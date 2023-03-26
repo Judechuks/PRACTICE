@@ -1,0 +1,18 @@
+body{
+	text-align: center;
+}
+#text{
+	font: bold 24px Century Gothic;
+	text-shadow: rgb(110, 110, 110) 3px 3px 5px; 
+}
+#box{
+	display: block;
+	width: 700px;
+	background: yellow;
+	margin: 30px auto;
+	text-align: center;
+	padding: 15px;
+	border: 1px solid blue;
+	-webkit-border-radius: 20px;
+	-webkit-transform: rotate(25deg) scale(1,.7) skew(30deg) translate(120px, 100px);
+}

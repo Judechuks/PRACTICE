@@ -1,0 +1,18 @@
+body{
+	text-align: center;
+}
+#text{
+	font: bold 24px Century Gothic;
+	text-shadow: rgb(110, 110, 110) 3px 3px 5px; 
+}
+#box{
+	display: block;
+	width: 700px;
+	background: -webkit-radial-gradient(center,circle, blue 0%, red 50%);
+	margin: 30px auto;
+	text-align: center;
+	padding: 15px;
+	border: 1px solid blue;
+	-webkit-box-shadow: rgba(25, 100, 15, .8) 10px 10px 10px;
+	-webkit-border-radius: 20px;
+}

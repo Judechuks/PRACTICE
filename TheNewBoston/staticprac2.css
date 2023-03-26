@@ -1,0 +1,70 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+h1 {
+	font: bold 24px Tahoma;	
+}
+h2 {
+	font: bold 20px Tahoma;	
+}
+header, section, article, hgroup, footer, aside, nav {
+	display: block;
+}
+body {
+	text-align: center;
+}
+#main_div {
+	border: 1px solid black;
+	width: 1000px;
+	margin: 20px auto;
+	text-align: left;
+	background: #110000; 
+}
+#main_header {
+	border: 1px solid black;
+	background: #FFFBCC;
+	padding: 20px;
+	text-align: center;
+}
+#main_nav {
+	background: #440000;
+	color: white;
+}
+#main_nav li {
+	display: inline-block;
+	list-style: none;
+	font: bold 20px Tahoma;
+	padding: 20px;
+}
+#main_section {
+	width: 660px; /*remember total width of the whole page is 1000px*/
+	margin: 30px; /*30px left and right total px = 660+30+30 = 720px*/
+	float: left; /*total px remaining = 1000 - 720 = 280px*/
+}
+#side_bar {
+	float: left;
+	width: 220px;
+	margin: 30px 0px; /*the remaining 280px is used up here, 220+30+30*/
+	padding: 25px; 
+	background: #FFFBCC;
+	font: 18px Tahoma;
+}
+#main_footer {
+	clear: both;
+	text-align: center;
+	padding: 20px;
+	border: 2px solid black;
+	background: #FFFBCC;
+	font: 18px Tahoma;
+}
+article {
+	background: #FFFBCC;
+	border: 1px solid black;
+	padding: 20px;
+	margin-bottom: 15px;
+	font: 18px Tahoma;
+}
+article footer {
+	text-align: right;
+}
