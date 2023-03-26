@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Neumorphism Button</title>
+    <meta name="revised"
+        content="JudeChuks, 05/09/2022">
+    <meta charset="UTF-8">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../../../WEB/PROJECT/assets/fontawesome-free-6.1.1-web/css/all.min.css" />
+</head>
+
+<style>
+* {
+   Padding: 0;
+   Margin: 0;
+   box-sizing: border-box;
+}
+.holder {
+   height: 100vh;
+   width: 100%;
+   background: #eceeff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+button.accept, button.reject {
+   font-size: 1.75rem;
+   font-weight: 600;
+   padding: 20px;
+   margin: 30px;
+   width: 350px;
+   background: #ebeef1;
+   cursor: pointer;
+   border-radius: 50px;
+   border: none;
+   color: #00a037;
+   box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+               -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+}
+button.accept:hover, 
+button.reject:hover {
+   background: #cceeff;;
+}
+button.reject {
+   color: #ed0000;
+   box-shadow: inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+               inset -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+}
+button i {
+   margin-right: 10px;
+}
+
+</style>
+
+<body>
+ <div class="holder">
+  <button type="button" class="accept">
+    <i class="fas fa-check"></i> Accept
+  </button>
+  <button type="button" class="reject">
+    <i class="fas fa-close"></i> Reject
+  </button>
+ </div>
+
+
+<script>
+
+</script>
+
+</body>
+</html>

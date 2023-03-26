@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Linear Progress Bar </title>
+    <meta name="revised"
+        content="JudeChuks, 03/08/2022">
+    <meta charset="UTF-8">
+</head>
+
+<style>
+    * {
+        Padding: 0;
+        Margin: 0;
+        box-sizing: border-box;
+    }
+
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+    #container {
+        background: #e3edf7;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper {
+        width: 160px;
+        height: 160px;
+        position: relative;
+    }
+    .outer {
+        width: 160px;
+        height: 100px;
+        padding: 15px;
+    }
+    .inner {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .item {
+        font-size: 1.75rem;
+        font-weight: 900;
+        color: #222;
+    }
+    progress{
+      font-size: 30px;
+      border-radius: 10px;
+      width: 160px;
+      
+    }
+
+</style>
+
+<body>
+  <main id="container">
+    <div class="wrapper">
+        <div class="outer">
+            <div class="inner">
+              <div class="item">
+               <!-- 68% -->
+              </div>
+           </div>
+        </div>
+        <!-- progress -->
+        <progress min="0" max="100" value="0" class="range">
+    </div>
+  </main>
+
+  <script>
+    //counting progress 
+    let item = document.querySelector(".item");
+    let range = document.querySelector(".range");
+    let value = range.style.value;
+    let counter = 0;
+    setInterval(() => {
+      if(counter === 68) {
+        clearInterval();
+      } else {
+        counter += 1;
+        range.setAttribute("value",`${counter}`)
+        item.textContent = counter+"%";
+      } 
+    }, 28);
+    item.textContent = range.getAttribute(value)
+    
+    
+  </script>
+</body>
+
+</html>

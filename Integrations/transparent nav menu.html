@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Judechuks, 20/9/2022">
+    <title>Transparent Nav Menu</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  body{
+    background: linear-gradient(rgba(0,0,0,0.4), #3551b5), url("../../PROJECT/assets/images/1.jpg") center/cover;
+    min-height: 100vh;
+  }
+  header{
+    background-color: aqua;
+    height: 80px;
+  }
+  .logo img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 10px 0px 10px 10px;
+  } 
+  nav{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ul{
+    list-style-type: none;
+  }
+  ul li{
+    display: inline-block;
+  }
+  ul li ul li{
+    /* margin: 0; */
+    display: none;
+  }
+  ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    display: block;
+    padding: 10px 15px; 
+  }
+  li a:hover{
+    color: #3551b5;
+  }
+  ul li:hover{
+    background-color: #eee;
+  }
+  ul li:hover ul li{
+    display: block;
+  }
+</style>
+<body>
+    <header>
+      <div class="logo">
+      <img src="../../PROJECT/assets/logos/Logo.png">
+      </div>
+
+      <nav>
+       <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a>
+           <ul>
+             <li><a href="#team">Our Team</a></li>
+             <li><a href="#camp">Camp Sites</a></li>
+             <li><a href="#mv">Mission &amp; Vision</a></li>
+           </ul> 
+        </li>
+        <li><a href="#sport">Sports</a>
+           <ul>
+             <li><a href="#foot">Football</a></li>
+             <li><a href="#ten">Tennis</a></li>
+             <li><a href="#car">Car Racing</a></li>
+           </ul>
+        </li>
+        <li><a href="#contact">Contact</a>
+           <ul>
+             <li><a href="#map">Map</a></li>
+             <li><a href="#dir">Direction</a></li>
+           </ul>
+        </li>
+        <li><a href="#news">News</a>
+           <ul>
+             <li><a href="#local">Local</a></li>
+             <li><a href="#fgn">Foreign</a></li>
+           </ul>
+        </li>
+
+      </ul>
+       
+      </nav>
+    </header>
+</body>
+</html>

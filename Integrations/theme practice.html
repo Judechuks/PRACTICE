@@ -1,0 +1,93 @@
+
+<!-- html -->
+   <body>
+     <div class="theme-container">
+        <button id="blackbg"></button>
+        <button id="whitebg"></button>
+        <button id="redbg"></button>
+      </div>
+    </body>
+<!-- css styles -->
+<style>
+.theme-container{
+  position: relative;
+}
+#blackbg, #whitebg, #redbg{
+  width: 40px;
+  height: 40px;
+  border: 4px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+}
+#blackbg{
+  background-color: black;
+}
+#whitebg{
+  background-color: white;
+  left: 50px;
+}
+#redbg{
+  background-color: red;
+  left: 100px;
+}
+.fa.fa-check{
+  color: #a517ba;
+  font-size: 1.5rem;
+}
+</style>
+
+<!-- Javascript -->
+<script>
+const blackBg = document.getElementById('blackbg');
+const whiteBg = document.getElementById('whitebg');
+const redBg = document.getElementById('redbg');
+// const docBody = document.getElementById('body');
+
+
+blackBg.addEventListener('click', function(){
+    blackBg.style.borderColor = 'white';
+    whiteBg.style.borderColor = 'black';
+    redBg.style.borderColor = 'black';
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
+    blackBg.classList.add('fa');
+    blackBg.classList.add('fa-check');
+
+    whiteBg.classList.remove('fa');
+    whiteBg.classList.remove('fa-check');
+    
+    redBg.classList.remove('fa');
+    redBg.classList.remove('fa-check');
+  });
+whiteBg.addEventListener('click', function(){
+    whiteBg.style.borderColor = 'black';
+    blackBg.style.borderColor = 'white';
+    redBg.style.borderColor = 'white';
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'white';
+    whiteBg.classList.add('fa');
+    whiteBg.classList.add('fa-check');
+
+    blackBg.classList.remove('fa');
+    blackBg.classList.remove('fa-check');
+    
+    redBg.classList.remove('fa');
+    redBg.classList.remove('fa-check');
+  });
+redBg.addEventListener('click', function(){
+    redBg.style.borderColor = 'black';
+    blackBg.style.borderColor = 'red';
+    whiteBg.style.borderColor = 'red';
+    document.body.style.backgroundColor = 'red';
+    document.body.style.color = 'black';
+    redBg.classList.add('fa');
+    redBg.classList.add('fa-check');
+
+    whiteBg.classList.remove('fa');
+    whiteBg.classList.remove('fa-check');
+    
+    blackBg.classList.remove('fa');
+    blackBg.classList.remove('fa-check');
+  });
+</script> 

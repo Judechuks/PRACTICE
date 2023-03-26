@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Judechuks, 19/9/2022">
+    <title>Image Slider</title>
+</head>
+<style>
+   *{
+      box-sizing: border-box;
+      font: 1em sans-serif;
+   }
+   .slider-container{
+      width: 800px;
+      height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+      text-align: center;
+   }
+   .image-container{
+      width: 4000px; /*5 pics * 800 width*/
+      height: 600px;
+      position: relative;
+      transition: left 2s;
+      -webkit-transition: left 2s;
+      -moz-transition: left 2s;
+      -o-transition: left 2s;
+   }
+   .slider-image{
+      width: 800px;
+      height: 600px;
+      float: left;
+      padding: 0;
+      margin: 0;
+   }
+   .button-container{
+      top: -35px;
+      position: relative;
+   }
+   .slider-button{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #0c0;
+      margin-right: 6px;
+   }
+   .slider-button:hover{
+      background-color: rgb(0, 255, 150);
+   }
+   #slider-image-1:target ~ .image-container{
+      left: 0px;
+   }
+   #slider-image-2:target ~ .image-container{
+      left: -800px;
+   }
+   #slider-image-3:target ~ .image-container{
+      left: -1600px;
+   }
+   #slider-image-4:target ~ .image-container{
+      left: -2400px;
+   }
+   #slider-image-5:target ~ .image-container{
+      left: -3200px;
+   }
+   .button-container a{
+      padding-top: 2px;
+      text-decoration: none;
+      font-weight: 700;
+   }
+</style>
+<body>
+    <div class="slider-container">
+
+        <span id="slider-image-1"></span>
+        <span id="slider-image-2"></span>
+        <span id="slider-image-3"></span>
+        <span id="slider-image-4"></span>
+        <span id="slider-image-5"></span>
+
+        <div class="image-container">
+          <img src="../../PROJECT/assets/images/city-1.jpeg" alt="first image" class="slider-image">
+          <img src="../../PROJECT/assets/images/city-2.jpeg" alt="second image" class="slider-image">
+          <img src="../../PROJECT/assets/images/city-3.jpeg" alt="third image" class="slider-image">
+          <img src="../../PROJECT/assets/images/city-4.jpeg" alt="fourth image" class="slider-image">
+          <img src="../../PROJECT/assets/images/city-5.jpeg" alt="fifth image" class="slider-image">
+          </div>
+
+          <div class="button-container">
+            <a href="#slider-image-1" class="slider-button">1</a>
+            <a href="#slider-image-2" class="slider-button">2</a>
+            <a href="#slider-image-3" class="slider-button">3</a>
+            <a href="#slider-image-4" class="slider-button">4</a>
+            <a href="#slider-image-5" class="slider-button">5</a>
+          </div>
+
+    </div>
+</body>
+</html>

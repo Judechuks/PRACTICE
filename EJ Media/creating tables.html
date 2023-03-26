@@ -1,0 +1,141 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" /> 
+	<title> Fancy Tables </title>
+	<style>
+        body{
+            padding-top: 20px;
+            display: -webkit-box;
+            -webkit-box-pack: center;
+        }
+        #gp{
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+        }
+        #gp td, #gp th{
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #gp tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+        #gp tr:not(.header):hover{
+            background-color: #ddd;
+        }
+        #gp th{
+            background-color: #04AA6D;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            color: white;
+        }
+        #wrapper{
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            padding: 0px 15px 15px 15px;
+            -webkit-box-orient: vertical;
+            background-color: aquamarine;
+            border: 2px solid blue;
+            border-radius: 25px;
+            width: 680px;
+            height: 540px;
+        }
+        h2{
+          text-align: center;
+          text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+    <h2>First Semester Result</h2>
+    <table id="gp" border="2">
+        <thead>
+            <tr>
+            <th colspan="6">Results Details</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Sn</td>
+            <td>code</td>
+            <td>Description</td>
+            <td>Unit</td>
+            <td>Score</td>
+            <td>Grade</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>EED413</td>
+            <td>ENTREPRENEURSHIP DEVELOPMENT</td>
+            <td>3</td>
+            <td>82</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>STA411</td>
+            <td>OPERATIONS RESEARCH II</td>
+            <td>2</td>
+            <td>71</td>
+            <td>AB</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>COM497</td>
+            <td>SEMINAR</td>
+            <td>1</td>
+            <td>79</td>
+            <td>A</td>
+        </tr> 
+        <tr>
+            <td>4</td>
+            <td>COM416</td>
+            <td>MULTIMEDIA</td>
+            <td>3</td>
+            <td>84</td>
+            <td>A</td>
+        </tr> 
+        <tr>
+            <td>5</td>
+            <td>COM415</td>
+            <td>DATA COMMUNICATION AND NETWORK</td>
+            <td>3</td>
+            <td>86</td>
+            <td>A</td>
+        </tr> 
+        <tr>
+            <td>6</td>
+            <td>COM414</td>
+            <td>COMPILER CONSTRUCTION</td>
+            <td>3</td>
+            <td>75</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>COM413</td>
+            <td>PROJECT MANAGEMENT</td>
+            <td>3</td>
+            <td>74</td>
+            <td>AB</td>
+        </tr> 
+        <tr>
+            <td>8</td>
+            <td>COM412</td>
+            <td>OO PASCAL</td>
+            <td>3</td>
+            <td>82</td>
+            <td>A</td>
+        </tr> 
+        <tr>
+            <td>9</td>
+            <td>COM411</td>
+            <td>ORACLE FAULT TOLERANCE</td>
+            <td>3</td>
+            <td>83</td>
+            <td>A</td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
