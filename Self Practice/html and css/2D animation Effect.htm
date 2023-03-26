@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2D Animation </title>
+    <meta name="revised"
+        content="JudeChuks, 12/04/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: 0;
+        }
+
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+        #container {
+            background: silver;
+            width: 25em;
+            height: 35em;
+            border: 4px solid black;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+
+        .shape {
+            width: 6em;
+            height: 6em;
+            text-align: center;
+            float: left;
+        }
+
+        div p {
+            Position: relative;
+            top: 43%;
+            font-weight: bold;
+        }
+
+        .shape {
+            position: relative;
+            border: 0.1875em solid grey;
+            border-radius: .6em;
+            background-color: aqua;
+            animation-duration: 3s;
+        }
+
+        .first {
+            z-index: 1;
+            animation-name: slide1;
+            animation-delay: 0.5s;
+        }
+
+        .second {
+            left: 3.0em;
+            animation-name: slide2;
+            animation-delay: 3.5s;
+        }
+
+        @keyframes slide1 {
+            0% {
+                background: blue;
+                left: 0em;
+                top: 0em;
+            }
+
+            25% {
+                background: red;
+                left: 18.70em;
+                top: 0em;
+            }
+
+            50% {
+                background: orange;
+                left: 18.70em;
+                top: 28.66em;
+            }
+
+            75% {
+                background: yellow;
+                left: 0em;
+                top: 28.66em;
+            }
+
+            100% {
+                background: blue;
+                left: 0em;
+                top: 0em;
+            }
+        }
+
+        @keyframes slide2 {
+            0% {
+                background: blue;
+                left: 3.0em;
+                top: 0em;
+            }
+
+            25% {
+                background: red;
+                left: 12.30em;
+                top: 14.50em;
+            }
+
+            50% {
+                background: orange;
+                left: 3.0em;
+                top: 28.66em;
+            }
+
+            75% {
+                background: yellow;
+                left: -6.40em;
+                top: 14.50em;
+            }
+
+            100% {
+                background: blue;
+                left: 3.0em;
+                top: 0em;
+            }
+        }
+    </style>
+
+<body>
+    <h2> 2D Animation Effect</h2>
+    <div id="container">
+        <div class="shape first">
+            <p> I Move <span>First</span></p>
+        </div>
+        <div class="shape second">
+            <p> I'm Next</p>
+        </div>
+    </div>
+</body>
+
+</html>

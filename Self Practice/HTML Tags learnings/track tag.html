@@ -1,0 +1,22 @@
+<video width="320" height="240" controls>
+  <source src="forrest_gump.mp4" type="video/mp4">
+  <source src="forrest_gump.ogg" type="video/ogg">
+  <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+  <track src="fgsubtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+</video>
+
+<!-- 
+The <track> tag specifies text tracks for <audio> or <video> elements.
+
+This element is used to specify subtitles, caption files or other files containing text, that should be visible when the media is playing.
+
+Tracks are formatted in WebVTT format (.vtt files).
+
+
+Attribute --- Value	--- Description
+1.) default ---	default --- Specifies that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate.
+2.) kind	--- captions, chapters, descriptions, metadata, subtitles --- Specifies the kind of text track.
+3.) label --- text --- Specifies the title of the text track.
+4.) src --- URL --- Required. Specifies the URL of the track file.
+5.) srclang --- language_code --- Specifies the language of the track text data (required if kind="subtitles").
+ -->

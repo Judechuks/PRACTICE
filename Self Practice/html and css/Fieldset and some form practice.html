@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> js practice </title>
+</head>
+<script type="text/javascript">
+	function welcome()
+	{
+		alert("Hello! You are Welcome!");
+	}
+</script>
+<style>
+	h1 {
+		Color: blue;
+		Background-color: #ffff00;
+		Text-align: center;
+	}
+
+	input[type:button]: {
+		Color: blue;
+		Background-color: yellow;
+		width: 50%;
+	}
+
+	body {
+		background-color: #cccccc;
+		margin: 1px;
+		padding: 0px;
+	}
+
+	fieldset {
+		margin: 0px;
+	}
+</style>
+</head>
+
+<body>
+	<h1> JavaScript Practice </h1>
+	<p onmouseover="welcome();" mouse="progress">hover over here </p>
+	<input type="button" name="ok" value="Click Me" onclick="welcome();">
+	<p> Please type your Complaint Here </p>
+	<form method="post" action="mailto:Judechuks26@gmail.com">
+		<fieldset style="background-color: #00cccc;">
+			<legend>Your E-mail </legend>
+			<input type="email" name="email" width="50%">
+			<input type="submit" name="complaint" width="60%" value="Send" style="background-color: yellow;">
+			<br>
+			<br>
+			<input type="file" name="file" width="60%" style="background-color: pink;">
+			<input type="submit" name="upload" width="60%" value="Upload" style="background-color: yellow;">
+			<br>
+			<br>
+		</fieldset>
+	</form>
+</body>
+
+</html>

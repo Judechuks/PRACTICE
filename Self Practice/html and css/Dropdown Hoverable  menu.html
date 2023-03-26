@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> dropdown practice </title>
+</head>
+<style>
+    h1 {
+        Color: blue;
+        Background-color: #ffff00;
+        Text-align: center;
+        width: 100%;
+    }
+
+    .dropdownbtn {
+        Color: white;
+        Background-color: steelblue;
+        Padding: 16px;
+        Font-size: 24px;
+        Border: none;
+        Cursor: pointer;
+    }
+
+    .dropdown {
+        Position: relative;
+        Display: inline-block;
+    }
+
+    .dropdown-content {
+        Position: absolute;
+        Display: none;
+        Padding: 8px 16px;
+        Box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        Background-color: #e8e8e8;
+        Min-width: 160px;
+    }
+
+    .dropdown-content a {
+        Text-decoration: none;
+        Font-size: 16px;
+        Padding: 12px 16px;
+        Color: #00cc00;
+        Display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: aquamarine;
+    }
+
+    .dropdown-content:hover {
+        Background-color: #00eeee;
+    }
+
+    .dropdown:hover .dropdown-content {
+        Display: block;
+    }
+
+    .dropdown:hover .dropdownbtn {
+        Background-color: turquoise;
+    }
+</style>
+</head>
+
+<body>
+    <h1> Dropdown Menu Practice </h1>
+    <h2> Hoverable Dropdown menu </h2>
+    <p> Move the mouse on the hoverable text below for a dropdown to open the dropdown menu and select an option or an
+        item or a link </p>
+    <div class="dropdown">
+        <span> Mouse Over Me </span>
+        <div class="dropdown-content">
+            <p> Hoverable Dropdown </p>
+            <a href="#">News </a>
+            <a href="#">Music</a>
+            <a href="#">Video </a>
+            <a href="#">Picture </a>
+        </div>
+    </div>
+</body>
+
+</html>

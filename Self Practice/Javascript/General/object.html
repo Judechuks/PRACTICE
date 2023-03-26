@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+</head>
+<body>
+  <section>
+     <div class="player-info">
+       <p id="p"></p>
+     </div>
+     <div class="player-score"></div>
+  </section>
+  <script>
+  p = document.getElementById('p');
+  let player1_name = 'Jude';
+  let player1_score = 50;
+  let player2_name = 'Chuks';
+  let player2_score = 55;
+  let player1 = {
+    name: player1_name,
+    score: player1_score
+  };
+  let player2 = {
+    name: player2_name,
+    score: player2_score
+  };
+function showDetails(){
+  p.innerHTML = this.name+" "+this.score;
+}
+player1.details = showDetails;
+player2.details = showDetails;
+
+player1.details();
+// player2.details();
+  </script>
+</body>
+</html>

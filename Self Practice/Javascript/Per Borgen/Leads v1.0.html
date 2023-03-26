@@ -1,0 +1,108 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Extention</title>
+    <meta name="author" content="JudeChuks, 10/07/2022">
+    <meta name="revised" content="11/07/2022">
+    <meta charset="UTF-8">
+    <style>
+body {
+    background: #016f32;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    width: 200px;
+    margin-right: 3px;
+    border-radius: 5px;
+} 
+#textbox {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 2px solid darkblue;
+    font-weight: bold;
+    font-size: 14px;
+}
+#textbox:focus {
+    background: lightgrey;
+}
+#save-btn{
+    background: darkblue;
+    color : goldenrod;
+} 
+#list{
+    margin-top: 10px;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+} 
+li {
+    margin-bottom: 5px;
+    font-size: 15px;
+} 
+a {
+    text-decoration: none;
+    padding: 3px 3px 3px 0;
+    color: #fff;
+    margin-bottom: 5px;
+    
+}
+a:visited {
+    color: darkred
+}  
+a:hover {
+    background: goldenrod;
+} 
+</style>
+</head>
+
+<body>
+    <input id="textbox" type="text" />
+    <button id="save-btn">SAVE LINK</button>
+    <ul id="list"></ul>
+
+<script type="text/javascript">
+    let input = document.getElementById('textbox');
+    let saveBtn = document.getElementById('save-btn');
+    let list = document.getElementById('list');
+    let myLeads = []
+    input.setAttribute("placeholder", "Paste Url Here")
+
+    saveBtn.addEventListener("click", function() {
+    myLeads.push(input.value);
+    input.value = "" 
+    renderLead()
+});
+
+    function renderLead() {
+        let listItems =""
+        for (let i = 0; i < myLeads.length; i++) {
+            /* const li = document.createElement("li")
+            li.textContent = myLeads[i]
+            list.append(li) */
+            //Alternatively
+            //listItems += "<li><a href='myLeads[I]' target='_blank' >" + myLeads[i] + "</a></li>"         
+            //Alternatively using template string `...enclosed strings...`
+            listItems += `
+                <li>
+                    <a href='${myLeads[i]}' target='_blank' >
+                        ${myLeads[i]} 
+                    </a>
+                </li>`
+        }
+            list.innerHTML = listItems
+    }
+</script>
+
+</body>
+</html>

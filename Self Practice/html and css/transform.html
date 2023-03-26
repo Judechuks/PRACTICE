@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+</head>
+<style>
+*{margin: 1px;}
+.square{
+  width: 200px;
+  height: 200px;
+}
+.square:first-child{
+  background-color: aqua;
+}
+.square:first-child:hover{
+  /* transform: rotateX(180deg); */
+  transform: scale(160%);
+}
+.square:nth-child(2){
+  background-color: dodgerblue;
+}
+.square:nth-child(2):hover{
+  /* transform: rotateY(180deg); */
+  transform: scaleY(150%);
+}
+.square:last-child{
+  background-color: limegreen;
+}
+.square:last-child:hover{
+  /* transform: rotateZ(45deg); */
+  /* transform: scaleX(120%); */
+  transform: skew(60deg);
+}
+
+section{
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: center;
+  gap: .5rem;
+}
+.square{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+</style>
+<body>
+   <section>
+    <div class="square">A</div>
+    <div class="square">B</div>
+    <div class="square">C</div>
+   </section>
+</body>
+</html>

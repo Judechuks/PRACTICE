@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript OOP</title>
+    <meta name="revised"
+        content="JudeChuks, 25/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: .5em;
+        }
+        body{
+        font: 18px bolder;
+        background-color: dimgray;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+    </style>
+    <script type="text/javascript">
+
+      
+    </script>
+<body>
+    <h2> JavaScript Array With Nested Loop </h2>
+    
+    <script type="text/javascript">
+        document.write("<h3> Name Of 10 Footballers That You Know</h3>");
+        var players = new Array();
+
+        for (x=1; x<=10; x++){
+          name = prompt(x+" - Enter Name Of Football Players You Know:");
+            for (y=0; y<=9; y++){
+              players [y] = name;
+            }
+          document.write(x+". "+players[0]+"<br>");
+          
+          //or you can use
+          //document.write(players[x-1]+"<br>");
+        }
+        
+    </script>
+
+</body>
+
+</html>

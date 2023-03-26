@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GridBox Model </title>
+    <meta name="revised"
+        content="JudeChuks, 08/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: 0;
+        }
+
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+        #container {
+            background: silver;
+            width: 95%;
+            height: 100%;
+            border: 3px solid black;
+            margin: auto;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            justify-content: space-around;
+        }
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+
+        div p {
+            Position: relative;
+            font-weight: bold;
+        }
+
+        .item {
+            width: 8em;
+            height: 10.4em;
+            text-align: center;
+            margin: 6% 0;
+            border: 3px solid grey;
+            border-radius: .6em;
+            background-color: aqua;
+            outline: 2px solid red;
+        }
+
+        .item img {
+            width: 120px;
+            height: 120px;
+            margin: 3px auto auto auto;
+        }
+
+        input[type=button] {
+            width: 126px;
+            color: white;
+            background: black;
+        }
+
+        input[type=button]:hover {
+            background: grey;
+        }
+
+        .item:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+
+<body>
+    <h2> GridBox Model</h2>
+    <div id="container">
+        <div class="item first">
+            <img src="../../Images/sport shoe.jpg"
+                alt="item 1" />
+            <p>Cost: #15000</p>
+            <input type="button"
+                value="Buy">
+        </div>
+        <div class="item second">
+            <img src="../../Images/long sleeve.jpg"
+                alt="item 2" />
+            <p>Cost: #10000</p>
+            <input type="button"
+                value="Buy">
+        </div>
+        <div class="item third">
+            <img src="../../Images/joggers 3.jpg"
+                alt="item 3" />
+            <p>Cost: #12000</p>
+            <input type="button"
+                value="Buy">
+        </div>
+        <div class="item fourth">
+            <img src="../../Images/short 1.jpg"
+                alt="item 4" />
+            <p>Cost: #6500</p>
+            <input type="button"
+                value="Buy">
+        </div>
+        <div class="item fifth">
+            <img src="../../Images/eye glass 2.jpg"
+                alt="item 5" />
+            <p>Cost: #5000</p>
+            <input type="button"
+                value="Buy">
+        </div>
+        <div class="item sixth">
+            <img src="../../Images/cap.jpg"
+                alt="item 6" />
+            <p>Cost: #2500</p>
+            <input type="button"
+                value="Buy">
+        </div>
+        <div class="item seventh">
+            <img src="../../Images/wallet.jpg"
+                alt="item 7" />
+            <p>Cost: #5000</p>
+            <input type="button"
+                value="Buy">
+        </div>
+        <div class="item eighth">
+            <img src="../../Images/wrist watch 1.jpg"
+                alt="item 8" />
+            <p>Cost: #120000</p>
+            <input type="button"
+                value="Buy">
+        </div>
+        <div class="item ninth">
+            <img src="../../Images/black shoe.jpg"
+                alt="item 9" />
+            <p>Cost: #50000</p>
+            <input type="button"
+                value="Buy">
+        </div>
+    </div>
+</body>
+
+</html>

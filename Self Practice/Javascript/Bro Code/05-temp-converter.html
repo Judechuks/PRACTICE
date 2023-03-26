@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+</head>
+<body>
+  <h1>Temperature Converter</h1>
+  <p>Celsius to Fahrenheit, and Fahrenheit to Celsius</p>
+  <label>Enter a temperature:</label> <br>
+  <input type="text" id="textBox"> <br>
+  <label>Convert to:</label> <br>
+  <input type="radio" name="unit" id="cButton">
+  <label for="cButton">Celsius</label> <br>
+  <input type="radio" name="unit" id="fButton">
+  <label for="fButton">Fahrenheit</label> <br>
+  <button type="button" id="submitButton">submit</button> <br>
+  <label id="tempLabel"></label> 
+
+  <script>
+    document.getElementById("submitButton").onclick = function () {
+      let temp;
+      if (document.getElementById("cButton").checked){
+        temp = document.getElementById("textBox").value;
+        temp = Number(temp); 
+        temp = toCelsius(temp);
+        document.getElementById("tempLabel").innerHTML = temp + "°C";
+      }
+      else if (document.getElementById("fButton").checked){
+        temp = document.getElementById("textBox").value;
+        temp = Number(temp); 
+        temp = toFahrenheit(temp); 
+        document.getElementById("tempLabel").innerHTML = temp + "°F";
+      } else {
+        document.getElementById("tempLabel").innerHTML = "You have to select a unit";
+      }
+    }
+    
+    function toCelsius(temp) {
+      return (temp - 32) * (5/9);
+    }
+    function toFahrenheit(temp) {
+      return temp * 9/5 + 32;
+    } 
+  </script>
+</body>
+</html>

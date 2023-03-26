@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practice</title>
+    <meta charset="Utf-8" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .one p:nth-child(even) {
+            border: 2px solid blueviolet;
+        }
+
+        .one p:nth-child(odd) {
+            border: 2px solid aqua;
+        }
+
+        .one p:first-child {
+            background-color: blueviolet;
+        }
+
+        .one p:nth-child(3),
+        .one p:nth-child(5) {
+            background-color: rgb(43, 226, 58);
+        }
+
+        .one p:last-child {
+            background-color: blueviolet;
+        }
+
+        body {
+            text-align: center;
+            width: 60%;
+            margin: auto;
+        }
+
+        div {
+            margin: 18px auto 18px auto;
+        }
+
+        .two p {
+            border: 2px solid rgb(43, 226, 58);
+            background-color: rgb(187, 0, 162);
+        }
+
+        .two~p {
+            /* all paragraphs outside div class "two" will be affected
+            border: 2px solid rgb(141, 14, 14);
+            background-color: rgb(43, 226, 58); */
+        }
+
+        .two+p {
+            /* first paragraph only, which is outside div class "two" will be affected and overrides the previous effect*/
+            border: 2px solid rgb(0, 14, 187);
+            background-color: rgb(255, 255, 255);
+        }
+
+        .three>p {
+            /* all the direct children of div class "three" should have the following properties and values but those that are not (i.e those under another tag will not be affected)*/
+            border: 2px solid blueviolet;
+            background-color: rgb(187, 0, 162);
+        }
+
+        .three p::first-letter {
+            color: #ff0;
+        }
+
+        .three::first-line {
+            color: #fff;
+        }
+
+        .four p::before {
+            content: url(../../Images/icon/arrow-right.png);
+        }
+
+        .four p::after {
+            content: url(../../Images/icon/arrow-left.png);
+        }
+
+        div .five * p {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <p>I'm Paragraph 1</p>
+        <p>I'm Paragraph 2</p>
+        <p>I'm Paragraph 3</p>
+        <p>I'm Paragraph 4</p>
+        <p>I'm Paragraph 5</p>
+        <p>I'm Paragraph 6</p>
+        <p>I'm Paragraph 7</p>
+    </div>
+    <div class="two">
+        <p>I'm a Separate Paragraph</p>
+    </div>
+    <p>I'm Paragraph 1</p>
+    <p>I'm Paragraph 2</p>
+    <p>I'm Paragraph 3</p>
+    <p>I'm Paragraph 4</p>
+    <p>I'm Paragraph 5</p>
+
+    <div class="three">
+        <p>I'm Paragraph 1</p>
+        <span>
+            <p>I'm Paragraph 2</p>
+        </span>
+        <p>I'm Paragraph 3</p>
+        <span>
+            <p>I'm Paragraph 4</p>
+        </span>
+        <p>I'm Paragraph 5</p>
+    </div>
+    <div class="four">
+        <p>I'm Paragraph 1</p>
+        <p>I'm Paragraph 2</p>
+        <p>I'm Paragraph 3</p>
+    </div>
+
+</body>
+
+</html>

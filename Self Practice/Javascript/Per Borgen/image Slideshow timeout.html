@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript Slideshow</title>
+    <meta name="revised" content="JudeChuks, 29/05/2022" />
+    <meta charset="UTF-8" />
+    <style>
+        * {
+            Padding: 0;
+            Margin: .5em;
+        }
+        body{
+            font: 18px bolder;
+            background-color: dimgray;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+        .item {
+            width: 8em;
+            height: 10.4em;
+            text-align: center;
+            border: 3px solid grey;
+            border-radius: .6em;
+            background-color: aqua;
+            outline: 2px solid red;
+            margin: 150px auto;
+            padding: 2px;
+        }
+        .item img{
+            width: inherit;
+            height: inherit;
+            margin: 0;
+            border-radius: .4em;
+        }
+
+    </style>
+</head>
+    
+<body>
+    <h2> JavaScript Slideshow </h2>
+
+     <div class="item">
+        <img id="image" src="../../../Images/sport shoe.jpg" alt="item 1"  />
+    </div>
+    
+    <script type="text/javascript">
+
+        
+        var img = document.getElementById("image");
+        var imageArray = ["../../../Images/sport shoe.jpg", "../../../Images/long sleeve.jpg", "../../../Images/joggers 3.jpg", "../../../Images/short 1.jpg", "../../../Images/eye glass 2.jpg", "../../../Images/cap.jpg", "../../../Images/wallet.jpg", "../../../Images/wrist watch 1.jpg", "../../../Images/sport shoe 1.jpg"];
+        var imageIndex = 0;
+
+        function changeImage() {
+            img.setAttribute("src", imageArray[imageIndex]);
+            imageIndex++;
+
+            if (imageIndex >= imageArray.length){
+                imageIndex = 0;
+            }
+            
+        }
+        
+        setInterval(changeImage, 1000);
+        //setTimeout(changeImage, 1000);
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript OOP</title>
+    <meta name="revised"
+        content="JudeChuks, 25/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: .5em;
+        }
+        body{
+        font: 18px bolder;
+        background-color: dimgray;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+    </style>
+    <script type="text/javascript">
+
+      
+    </script>
+<body>
+    <h2> JavaScript Array With Loop & Concatenation</h2>
+    
+    <script type="text/javascript">
+        document.write("<h3> Name of Family Members</h3>");
+
+        var brothers = new Array();
+        var sisters = new Array();
+          document.write("<h3>Brothers</h3>");
+          var b = prompt("How Many Brothers Do You Have?");
+              b = parseInt(b);
+          var s = prompt("How Many Sisters Do You Have?");
+              s = parseInt(s);
+
+        for (x=1; x<=b; x++){
+          name = prompt(x+" - Enter The Name Of Your Brother:");
+          brothers [x-1] = name;
+          document.write(x+". "+brothers[x-1]+"<br>");
+        }
+          document.write("<h3>Sisters</h3>");
+        for (x=1; x<=s; x++){
+          name = prompt(x+" - Enter The Name Of Your Sister:");
+          sisters [x-1] = name;
+          document.write(x+". "+sisters[x-1]+"<br>");
+        }
+         document.write("<h3>Family</h3>");
+         //concatenating the two arrays, the innner array passed as argument becomes the last array to be displayed
+        var family = brothers.concat(sisters);
+        for (x=1; x<=b+s; x++){
+        document.write(x+". "+family[x-1]+"<br>");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

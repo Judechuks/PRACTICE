@@ -1,0 +1,135 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <title>blackjack Reloaded</title>
+    <meta name="revised" content="JudeChuks, 09/07/2022">
+    <meta charset="UTF-8">
+    <style>
+body {
+    background: #016f32;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Helvetica Neue';
+}
+h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+   color: goldenrod;
+} 
+h2{
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+} 
+button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 8px;
+    margin-right: 3px;
+    border-radius: 5px;
+} 
+#start-btn {
+    background: goldenrod;
+    color : darkblue;
+} 
+#save-btn, #restart-btn{
+    background: darkblue;
+    color : goldenrod;
+} 
+#msg {
+   font-style: italic;
+}
+#wrapper{
+    margin: 100px 0 0 0;
+    padding: 80px 0;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+<h1>BlackJack</h1>
+<p id="msg">Want to play a round?: </p>
+<p id="card">Card: </p>
+<p id="sum">Sum: </p>
+<button id="start-btn" onclick="startGame()">START GAME</button> <br>
+<button id="save-btn" onclick="newCard()">NEW CARD</button>
+<button id="restart-btn" onclick="reStart()">RESTART</button>
+<p id="player-el"></p>
+</div>
+
+<script type="text/javascript">
+let messageRef = document.getElementById('msg');
+let cardRef = document.getElementById('card');
+let sumRef = document.getElementById('sum');
+let playerEl = document.getElementById('player-el');
+let hasBlackJack = false
+let isAlive = false
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
+let cards = [firstCard , secondCard]
+let sum = firstCard + secondCard
+let playerName = prompt("Enter Your Name")
+let playerChips = prompt("Enter Your Chips Amount")
+player = { 
+    name: playerName,
+    chips: playerChips
+}
+playerEl.innerHTML = "Player: "+player.name+"<br> Chips: $"+player.chips
+function startGame() {
+    renderGame() 
+}
+function renderGame() {
+    cardRef.textContent = "Cards: "
+    for (i = 0; i < cards.length; i++) {
+        cardRef.textContent += cards[i] + " "
+    }
+    sumRef.textContent = "Sum: " + sum
+    if (sum <= 20) {
+        message = "Do you want to draw a new card?"
+        isAlive = true
+    } else if (sum === 21) {
+        message = "You've got a blackjack"
+        hasBlackJack = true
+        isAlive = false
+    } else {
+        message = "You're out of the game"
+        isAlive = false
+    }
+    messageRef.textContent = message
+}
+
+//want to generate random numbers of card by using Math.random() method betweem 2 to 11 and using floor(x) method to approximate it to the nearest integer(whole number)
+function getRandomCard() {
+    let randomNum = Math.floor(Math.random() * 13) + 1
+    if (randomNum > 10){
+        return 10
+    } else if (randomNum === 1) {
+        return 11
+    } else {
+        return randomNum
+    }
+}
+
+// generate new card
+function newCard() {
+    if (isAlive === true && hasBlackJack === false) {
+    let nextCard = getRandomCard()
+    sum += nextCard
+    cards.push(nextCard)
+    renderGame()
+    } else {
+        alert("Oppss! \nGame Ended! \nClick on RESTART Button to Start again")
+    }
+}
+function reStart() {
+    //refreshing the browser
+    location.reload()
+}
+</script>
+</body>
+</html>

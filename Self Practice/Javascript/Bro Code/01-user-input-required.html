@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Input Required</title>
+</head>
+<style>
+  p{
+    font-family: sans-serif;
+    font-size: 1.3rem;
+  }
+</style>
+<body>
+  <p></p>
+  <script>
+    let username = "";
+
+    while(username == "" || username == null){ 
+    // username must not be empty or null
+      username = prompt("Enter your username: ");
+    }
+
+    document.getElementsByTagName('p')[0].innerText = `Welcome ${username}!`;
+  </script>
+</body>
+</html>

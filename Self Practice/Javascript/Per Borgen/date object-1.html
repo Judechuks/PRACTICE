@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript</title>
+    <meta name="revised"
+        content="JudeChuks, 26/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: 0;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+         body{
+         background : darkgray;
+         } 
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+        #output{
+            margin: 100px;
+            background: #f1f1f1;
+            padding: 60px 0px;
+            font-size: 50px;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+   
+<body>
+    <h2>Date Object In Javascript using set Interval and Date Object</h2>
+    <h2 id="output">Time</h2>
+    <h2>24 Hours Clock</h2>
+    
+ <script type="text/javascript">
+
+       function showTime() {
+         // calling inbuilt date object 
+          var time = new Date();
+          var hour = time.getHours() ;
+          var minute = time.getMinutes() ;
+          var second = time.getSeconds() ;
+          output = document.getElementById("output");
+          output.innerText =(hour+ " : " +minute +" : " +second) ;
+          console.log(output);
+        } 
+        setInterval("showTime()", 1000);
+        // setInterval method is used to run a particular method or whatever parameter that is passed to it, and the second parameter is the interval it will take, it is measured in milliseconds, 1000ms = 1 seconds
+       
+    </script>
+
+</body>
+
+</html>

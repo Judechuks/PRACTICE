@@ -1,0 +1,87 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <title>javascript</title>
+    <meta name="revised" content="JudeChuks, 09/07/2022">
+    <meta charset="UTF-8">
+    <style>
+body {
+    background: #016f32;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Helvetica Neue';
+}
+h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+   color: goldenrod;
+} 
+h2{
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+} 
+button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 8px;
+    margin-right: 3px;
+    border-radius: 5px;
+} 
+#randomNum-btn{
+    background: darkblue;
+    color : goldenrod;
+} 
+#msg {
+   font-style: italic;
+}
+#wrapper{
+    margin: 100px 0 0 0;
+    padding: 80px 0;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+<h1>Random Numbers From 2 to 11</h1>
+<p id="title">RANDOM NUMBER: </p>
+<p id="num">0</p>
+<p id="num1">0</p>
+<p id="num2">0</p>
+<button id="randomNum-btn" onclick="randomNumber()">GENERATE NUMBER</button> 
+</div>
+
+<script type="text/javascript">
+let randomNum = document.getElementById('num');
+let randomNum1 = document.getElementById('num1');
+let randomNum2 = document.getElementById('num2');
+//want to generate random numbers of card by using Math.random() method 
+function randomNumber() {
+let num = Math.random()
+randomNum.textContent = num
+//let the random number be between 2 to 11
+num1 = num * 10
+//using floor(x) method to get rid of decimal point while round() method to approximate it to the nearest integer(whole number)
+randomNum1.textContent = Math.floor(num1)
+//converting randomNum1.textContent to integer
+num2 = Number(randomNum1.textContent)
+//let the random number be between 2 to 11
+num3 = num2 + 2
+randomNum2.textContent = num3
+}
+
+/* Alternative code
+
+function randomNumber() {
+let randomNum = Math.floor(Math.random() * 10) + 2
+return randomNum
+}
+*/
+</script>
+</body>
+</html>

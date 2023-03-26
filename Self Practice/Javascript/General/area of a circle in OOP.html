@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript OOP</title>
+    <meta name="revised"
+        content="JudeChuks, 25/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: .5em;
+        }
+        body{
+        font: 18px bolder;
+        background-color: dimgray;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+    </style>
+    <script type="text/javascript">
+
+       // creating the circle object constructor
+       function circle(radius){
+         this.radius = radius;
+         
+         //initializing the methods
+         this.area = area;
+         this.perimeter = perimeter;
+         this.diameter = diameter;
+       }
+
+       // Creating The Area Method
+           function area(){
+             return Math.PI * this.radius * this.radius; 
+          };
+         // Creating The Perimeter Method
+           function perimeter(){
+             return 2 * Math.PI * this.radius;
+          };
+          // Creating The Diameter Method
+           function diameter(){
+             return 2 * this.radius;
+          };
+        
+
+    </script>
+<body>
+    <h2> JavaScript OOP: Area of a Circle </h2>
+    
+    <script type="text/javascript">
+        document.write("<h3>Circle Measurement</h3>");
+        var r = prompt("Enter the radius of the circle: ");
+            r = parseFloat(r);
+        // instantiation of an object
+        var circle1 = new circle(r);
+       // Dispaying  or calling the Objects
+       document.write("Radius of the Circle: "+circle1.radius+"<br />Diameter: "+circle1.diameter()+"<br />");
+       document.write("Area of the Circle: "+circle1.area()+"<br />Perimeter: "+circle1.perimeter());
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript</title>
+    <meta name="revised"
+        content="JudeChuks, 26/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: 0;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+         body{
+         background : darkgray;
+         } 
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+        #output1, #output2 {
+            text-align: center;
+            margin: 55px 100px 0px 100px;
+            background: #f1f1f1;
+            padding: 60px 0px;
+            font-size: 40px;
+            border-radius: 10px;
+        }
+        #output2 {
+            display: none;
+        }
+        button{
+            background: #5400f1;
+            border: 2px solid black;
+            border-radius: 8px;
+            font-size: 15px;
+            padding: 5px;
+            margin: 5px;
+        }
+         button:hover{
+            background: #aa83f3;
+        }
+        #btns{
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+    <script type="text/javascript">
+    
+        function showTime24() {
+         // calling inbuilt date object 
+          var time = new Date();
+          var hour = time.getHours() ;
+          var minute = time.getMinutes() ;
+          var second = time.getSeconds() ;
+          output = document.getElementById("output1");
+          output.innerText =(hour+ " : " +minute +" : " +second) ;
+          console.log(output);
+        } 
+        setInterval("showTime24()", 1000);
+
+       function showTime12() {
+         // calling inbuilt date object 
+          var time = new Date();
+          var hour = time.getHours() ;
+          var minute = time.getMinutes() ;
+          var second = time.getSeconds() ;
+          output = document.getElementById("output2");
+          if (hour <= 11.99){
+            output.innerText = (hour+ " : " +minute +" : " +second+ " AM") ;
+          } else {
+            output.innerText = (hour+ " : " +minute +" : " +second+ " PM") ;
+          }
+          if (hour > 12.99){
+            hour = hour - 12;          
+            output.innerText = (hour+ " : " +minute +" : " +second+ " PM") ;
+           }          
+          console.log(output);
+        } 
+        setInterval("showTime12()", 1000);
+        // setInterval method is used to run a particular method or whatever parameter that is passed to it, and the second parameter is the interval it will take, it is measured in milliseconds, 1000ms = 1 seconds
+    </script>
+</head>
+<body>
+    <h2>Date Object In Javascript using set Interval and Date Object</h2>
+    <h2 id="output1">Time</h2>
+    <h2 id="output2">Time</h2>
+    <h2 id="ref">24 Hours Clock</h2>
+    
+    <script type="text/javascript">
+    ref = document.getElementById("ref");
+    output1 = document.getElementById("output1");
+    output2 = document.getElementById("output2");
+
+     function clock12(){
+          
+          output1.setAttribute("style","display: none"); 
+          output2.setAttribute("style","display: block"); 
+          ref.innerText = "12 Hours Clock";
+        }
+        function clock24(){
+          output1.setAttribute("style", "display: block"); 
+          output2.setAttribute("style", "display: none"); 
+          ref.innerText = "24 Hours Clock";
+        }
+        function clockBoth(){
+          output1.setAttribute("style", "display: block"); 
+          output2.setAttribute("style", "display: block"); 
+          ref.innerText = "Two Type Clock";
+        }
+       
+    </script>
+ <div id="btns">
+<button onclick="clock24()" id="btn1">24 Hours Clock</button>
+<button onclick="clock12()" id="btn2">12 Hours Clock</button>
+<button onclick="clockBoth()" id="btn3">Both Clock</button>
+</div>
+</body>
+
+</html>

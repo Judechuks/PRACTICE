@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>form and attributes</title>
+    <style>
+        body {
+            font-family: Georgia, verdana, arial, Serif;
+
+            /* Font Shorthand Format
+	  font: font-style font-variant font-weight 
+	  font-size/line height font-family;*/
+            /* Example	
+	  font: italic small-caps bold 
+	  14px/150% Georgia, verdana, arial, Serif; */
+        }
+
+        .required {
+            font-weight: bold;
+            color: #f00;
+        }
+
+        label,
+        legend {
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            font-size: 1em;
+            border-radius: .3em;
+            border: 2px solid #000;
+            box-shadow: 2px 2px 4px 1px #000;
+            /*x y blur spread color*/
+            margin-right: 15px;
+            padding: 3px;
+        }
+
+        input:focus {
+            background-color: lightgray;
+        }
+
+        input[type=file] {
+            background-color: lightgray;
+        }
+
+        #img_search {
+            display: inline-block;
+            position: relative;
+            top: .4em;
+            left: -2.8em;
+            width: 20px;
+            height: 20px;
+        }
+
+        #sub_icon1 {
+            position: relative;
+            top: .6em;
+            left: -2em;
+        }
+
+        details {
+            color: white;
+            background-color: gray;
+            border-radius: .3em;
+            box-shadow: 2px 2px 4px 1px #000;
+            /*x y blur spread color*/
+        }
+
+        summary {
+            font-weight: bold;
+            margin-top: 1.4em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <fieldset>
+            <legend>Sign-Up Data </legend>
+            <label>
+                <span class="required">** </span>
+                First Name: <br>
+                <input type="text"
+                    id="fname"
+                    name="fname"
+                    placeholder="Enter First Name"
+                    required
+                    autofocus> </label> <br><br>
+            <label>
+                <span class="required">** </span>
+                Last Name: <br>
+                <input type="text"
+                    id="lname"
+                    name="lname"
+                    placeholder="Enter Last Name"
+                    required>
+            </label> <br><br>
+            <label>
+                <span class="required">** </span>
+                User Name: <br>
+                <input type="text"
+                    id="uname"
+                    name="uname"
+                    placeholder="Enter User Name"
+                    required>
+            </label> <br><br>
+            <label>
+                <span class="required">** </span>
+                E-Mail: <br>
+                <input type="email"
+                    id="email"
+                    name="email"
+                    placeholder="@email.com"
+                    required>
+            </label> <br><br>
+            <label>
+                <span class="required">** </span>
+                Re-Enter E-Mail: <br>
+                <input type="email"
+                    id="email"
+                    name="email"
+                    placeholder="@email.com"
+                    required>
+            </label> <br><br>
+            <label>
+                <span class="required">** </span>
+                Password: <br>
+                <input type="password"
+                    id="pwd"
+                    name="pwd"
+                    required>
+            </label> <br><br>
+            <input type="submit"
+                id="sub"
+                name="sub"
+                value="Submit">
+            <input type="reset"
+                id="reset"
+                name="reset"
+                value="Reset">
+            <br><br>
+            <small>
+                The fields marked <span class="required"> ** means Compulsory fields <span>
+            </small>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Bio-Data</legend>
+            <label>Sex: <br>
+                <label> <input type="radio"
+                        name="sex"
+                        value="m"> Male</label>
+                <label> <input type="radio"
+                        name="sex"
+                        value="f">Female</label>
+            </label>
+            <br><br>
+            <label>Sports: <br>
+                <label><input type="checkbox"
+                        name="hobby"
+                        value="football">Football </label>
+                <label><input type="checkbox"
+                        name="hobby"
+                        value="wresting">Wresting</label> <br>
+                <label><input type="checkbox"
+                        name="hobby"
+                        value="basketball">Basketball</label>
+                <label><input type="checkbox"
+                        name="hobby"
+                        value="tennis">Table Tennis </label>
+            </label> <br> <br>
+            <span class="required">** </span>
+            <label> Telephone: <br>
+                <input type="tel"
+                    pattern="+[234]-{3}[0-9]{11}"
+                    placeholder="+234-08012345678"
+                    required>
+            </label> <br>
+            <label>Religion:<br> <br>
+                <select name="religion">
+                    <option disabled
+                        selected>..Select Religion..</option>
+                    <option value="christian">Christian</option>
+                    <option value="muslim">Islamic</option>
+                    <option value="tradition">Traditional</option>
+                    <option value="none">None</option>
+                </select>
+            </label> <br> <br>
+            <!-- below the <optgroup> is used to wrap <options> that are related -->
+            <label>State Of Origin: <br>
+                <select name=""
+                    id="">
+                    <option disabled
+                        selected>..State Of Origin..</option>
+                    <optgroup label="South-East">
+                        <option value="">Abia</option>
+                        <option value="">Anambra</option>
+                        <option value="">Imo</option>
+                    </optgroup>
+                    <optgroup label="South-South">
+                        <option value="">Delta</option>
+                        <option value="">Edo</option>
+                        <option value="">Rivers</option>
+                    </optgroup>
+                </select>
+            </label> <br><br>
+            <label>Complexion: <br>
+                <!-- list="name" should match with datalist="name" and should not be same with id="name" (name1) or name="name" (name1) -->
+                <input list="complexions"
+                    name="complexion"
+                    id="complexion">
+                <datalist id="complexions">
+                    <option value="Fair">
+                    <option value="Chocolate">
+                    <option value="Dark">
+                </datalist>
+                <br><br>
+                <label>
+                    <span class="required">** </span>
+                    Date of Birth: <br>
+                    <input type="date"
+                        id="dob"
+                        name="dob"
+                        required>
+                </label> <br><br>
+                <label>Birth Certificate: <br>
+                    <input type="file"
+                        multiple>
+                </label>
+        </fieldset><br>
+        <fieldset>
+            <legend>Other Details</legend>
+            <label>Your Website:<br>
+                <input type="url"
+                    placeholder="http://website.com">
+            </label><br><br>
+            <label>Select Your Favorite Color: <br>
+                <input type="color"
+                    id="favcolor"
+                    name="favcolor"
+                    value="#ff9900">
+            </label> <br><br>
+            <label>Click to Submit: <br>
+                <input type="image"
+                    src="../../Images/icon/right.png"
+                    alt="Submit"
+                    height="20"
+                    width="30"
+                    id="sub_icon"
+                    name="sub_icon">
+            </label>
+        </fieldset><br>
+        <fieldset>
+            <legend>Search</legend>
+            <input type="search"
+                placeholder="search">
+            <Img src="../../Images/icon/search.png"
+                id="img_search">
+            <input type="image"
+                src="../../Images/icon/right.png"
+                alt="Submit"
+                height="20"
+                width="20"
+                id="sub_icon1"
+                name="sub_icon">
+            </label>
+        </fieldset><br>
+        <fieldset>
+            <legend>Traveling Details</legend>
+            <label>Traveling Month: <br>
+                <input type="month">
+            </label> <br> <br>
+            <label>Traveling Week: <br>
+                <input type="week">
+            </label> <br> <br>
+            <label>Traveling Time: <br>
+                <input type="time">
+            </label><br> <br>
+            <label>Returning Date & time: <br>
+                <input type="datetime-local">
+            </label><br> <br>
+            <label>Number of Days Staying: <br>
+                <input type="number"
+                    min="7"
+                    max="90">
+            </label><br> <br>
+            <label>Traveling Progress: <br>
+                <input type="range" class="progress"
+                    min="0"
+                    max="100"
+                    value="90">
+            </label><br> <br>
+            <button type="button"
+                value="submit"
+                title="I'm dormant"> Submit </button>
+            <button type="button"
+                value="reset"
+                title="I'm dormant">Reset</button>
+        </fieldset>
+        <!-- Another tag that works like <fieldset> alongside <legend> is the <details> tag alongside <summary> tag -->
+        <details>
+            <summary>Welcome Note</summary>
+            <p>Hello! Welcome to my page, have a nice time exploring</p>
+        </details>
+        <details>
+            <summary>My programming Rate</summary>
+            <p>My Success is loading...</p>
+            <progress value="90" class="progress"
+                min=""
+                max="100"></progress>
+        </details> <br>
+        <label>Comment:<br>
+            <textarea name=""
+                id=""
+                cols="40"
+                rows="10"></textarea>
+        </label><br>
+        <input type="button"
+            value="Submit">
+        <input type="reset"
+            value="Reset"> <br> <br>
+    </form>
+
+    <script>
+      let val = 0;
+
+      function increment(){
+        let p = document.getElementsByClassName("progress")[0];
+        let p2 = document.getElementsByClassName("progress")[1];
+        p.value = val;
+        p2.value = val;
+        val += 1;
+        if (val > 100){
+          terminate();
+        }
+      }
+
+      timeoutHandle = setInterval(increment, 1000);
+      
+      function terminate(){
+        clearInterval(timeoutHandle);
+      }
+    </script>
+
+</body>
+
+</html>

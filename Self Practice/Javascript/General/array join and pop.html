@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript OOP</title>
+    <meta name="revised"
+        content="JudeChuks, 25/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: .5em;
+        }
+        body{
+        font: 18px bolder;
+        background-color: dimgray;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+    </style>
+    <script type="text/javascript">
+
+      
+    </script>
+<body>
+    <h2> JavaScript Array With Join And Pop</h2>
+    
+    <script type="text/javascript">
+
+        var series = new Array("Smallville"," The Flash", " Supernatural", " Supergirl", " Krypton", " The Vampire Daires", " The Originals", " Legacy", " Legends of Tomorrow", " Riverdale", " Game of Thrones", );
+
+        document.write("<h3>Series</h3>");
+        // join() method is used to join all members of an array as one string
+        var allSeries = series.join();
+
+        //argument ("-") serves as a separator between members of the array now joined as one... any symbol can be used, but must be enclosed in the quotation mark (" separator ")
+        var allSeries1 = series.join(" - ");
+       
+        document.write("<h4>"+allSeries+"</h4>");
+        document.write("<h4>"+allSeries1+"</h4>");        
+
+        // pop() method is used to remove the last member in the array
+        series.pop();
+        series.pop();
+        // shift() method is used to remove the first member in the array
+        series.shift();
+        // push("item") method is used to insert a member in the array from the back
+        series.push("Riverdale");
+        // unshift("item") method is used to insert a member in the array from the back
+        series.unshift("Smallville");
+        document.write("<h4>"+series+"</h4>");
+
+
+    </script>
+
+</body>
+
+</html>

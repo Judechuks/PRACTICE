@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript</title>
+    <meta name="revised"
+        content="JudeChuks, 26/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: 0;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+         body{
+         background : darkgray;
+         } 
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+    </style>
+</head>
+   
+<body>
+    <h2>Associative Array</h2>
+    
+ <script type="text/javascript">
+       var collections = new Array ();
+// associative array is used to replay the index of an array, which can be used to reference a particular element of an array
+       collections["color"] = "Orange" ;
+       collections["movie"] = "Smallville" ;
+       collections["sport"] = "Football" ;
+       collections["footballer"] = "Messi" ;
+       collections["pet"] = "Dog" ;
+       collections["hobby"] = "Coding" ;
+       collections["friend"] = "Lilian" ;
+       collections["food"] = "Spaghetti" ;
+
+       document.write("<h3> Favorites </h3> ") ;
+       document.write("Color:  " + collections["color"] +"<br>" + "Movie:  " + collections["movie"] +"<br>" + "Sport:  " + collections["sport"] +"<br>" +"Footballer:  " + collections["footballer"] +"<br>" +  "Pet:  " + collections["pet"] +"<br>" + "Hobby:  " + collections["hobby"] +"<br>" + "Friend:  " + collections["friend"] +"<br>" + "Food:  " + collections["food"] +"<br>" ) ;
+         
+       
+    </script>
+
+</body>
+
+</html>

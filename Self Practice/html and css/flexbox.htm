@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FlexBox Model </title>
+    <meta name="revised"
+        content="JudeChuks, 17/04/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: 0;
+        }
+
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+        #container {
+            background: silver;
+            width: 95%;
+            height: 36em;
+            border: 4px solid black;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /*align-items: stretch;*/
+        }
+
+        h2 {
+            text-align: center;
+            margin: .45em 0em;
+        }
+
+        div p {
+            Position: relative;
+            top: 43%;
+            font-weight: bold;
+        }
+
+        .item {
+            position: absolute;
+            border: 0.1875em solid grey;
+            border-radius: .6em;
+            background-color: aqua;
+        }
+
+        .first {
+            order: 1;
+            flex-basis: 100%;
+            height: 8%;
+            flex-grow: 1;
+            flex-shrink: 1;
+            align-self: flex-start;
+            position: relative;
+        }
+
+        .second {
+            order: 2;
+            flex-basis: 40%;
+            height: 70%;
+            flex-grow: 1;
+            flex-shrink: 1;
+            align-self: ;
+            position: relative;
+        }
+
+        .third {
+            order: 3;
+            flex-basis: 6em;
+            flex-grow: 1;
+            flex-shrink: 0;
+            align-self: center;
+            position: relative;
+        }
+
+        .fourth {
+            order: 4;
+            flex-basis: 6em;
+            flex-grow: 1;
+            flex-shrink: 1;
+            align-self: center;
+            position: relative;
+        }
+
+        .fifth {
+            order: 5;
+            flex-basis: 100%;
+            height: 8%;
+            width: 100%;
+            flex-grow: 5;
+            flex-shrink: 1;
+            align-self: flex-end;
+
+            position: relative;
+        }
+
+        .sixth {
+            order: 6;
+            height: 90%;
+            flex-basis: 20%;
+            flex-grow: 1;
+            flex-shrink: 1;
+            align-self: flex-end;
+            position: relative;
+        }
+
+        /* flex shorthand property */
+        /* flex: [grow] [shrink] [basis]; */
+    </style>
+
+<body>
+    <h2> FlexBox Model</h2>
+    <div id="container">
+        <div class="item first">
+            <p> A</p>
+        </div>
+        <div class="item second">
+            <p> B</p>
+        </div>
+        <div class="item third">
+            <p> C</p>
+        </div>
+        <div class="item sixth">
+            <p> D</p>
+        </div>
+        <div class="item fifth">
+            <p> E</p>
+        </div>
+        <div class="item fourth">
+            <p> F</p>
+        </div>
+    </div>
+</body>
+
+</html>

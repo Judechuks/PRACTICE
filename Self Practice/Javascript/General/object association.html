@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Association</title>
+  <p>Check the Console</p>
+</head>
+<body>
+  <script>
+    let player1 = {name: "Fred", score: 10000, rank: 1};
+    let player2 = {name: "Sam", score: 100000, rank: 5};
+
+    function playerDetails(){
+      console.log("Player Name: ", this.name, " Player Score: ", this.score, " Player Rank: ", this.rank);
+    }
+
+    //associating playerDetails function to player object method
+    player1.logDetails = playerDetails;
+    player2.logDetails = playerDetails;
+    //Note: the above two lines of code is not same as caslling the playerDetails function but rather associating the function to the player method logDetails
+
+    player1.logDetails();
+    player2.logDetails();
+  </script>
+</body>
+</html>

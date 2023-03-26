@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Module</title>
+</head>
+<style>
+  #container{
+    background-color: cadetblue;
+  }
+  p{
+    font-size: 1.2rem;
+  }
+</style>
+<body>
+    <p id="first">First Paragraph</p>
+  <div id="container">
+    <p>Second Paragraph</p>
+  </div>
+
+  <script>
+    let first = document.getElementById("first");
+    //gets the paragraph from the body and then can be manipulated the way you want
+    
+    let container = document.getElementById("container");
+    let secondFirst = container.getElementsByTagName("p");
+    //gets the same paragraph as the above. The difference is that any paragraph outside the div container will not be selected.
+
+    //when you use:
+    // document.getElementsByClassName, document.getElementsByName, document.getElementsByTagName (Elements meaning more than one). Its saves or stores the value as an array in the variable that you have decided to use.
+
+  // to create an element use, document.createElement("elementName");
+  let pTag = document.createElement("p");
+  pTag.innerHTML = "Third paragraph";
+  document.getElementById("container").appendChild(pTag);
+
+  //To create a text on the page without a tag, use: 
+  let newText = document.createTextNode("This is another text node");
+  document.getElementById("container").appendChild(newText);
+
+
+  </script>
+</body>
+</html>

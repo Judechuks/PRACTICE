@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript OOP</title>
+    <meta name="revised"
+        content="JudeChuks, 25/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: .5em;
+        }
+        body{
+        font: 18px bolder;
+        background-color: dimgray;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+    </style>
+    <script type="text/javascript">
+
+      
+    </script>
+<body>
+    <h2> JavaScript Array With Reverse, Push And Sort</h2>
+    
+    <script type="text/javascript">
+
+        document.write("<h3>Series</h3>");
+
+        var series = new Array(" Smallville"," The Flash", " Supernatural", " Supergirl", " Krypton", " The Vampire Daires", " The Originals", " Legacy", " Legends of Tomorrow", " Riverdale", " Game of Thrones", );
+        var episodes = new Array("02", "05", "06", "01", "04", "08", "03", "07", "10", "09")
+
+        document.write("<h4>"+series+"</h4>");
+
+        document.write("<h3>Reversed Order</h3>");
+        // reverse() method is used to change the order of appearance of members
+        series.reverse();
+        document.write("<h4>"+series+"</h4>"); 
+        series.reverse();
+
+        document.write("<h3>Extra Added</h3>");
+        // push() method is used to add members into the array
+        series.push(" Captin Marvel", " The Titans", " Superman and Lois");
+        document.write("<h4>"+series+"</h4>"); 
+
+        document.write("<h3>Sorted</h3>");
+        // sort() method is used to arrange the members alpabetically
+        series.sort();
+        episodes.sort();
+        document.write("<h4>"+series+"</h4>");       
+        document.write("<h4>"+episodes+"</h4>");       
+
+
+    </script>
+
+</body>
+
+</html>

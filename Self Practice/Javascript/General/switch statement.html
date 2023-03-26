@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript </title>
+    <meta name="revised"
+        content="JudeChuks, 22/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: .5em;
+        }
+
+        body{
+        font: 18px bolder;
+        background-color: dimgray;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+    </style>
+   
+<body>
+    <h2> JavaScript Switch Statement</h2>
+    
+    <script type="text/javascript">
+
+        var gender = (prompt("What is your Gender?: ")).toLowerCase();
+        switch(gender){
+            case "male":
+            document.write("You are a man and a potential father");
+            break;
+            case "female":
+            document.write("You are a woman and a potential mother");
+            break;
+            default: 
+            document.write("You are a man or a woman so you a potential father or mother");
+        }
+
+    </script>
+
+</body>
+
+</html>

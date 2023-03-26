@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> dropdown </title>
+    <style>
+        h1 {
+            background-color: blue;
+            color: yellow;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+        }
+        .dropdown1 {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown1-content {
+            display: none;
+            position: absolute;
+            background-color: lightcyan;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+        }
+        .dropdown1:hover .dropdown1-content {
+            display: block;
+        }
+        .dropbtn {
+            background-color: steelblue;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #e8e8e8;
+            min-width: 200px;
+            box-shadow: px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            Padding: 0.5px;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            background-color: #00cccc;
+            text-align: center;
+            font-size: 20px;
+        }
+        .dropdown-content a:hover {
+            background-color: #00ffff;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: turquoise;
+        }
+        .text {
+            color: #0000ff;
+            background-color: #ffff00;
+            padding: 8px;
+            font-size: 24px;
+        }
+        .text2 {
+            font-size: 24px;
+            padding: 8px;
+        }
+        body {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dropdown Menu</h1>
+    <p>Move the mouse over the button to open the dropdown menu.</p>
+    <div class="dropdown">
+        <button class="dropbtn"><b>Dropdown </b></button>
+        <div class="dropdown-content">
+            <b> <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a> </b>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Hoverable Dropdown</h1>
+    <p>Move the mouse over the text below to open the dropdown content.</p>
+    <div class="dropdown1">
+        <span class="text"> <b> Mouse over me </b> </span>
+        <div class="dropdown1-content">
+            <p class="text2"> <b> Hoverable Dropdown </b> </p>
+        </div>
+    </div>
+</body>
+</html>

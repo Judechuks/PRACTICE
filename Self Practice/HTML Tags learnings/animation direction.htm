@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS | animation-direction Property
+        </title>
+        <style>
+            body {
+                text-align:center;
+            }
+            h1 {
+                color:green;
+            }
+            h3 {
+                width: 100%;
+                animation-name: text;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+            }
+            
+            @keyframes text {
+                from {
+                    margin-left: 60%;
+                }
+                to {
+                    margin-left: 0%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h3 id="one">This text is normal.</h3>
+    </body>
+</html>                                  

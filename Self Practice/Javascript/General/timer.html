@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+</head>
+<style>
+  div{
+    font-size: 1.5rem;
+    background-color: gray;
+    color: maroon;
+  }
+</style>
+<body>
+  <div>
+    <p id="p1"></p>
+    <p id="p2"></p>
+  </div>
+
+  <script>
+    //Timers in Javascript are of two methods:
+    // 1. setTimeout: allows functions to be called at a particular time. It accepts two arguments; function you are calling and the time when it will be called (in milliseconds).
+    // 2. setInterval: allows functions to be called repeatedly at different interval. It accepts three arguments; function you are calling, the time intervals it should delay to repeat the calling (in milliseconds) and false value. The major arguments are the function and the time.
+
+    function greeting(){
+      let p1 = document.getElementById("p1");
+      p1.appendChild(document.createTextNode("Welcome to my page"));
+    }
+    function appear(){
+      let p2 = document.getElementById("p2");
+      p2.appendChild(document.createTextNode("Welcome to my page"));
+    }
+    setTimeout(greeting, 2000);
+    setInterval(appear, 3000);
+  </script>
+</body>
+</html>

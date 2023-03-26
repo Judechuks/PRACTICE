@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--css/js files are also supported, you can
+ refer them using relative path.
+ Save all files first, including html file
+ to use this feature. -->
+	<style type="text/css">
+		h1 {
+			color: #555555;
+		}
+
+		body {
+			background-color: #e2e2e2;
+			font-size: 30px;
+		}
+
+		input {
+			font-size: 30px;
+		}
+
+		output {
+			color: blue;
+			background-color: white;
+			font-size: 38px;
+			padding: 10px;
+		}
+	</style>
+
+	<script type="text/JavaScript">
+    function showResult()
+    {
+    	x = document.forms["myform"]["newinput"].value;
+    	document.forms["myform"]["result"].value = x;
+    }
+    
+    </script>
+
+</head>
+
+<body>
+	<form action="/cgi-bin/html5.cgi" method="get" name="myform">
+		<b>Enter Value:</b>
+		<br />
+		<input type="text" name="newinput" />
+		<br />
+		<br />
+		<input type="button" Value="Result" onclick="showResult();" />
+		<br />
+		<br />
+		<b><output name="result"></b>
+
+	</form>
+
+</body>
+
+</html>

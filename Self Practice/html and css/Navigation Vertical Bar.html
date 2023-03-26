@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Navigation Example </title>
+<style> 
+h1{
+	color: #33ccff;
+	border: 2px solid blue;
+	background-color: yellow;
+    Padding: 10px;
+}
+ul{
+	list-style-type: none;
+	border: 2px solid blue;
+	background-color: cyan;
+	margin: 0px;
+	padding: 0px;
+	width: 250px;
+}
+li a{
+	display: block;
+	color: magenta;
+	text-decoration: none;
+	margin: 1px;
+	padding: 8px 0px 8px 16px;
+	font-size: 24px;
+}
+li a.active{
+	background-color: red;
+	color: white;
+}
+li a:hover:not(.active){
+	background-color: turquoise;
+	color: white;
+}
+
+</style>
+<body>
+
+<h1> My  Vertical Navigation Bar...</h1>
+
+	<ul>
+		<li><a class="active" href="#" >Home</a></li>
+		<li><a href="#" >About</a></li>
+		<li><a href="#" >Contact</a></li>
+		<li><a href="#" >More</a></li>
+	</ul>
+			<p> This a very nice navigation bar 
+				whereby the active nav has color red,
+				the background of the nav bar is cyan,
+				and the hovered but not active navs has color turquoise...</p>
+			<p> This is the work of CSS and HTML...</p>
+
+</body>
+</html>

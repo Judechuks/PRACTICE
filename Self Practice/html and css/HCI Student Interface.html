@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Student Registration</title>
+<style>
+    * {
+	margin: 0;
+	padding: 0;
+    }
+    .Regform {
+        background-color: rgb(0, 0, 0, 0.8);
+        margin: auto;
+	    width: 800px;
+	    padding: 10px 0px 10px 0px;
+	    border-radius: 15px 15px 0px 0px;
+        color: aqua;
+        text-align: center;  
+    }
+    body {
+        background-image: url(../../Images/ngwa_girls_white.jpg);
+        background-position: center;
+	    background-size: cover;
+	    font-family: sans-serif;
+	    margin-top: 40px;
+    }
+   .info {
+        text-align: center;
+    }
+   .main {
+        background-color: (0, 0, 0, 0.5);
+	width: 800px;
+	margin: auto;
+    }
+   form {
+        Padding: 10px;
+   }
+    #main {
+        width:100%;
+        height: 100px;
+   } 
+   .name {
+        margin-left: 25px;
+        margin-top: 30px;
+        width: 125px;
+	font-size: 18px;
+	font-weight: 700; 
+   } 
+
+</style>
+</head>
+
+<body>
+    <div class="Regform"> <h1> Student Form</h1> </div>
+    <div class="info"> <h3>Enter your Details Correctly</h3> </div>
+   <div clas="main">
+    <form action="" method="">
+       <label for="lname">LASTNAME: </label>
+       <input type="text" id="lname" name="Name" size="30"> <br> <br>
+       <label for="fname">FIRSTNAME: </label>
+       <input type="text" id="fname" name="Name" size="30"> <br> <br> 
+       <label for="oname">OTHER NAMES: </label>
+       <input type="text" id="oname" name="Name" size="30"> <br> <br>
+       <label for="sex"> SEX: </label>
+       <label for="sex"> Male </label>
+       <input type="radio" id="sex" name="MorF" value="Male">
+       <label for="sex"> Female </label>
+       <input type="radio" id="sex" name="MorF" value="Female"> <br> <br>
+       <label for="DOB"> DATE OF BIRTH: </label>
+       <input type="date" id="DOB" name="dob"><br><br>
+       <label for="fone"> PHONE NUMBER: </label>
+       <input type="text" id="fone" name="phone"> <br> <br>
+       <label for="nat"> NATIONALITY: </label>
+       <input type="text" id="nat" name="nation"> <br> <br>
+       <label for="state"> STATE OF ORIGIN: </label>
+       <input type="text" id="state" name="state"> <br> <br>
+       <label for="local"> L.G.A: </label>
+       <input type="text" id="local" name="lga"> <br> <br>
+       <label for="address"> ADDRESS: </label>
+       <input type="text" id="address" name="adds"> <br> <br>
+       <label for="email"> EMAIL: </label>
+       <input type="email" id="email" name="email_add"> <br> <br>
+       <label for="clas"> CLASS: </label>
+       <select id="clas" name="class"> 
+          <option selected="selected" disabled="disabled">...Select Class... </option>
+          <option> JSS 1</option>
+          <option> JSS 2</option>
+          <option> JSS 3</option>
+          <option> SSS 1</option>
+          <option> SSS 2</option>
+          <option> SSS 3</option>
+       </select> <br> <br>
+       <label for="subject"> SUBJECTS: </label>
+       <select id="subject" name="subject" multiple="multiple">
+           <option selected="selected" disabled="disabled">...Select Subjects... </option>
+          <option> Mathematics</option>
+          <option> English</option>
+          <option> Agric</option>
+          <option> Home Economics</option>
+          <option> C.R.S</option>
+          <option> Chemistry</option>
+          <option> Physics</option>
+          <option> Biology</option>
+          <option> Geography</option>
+          <option> History</option>
+          <option> Commerce</option>
+          <option> Economics</option>
+          <option> Literature</option>
+          <option> Fine Art</option>
+          <option> Basic Tech</option>
+          <option> Basic Science</option>
+          <option> Government</option>
+          <option> Social Studies</option>
+          <option> Civic Education</option>
+       </select> <br> <br>
+       <input type="submit" name="submit" value="SUBMIT"/>
+       <input type="reset" name="reset" value="RESET"/> <br> <br>
+
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <title>blackjack</title>
+    <meta name="revised" content="JudeChuks, 09/07/2022">
+    <meta charset="UTF-8">
+    <style>
+body {
+    background: #016f32;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Helvetica Neue';
+}
+h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+   color: goldenrod;
+} 
+h2{
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+} 
+button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 8px;
+    margin-right: 3px;
+    border-radius: 5px;
+} 
+#start-btn {
+    background: goldenrod;
+    color : darkblue;
+} 
+#new-btn{
+    background: darkblue;
+    color : goldenrod;
+} 
+#msg {
+   font-style: italic;
+}
+#wrapper{
+    margin: 100px 0 0 0;
+    padding: 80px 0;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+<h1>BlackJack</h1>
+<p id="msg">Want to play a round? </p>
+<p id="card">Card: </p>
+<p id="sum">Sum: </p>
+<button id="start-btn" onclick="startGame()">START GAME</button> <br>
+<button id="new-btn" onclick="newCard()">NEW CARD</button>
+<p id="player-el"></p>
+</div>
+
+<script type="text/javascript">
+    let messageRef = document.getElementById('msg');
+    let cardRef = document.getElementById('card');
+    let sumRef = document.getElementById('sum');
+    let playerEl = document.getElementById('player-el');
+    let hasBlackJack = false
+    let isAlive = false
+    let cards = []
+    let sum = 0
+
+player = { 
+    name: "Jude",
+    chips: 250
+}
+playerEl.textContent = player.name+": $"+player.chips
+
+function getRandomCard() {
+    let randomNum = Math.floor(Math.random() * 13) + 1
+    if (randomNum > 10){
+        return 10
+    } else if (randomNum === 1) {
+        return 11
+    } else {
+        return randomNum
+    }
+}
+
+function startGame() {
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard , secondCard]
+    sum = firstCard + secondCard
+    // when you remove the above codes in the startGame the startGame function does not execute the code the second time, it is better
+    renderGame()
+}
+function renderGame() {
+    cardRef.textContent = "Cards: "
+    for (let i = 0; i < cards.length; i++) {
+        cardRef.textContent += cards[i] + " "
+    }
+    sumRef.textContent = "Sum: " + sum
+
+    if (sum <= 20) {
+    message = "Do you need to draw a new card?"
+    } else if (sum === 21) {
+    message = "You've got a blackjack"
+    hasBlackJack = true
+    } else {
+    message = "You're out of the game"
+    isAlive = false
+    }
+    messageRef.textContent = message
+}
+//add another card to existing cards
+function newCard() {
+    if (isAlive === true && hasBlackJack === false) {
+        let nextCard = getRandomCard()
+        sum += nextCard
+        cards.push(nextCard)
+        renderGame()
+    }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Student Registration</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.Regform {
+			background-color: rgba(0, 0, 0, 0.8);
+			margin: auto;
+			width: 800px;
+			padding: 10px 0px 10px 0px;
+			border-radius: 15px 15px 0px 0px;
+			color: aqua;
+			text-align: center;
+		}
+
+		body {
+			background-image: url(../../Images/ngwa_girls_white.jpg);
+			background-position: center;
+			background-size: cover;
+			font-family: sans-serif;
+			margin-top: 40px;
+		}
+
+		.info {
+			text-align: center;
+			color: white;
+		}
+
+		.main {
+			background-color: rgba(0, 0, 0, 0.7);
+			width: 800px;
+			margin: auto;
+		}
+
+		form {
+			Padding: 10px;
+		}
+
+		#name {
+			width: 100%;
+			height: 60px;
+		}
+
+		.name {
+			margin-left: 15px;
+			margin-top: 5px;
+			width: 150px;
+			color: white;
+			font-size: 14px;
+			font-weight: 700;
+		}
+
+		.lname {
+			position: relative;
+			display: inline-block;
+			left: 150px;
+			top: -22%;
+			line-height: 25px;
+			border-radius: 6px;
+			padding: 0 10px;
+			font-size: 16px;
+			color: #555;
+		}
+
+		.fname {
+			position: relative;
+			display: inline-block;
+			left: 320px;
+			top: -71%;
+			line-height: 25px;
+			border-radius: 6px;
+			padding: 0 10px;
+			font-size: 16px;
+		}
+
+		.lastlabel {
+			position: relative;
+			left: 161px;
+			top: -23px;
+			text-transform: capitalize;
+			color: white;
+			font-size: 14px;
+		}
+
+		.firstlabel {
+			position: relative;
+			left: 108px;
+			top: -25px;
+			text-transform: capitalize;
+			color: white;
+			font-size: 14px;
+		}
+
+		.m {
+			color: white;
+			position: relative;
+			top: -17px;
+			left: 150px;
+		}
+
+		#DOB,
+		#fone,
+		#nat,
+		#state,
+		#local,
+		#address,
+		#email,
+		#clas,
+		#sub {
+			position: relative;
+			left: 150px;
+			top: -26px;
+			line-height: 25px;
+			width: 180px;
+			border-radius: 6px;
+			padding: 0 10px;
+			color: #555;
+			font-size: 16px;
+		}
+
+		button {
+			background-color: #3BAF9F;
+			display: block;
+			margin: 20px 0px 0px 20px;
+			text-align: center;
+			border-radius: 12px;
+			border: 2px solid #366473;
+			padding: 14px 110px;
+			color: white;
+			cursor: pointer;
+			outline: none;
+			transition: 0.25px;
+			position: relative;
+			top: -145px;
+			left: 400px;
+		}
+
+		button:hover {
+			background-color: blue;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="Regform">
+		<h1> Student Form</h1>
+	</div>
+	<div class="main">
+		<div class="info">
+			<h3>Enter your Details Correctly</h3>
+		</div>
+		<form action="" method="POST|GET">
+			<div id="name">
+				<h2 class="name">NAME: </h2>
+				<input type="text" class="lname" name="Name"> <br>
+				<label for="lname" class="lastlabel">Last Name </label>
+				<input type="text" class="fname" name="Name">
+				<label for="fname" class="firstlabel">First Name </label>
+			</div>
+			<label for="sex1">
+				<h2 class="name">SEX: </h2>
+			</label>
+			<div class="m"> <label for="sex1"> Male </label>
+				<input type="radio" id="sex1" name="MorF" value="Male">
+				<label for="sex2"> Female </label>
+				<input type="radio" id="sex2" name="MorF" value="Female">
+			</div>
+			<label for="DOB">
+				<h2 class="name">DATE OF BIRTH: </h2>
+			</label>
+			<input type="date" id="DOB" name="dob">
+			<label for="fone">
+				<h2 class="name">PHONE NUMBER: </h2>
+			</label>
+			<input type="text" id="fone" name="phone">
+			<label for="nat">
+				<h2 class="name"> NATIONALITY: </h2>
+			</label>
+			<input type="text" id="nat" name="nation">
+			<label for="state">
+				<h2 class="name">STATE OF ORIGIN: </h2>
+			</label>
+			<input type="text" id="state" name="state">
+			<label for="local">
+				<h2 class="name">L.G.A: </h2>
+			</label>
+			<input type="text" id="local" name="lga">
+			<label for="address">
+				<h2 class="name"> ADDRESS: </h2>
+			</label>
+			<input type="text" id="address" name="adds">
+			<label for="email">
+				<h2 class="name"> EMAIL: </h2>
+			</label>
+			<input type="email" id="email" name="email_add">
+			<label for="clas">
+				<h2 class="name">CLASS: </h2>
+			</label>
+			<select id="clas" name="class">
+				<option selected="selected" disabled="disabled">...Select Class... </option>
+				<option> JSS 1</option>
+				<option> JSS 2</option>
+				<option> JSS 3</option>
+				<option> SSS 1</option>
+				<option> SSS 2</option>
+				<option> SSS 3</option>
+			</select>
+			<label for="sub">
+				<h2 class="name">SUBJECTS: </h2>
+			</label>
+			<select id="sub" name="subject" size="10" multiple="multiple">
+				<option selected="selected" disabled="disabled">...Select Subjects... </option>
+				<option selected="selected"> Mathematics</option>
+				<option selected="selected"> English</option>
+				<option selected="selected"> Civic Education</option>
+				<option> Agric Science</option>
+				<option> Basic Science</option>
+				<option> Basic Tech</option>
+				<option> P.H.E</option>
+				<option> Home Economics</option>
+				<option> Social Studies</option>
+				<option> French</option>
+				<option> Computer Studies</option>
+				<option> Business Studies</option>
+				<option> Fine Art</option>
+				<option> Music</option>
+				<option> Further Maths</option>
+				<option> Food & Nutrtion</option>
+				<option> Physics</option>
+				<option> Chemistry</option>
+				<option> Biology</option>
+				<option> Geography</option>
+				<option> Economics</option>
+				<option> Commerce</option>
+				<option> History</option>
+				<option> Government</option>
+				<option> Data Processing</option>
+			</select>
+			<button type="submit"> SUBMIT </button>
+			<button type="reset"> RESET </button>
+		</form>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setTimeout</title>
+</head>
+<style>
+  div{
+    font-size: 1.5rem;
+    background-color: gray;
+    color: maroon;
+  }
+</style>
+<body>
+  <div>
+    <p id="p">Hello</p>
+  </div>
+
+  <script>
+    //Timers in Javascript are of two methods:
+    // 1. setTimeout: allows functions to be called at a particular time. It accepts two arguments; function you are calling and the time when it will be called (in milliseconds).
+
+    function greeting(){
+      let p = document.getElementById("p");
+      p.appendChild(document.createTextNode("Welcome to my page"));
+    }
+    
+    setTimeout(greeting, 2000);
+  </script>
+</body>
+</html>

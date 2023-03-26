@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript</title>
+    <meta name="revised"
+        content="JudeChuks, 25/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: .5em;
+        }
+
+        body{
+        font: 18px bolder;
+        background-color: dimgray;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+    </style>
+   
+<body>
+    <h2> Score Grading</h2>
+    
+    <script type="text/javascript">
+
+      function getScore() {
+        var score = prompt("Enter your score: ");
+            score = parseInt(score);
+        grade(score);
+      }
+
+      function grade(score) {
+// use of array to create grade remark
+        var remark = ["Superb", "Distinction", "Excellent", "Very Good", "Good", "Average", "Fair", "Poor", "Failed"];
+
+        switch(true){
+            case (score >= 75 && score <= 100):
+            document.write("Your Score: "+score+"<br />"+"Grade: A - "+remark[0]);
+               break;
+        case (score >= 70 && score <= 74):
+            document.write("Your Score: "+score+"<br />"+"Grade: AB - "+remark[1]);
+               break;
+        case (score >= 65 && score <= 69):
+            document.write("Your Score: "+score+"<br />"+"Grade: B - "+remark[2]);
+               break;
+        case (score >= 60 && score <= 64):
+            document.write("Your Score: "+score+"<br />"+"Grade: BC - "+remark[3]);
+               break;
+        case (score >= 55 && score <= 59):
+            document.write("Your Score: "+score+"<br />"+"Grade: C - "+remark[4]);
+               break;
+        case (score >= 50 && score <= 54):
+            document.write("Your Score: "+score+"<br />"+"Grade: CD - "+remark[5]);
+               break;
+        case (score >= 45 && score <= 49):
+            document.write("Your Score: "+score+"<br />"+"Grade: D - "+remark[6]);
+               break;
+        case (score >= 40 && score <= 44):
+            document.write("Your Score: "+score+"<br />"+"Grade: E - "+remark[7]);
+               break;
+        case (score >= 0 && score <= 39):
+            document.write("Your Score: "+score+"<br />"+"Grade: F - "+remark[8]);
+               break;
+        default :
+            document.write("Your Score: "+score+"<br />"+"Error: Re-check your score again");
+        }
+    }
+        getScore();
+
+    </script>
+
+</body>
+
+</html>

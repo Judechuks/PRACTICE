@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+  <ol id="orderedList">
+    <li>First</li>
+    <li>Second</li>
+    <!-- Third is added using javascript -->
+    <li>Fourth</li>
+    <!-- Fifth is added using javascript -->
+  </ol>
+</body>
+<script>
+
+  // 1. CREATING A NEW LIST ITEM TO THE ORDERED LIST AS THE LAST ITEM DOWNWARDS
+
+  //  first, get the element (i.e in this case the list) from the DOM
+   const ol = document.getElementById("orderedList");
+
+  //  second, create the new list item (i.e the list)
+   let createList = document.createElement("li");
+
+   // third, create the text (i.e the textNode that will be contained in the list item, alternatively, li.innerHTML can be used)
+   let listText = document.createTextNode("Fifth");
+
+   // append (i.e attach) the created textNode to the list item
+   createList.appendChild(listText);
+
+   // append the created list to the ordered list in the DOM
+   ol.appendChild(createList);
+
+  // 2. CREATING A NEW LIST ITEM TO THE ORDERED LIST AT ANY POSITION
+  
+  // first, select all the list in the orderedList (it returns the values in array)
+  let lists = ol.getElementsByTagName("li");
+
+  // create a new list item
+  let newList = document.createElement("li");
+  
+  // create a textNode and append it to the newly created list node
+  newList.appendChild(document.createTextNode("Third"));
+  // get the position where you want the list to be added to (this time using 'insertBefore')
+  ol.insertBefore(newList, lists[2]);
+  
+</script>
+</html>

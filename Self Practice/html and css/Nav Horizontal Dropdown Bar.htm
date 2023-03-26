@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>horizontal Dropdown Nav Bar </title>
+    <meta charset="UTF-8" />
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #sub_body {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        h1 {
+            Color: blue;
+            Background-color: #ffff00;
+            Text-align: center;
+        }
+
+        h2 {
+            color: #0000cc;
+            text-align: center;
+        }
+
+        ul {
+            Top: 0;
+            Margin: 0;
+            Padding: 0;
+            List-style-type: none;
+            background-color: turquoise;
+            overflow: hidden;
+        }
+
+        Li {
+            Float: left;
+        }
+
+        Li a {
+            Display: block;
+            /* display: inline-block; to make 
+            the dropdown appear horizontally */
+            Text-decoration: none;
+            Text-align: center;
+            padding: 12px 14px;
+            font-size: 16px;
+            font-weight: bold;
+            border-right: 1px solid yellow;
+        }
+
+        Li a:hover:not(.active) {
+            Background-color: #0011ee;
+            color: aliceblue;
+        }
+
+        .active {
+            Background-color: red;
+            Color: white;
+        }
+
+        .content {
+            display: none;
+            position: absolute;
+            background-color: turquoise;
+            z-index: 1;
+        }
+
+        .container:hover .content {
+            display: block;
+            position: absolute;
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li> <a href="#" class="active"> Home </a> </li>
+        <li>
+            <div class="container"><a href="#"> News</a>
+                <div class="content">
+                    <a href="#"> Global </a>
+                    <a href="#"> National</a>
+                    <a href="#"> Politics </a>
+                    <a href="#"> Sports </a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container"><a href="#"> Musics</a>
+                <div class="content">
+                    <a href="#"> Pop </a>
+                    <a href="#"> Jazz</a>
+                    <a href="#"> Rock </a>
+                    <a href="#"> Reggae </a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container"><a href="#">Pictures</a>
+                <div class="content">
+                    <a href="#"> Animals </a>
+                    <a href="#"> Nature</a>
+                    <a href="#"> Cars </a>
+                    <a href="#"> Sports </a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="container"><a href="#">Videos</a>
+                <div class="content">
+                    <a href="#"> Series </a>
+                    <a href="#"> Action</a>
+                    <a href="#"> Anime </a>
+                    <a href="#"> Comics </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <br>
+    <h1> Horizontal Dropdown Navigation Bar </h1>
+    <h2> This is scrollable horizontal nav bar </h2>
+
+    <div id="sub_body">
+        <h3> Try Hovering The Nav Bar </h3>
+        <p> This is an HTML and CSS practice...
+            <br> I'm creating a horizontal navigation bar with a drop down
+        </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+        <p>Texts.... </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and Pattern</title>
+</head>
+  <!-- <style>
+    body {
+      position: relative;
+    }
+    form {
+      position: relative;
+      width: 600px;
+      margin: 10% auto;
+    }
+    h1 {
+      position: absolute;
+      top: 9%;
+    }
+    .container {
+      background-color: rgba(125, 125, 125, 0.6);
+      width: 500px;
+      margin: 10% auto;
+      border-radius: 10px;
+    }
+    label:not(#agree){
+      /* left: 20px; */
+      font-size: 1.4rem;
+    }
+    input:not(#agree) {
+      display: inline-block;
+      position: relative;
+      left: 20px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      margin-bottom: 9px;
+    }
+  </style> -->
+<body>
+  <form>
+   <div class="container">
+    <h2>SIGN UP</h2>
+    <label for="user">Username:</label>
+    <input type="text" id="user" pattern=".{12,}"> 
+    <br>
+    <label for="f-name">Last Name:</label>
+    <input type="text" id="f-name"> 
+    <br>
+    <label for="l-name">First Name:</label>
+    <input type="text" id="l-name"> 
+    <br>
+    <label for="pass">New Password:</label>
+    <input type="password" id="pass"> 
+    <br>
+    <label for="re-pass">Retype Password:</label>
+    <input type="password" id="re-pass"> 
+    <br>
+    <input type="checkbox" id="agree"> 
+    <label for="agree">  I accept and agree to the terms and conditions <br> 
+      <a href="#">Terms and Conditions</a>
+    </label>
+    <input type="submit" value="SIGN UP">
+   </div>
+  </form>
+</body>
+</html>

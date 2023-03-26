@@ -1,0 +1,9 @@
+If you want to run the javascript file using node. You have to make sure node is installed
+You can download node or TailwindCSS and install 
+To run the code, go the the command promt wich the actual path to this folder
+Then type
+node followed by the name of the javascript file.
+Example:
+node 06-arrays
+or
+node 0-arrays.js

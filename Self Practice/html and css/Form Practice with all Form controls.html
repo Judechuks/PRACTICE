@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Form Practice</title>
+    <style>
+        h1 {
+            Color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> PERSONAL DETAILS </h1>
+    <h3> Please enter your correct details</h3>
+    <form action="script url" method="GET|POST">
+        Last Name: <input type="text" name="last_name" /><br><br>
+        First Name:<input type="text" name="first_name" /><br><br>
+        Middle Name:<input type="text" name="middle_name" /><br><br>
+        Sex: <input type="text" name="_sex" maxlength="6" /><br><br>
+        Occupation: <input type="text" name="occup" /><br><br>
+        Address: <input type="text" name="_address" /><br><br>
+        Phone: <input type="text" name="_phone" /><br><br>
+        Email: <input type="text" name="_email" /><br><br>
+        Date Of Birth: <input type="date" name="DOB" /><br><br>
+        Secret Question: What is your favourite food?<br>
+        Answer: <input type="password" name="f_food" /><br><br>
+        Marital Status:
+        single<input type="radio" name="_single" value="single" checked="checked" /> &nbsp&nbsp
+        Married <input type="radio" name="_married" value="married" /><br><br>
+        Religion: <select name="dropdown">
+            <option value="christian" selected>Christian</option>
+            <option value="muslim">Muslim</option>
+            <option value="pegan">Pegan</option>
+            <option value="budihism">Budihism</option>
+            <option value="hindism">Hindism</option>
+            <option value="judaism">Judaism</option>
+            <option value="none">None</option>
+        </select><br>
+        <!-- another attribute is the "multiple" if set to multiple then a user can select more than one options -->
+        Please tick where possible<br>
+        Tall<input type="checkbox" name="tall" value="on" /><br>
+        Short<input type="checkbox" name="short" value="on" /><br>
+        Fat<input type="checkbox" name="fat" value="on" /><br>
+        Slim<input type="checkbox" name="slim" value="on" /><br>
+        Dark<input type="checkbox" name="dark" value="on" /><br>
+        Fair<input type="checkbox" name="fair" value="on" /><br>
+        File upload
+        <input type="file" name="fileupload" accept="image/*" /><br>
+        Buttons<br>
+        <input type="submit" name="Submit" value="submit" /><br>
+        <input type="reset" name="reset" value="Reset" /><br>
+        <input type="button" name="ok" value="OK" /><br>
+        <input type="image" name="imagebutton" src="../../Images/icon/right.png" height="35"
+            width="50" /><br>
+
+        Comments:<br><textarea cols="60" rows="10" nament="_comments"> comment here</textarea><br>
+        File Upload with hidden form control
+        <input type="hidden" name="pagename" value="10" /><br>
+        <input type="submit" name="submit" value="Submit" /><br>
+        <input type="reset" name="reset" value="Reset" /><br>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript Function </title>
+    <meta name="revised"
+        content="JudeChuks, 22/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: .4em;
+        }
+
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+        body{
+        font: 18px bolder;
+        background-color: dimgray;
+        }
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+    </style>
+    
+
+<body>
+    <h2> JavaScript Arithmetic Operators Using Function with Return Keyword</h2>
+    
+<script  type="text/javascript">
+
+    function sum(a, b) {
+        return a + b;
+    } 
+    function mul(a, b) {
+        return a * b;
+    } 
+    function sub(a, b) {
+        return a - b;
+    } 
+    function div(a, b) {
+        return a / b;
+    } 
+    function mod(a, b) {
+        return a % b;
+    } 
+    function increment(a) {
+        a++;    
+        return a;
+    }
+    function decrement(a) {
+        a--;
+        return a;
+    }  
+    document.write("9 + 3 = "+sum (9,3)+"<br>") ;
+    document.write("9 * 3 = "+mul (9,3)+"<br>") ;
+    document.write("9 - 3 = "+sub (9,3)+"<br>") ;
+    document.write("9 / 3 = "+div (9,3)+"<br>") ;
+    document.write("9 % 3 = "+mod (9,3)+"<br>") ;
+    document.write("93++ = "+increment (93)+"<br>") ;
+    document.write("93-- = "+decrement (93)+"<br>") ;
+
+
+    </script>
+</body>
+
+</html>
+

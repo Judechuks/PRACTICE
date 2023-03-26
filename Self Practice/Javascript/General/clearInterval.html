@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClearInterval</title>
+</head>
+<style>
+  p{
+    font-size: 1.5rem;
+    background-color: gray;
+    color: green;
+  }
+  #btn{
+    position: fixed;
+    top: 60px;
+    background-color: red;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+</style>
+<body>
+  <p id="p"></p>
+  <button id="btn">Stop setInterval</button>
+
+  <script>
+    const btn = document.getElementById("btn");
+    let p = document.getElementById("p");
+
+    let appear = setInterval (function(){
+      p.innerHTML = "Welcome";
+    }, 1000);
+
+    let disappear = setInterval (function(){
+      p.innerHTML = "";
+    }, 2000);
+
+    btn.onclick = function stopSetInterval(){
+      clearInterval(appear); //stops appear setInterval
+      clearInterval(disappear); //stops disappear setInterval
+
+      if (clearInterval){
+        p.innerHTML = "Welcome";
+      }
+    }
+  </script>
+</body>
+</html>

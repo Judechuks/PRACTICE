@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Fixed Vertical Navigation Bar Example </title>
+<style> 
+	h1{
+		color: #33ccff;
+		border: 0.5px solid blue;
+		background-color: yellow;
+		padding: 10px;
+		text-align: center;
+	}
+	 h2{
+		color: #33ccff;
+		border: 0px solid blue;
+		background-color: yellow;
+		padding: 10px;
+		text-align: center;
+	}
+	body{
+ 		margin: 0px;
+ 	}
+	#div1{
+		margin-left: 29%;
+		padding: 0px;
+	 	width: 70%;
+	 	top: 26%;
+	 	height: 75%;
+	} 
+	#div2{
+		position: fixed;
+		margin-left: 0.1%;
+		background-color: #eeeeee;
+		top: 0px;
+		height: 23%;
+        width: 100%;	  
+	}
+	#div3{
+		top: 20.2%;
+		position: fixed;
+		width: 71.5%;
+	}  
+	ul{
+		color: #0000ee;
+		background-color: #00dddd;
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+		width: 28.5%;
+		height: 100%;
+		position: fixed; 
+		overflow: auto;
+		top: 23%;
+	}
+	li a{
+		display: block;
+		text-decoration: none;
+		border: 0px solid turquoise;
+		padding: 8px 0px 8px 16px;
+		font-size: 20px;
+		margin: 0px;
+    }
+	li a.active{
+		color: white;
+		background-color: #cc0000;
+	}
+	li a:hover:not(active){
+		color: white;
+		background-color: #00ffff;
+	}
+</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#Home" class="active"> Home </a></li>
+		 <li><a href="#News"> News</a></li>
+		  <li><a href="#News"> Videos</a></li>	
+		 <li><a href="#News"> Musics</a></li>	
+		  <li><a href="#News"> Pictures</a></li>
+		 <li><a href="#News"> About Us</a></li>	
+		<li><a href="#News"> Contact Us</a></li>
+	</ul>
+	<div id="div2">
+			<h2> Fixed Vertical Nav Bar </h2>
+	This navigation bar is vertical and fixed it does not
+	move even when the page is scrolled, The contents scrolls
+	but the navs remains in their positions...
+	</div>
+	<div id="div1">
+	    
+	<div id="div3">
+		<h2> Fixed Vertical Nav Bar </h2>
+	</div>	
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<h3>Try to scroll this area, and see how the side nav 
+		sticks to the page</h3> 
+		<p>Notice that this div element has a left margin of 29%. 
+This is because the side navigation is set to 28.5% width. 
+If you remove the margin, the side nav will overlay/sit on 
+top of this div.</p>
+		<p>Also notice that we have set overflow:auto to sidenav. 
+This will add a scrollbar when the sidenav is too long 
+(for example if it has over 50 links inside of it).</p>
+			<p>Text 1</p>
+			<p>Text 2</p> 
+			<p>Text 3</p> 
+			<p>Text 4</p> 
+			<p>Text 5</p> 
+			<p>Text 6</p> 
+			<p>Text 7</p> 
+			<p>Text 8</p> 
+			<p>Text 9</p> 
+			<p>Text 10</p>
+			<p>Text 11</p> 
+			<p>Text 12</p> 
+			<p>Text 13</p> 
+			<p>Text 14</p> 
+			<p>Text 15</p> 
+			<p>Text 16</p> 
+			<p>Text 17</p> 
+			<p>Text 18</p> 
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript</title>
+    <meta name="revised"
+        content="JudeChuks, 27/05/2022">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            Padding: 0;
+            Margin: 0;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+        body{
+            margin: 40px;
+            background : darkgray;
+            font-family: Georgia, verdana, arial, Serif;
+        } 
+
+       h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+        #wrapper {
+            margin: auto auto;
+            padding: 15px 15px;
+            background: #3e3e3e;
+            width: 60%;
+            outline: 3px solid blue;
+            border-radius: 5px;
+            padding: 40px;
+        }
+        label {
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+        input {
+            font-size: 1.3em;
+            border-radius: .3em;
+            border: 0px solid #000;
+            box-shadow: 2px 2px 4px 1px #000;
+            /*x y blur spread color*/
+            margin: 0px 15px 15px 0px;
+            padding: 3px;
+        }
+
+        input:focus {
+            background-color: lightgray;
+        }
+        #info {
+            margin: -6px;
+            font-size: .7em;
+            color: #700000;
+        }
+        #sub {
+            background: #0000aa;
+            width: 100%;
+            outline: 3px solid black;
+        }
+        #user, #pass, #repass{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        #title {
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2em;
+        }
+        #sub:hover {
+            background: #0000ff;
+        }
+
+    </style>
+</head>  
+<body>
+
+    <h2>Javascript and HTML form</h2>
+
+  <script type="text/javascript">
+         // if there are more than one forms in the page, javascript can access the forms in same way as array i.e through index, where the first becomes 0. Or the form can be reference by its name, in this case 'loginForm' 
+         // also the elements in the form can be access in same way as the form. And to know the number of elements in the form you use document.write(Form[0].length) ;
+
+    function validator() {
+        if (signUpForm.confirm.checked == false) {
+             alert("Make sure to agree with terms and conditions before you sign up");   } 
+        else {
+            if ((signUpForm.user.value == 0) && (loginForm.pass.value == 0)) {
+                 alert("Username and Password can not be Empty! ") ;    }
+            else { 
+                if (signUpForm.user.value == 0) {
+                    alert("Username can not be Empty!") ;  } 
+                else {
+                    if (signUpForm.pass.value == 0) {
+                        alert("Password can not be Empty!") ;  }  
+                    else {
+                        if (signUpForm.pass.value != signUpForm.repass.value) {
+                            alert("Both Passwords do not match!") ;  }  
+                        else {
+                            alert("Successfully Signed Up! ");  
+                        } 
+                    }
+                }
+            }
+        }
+    } 
+
+  </script>
+
+  <div id="wrapper">
+  <h3 id="title">Sign-Up</h3>
+  <form name="signUpForm">
+  <label for="user">Username: </label> <br />
+  <input type="text" name="user" id="user" /> <br />
+  
+  <label for="pass">Password: </label> <br />
+  <input type="password" name="pass" id="pass" /> <br />
+
+  <label for="pass">Re-type Password: </label> <br />
+  <input type="password" name="repass" id="repass" /> <br /> <br />
+
+  <input type="checkbox" name="confirm" id="confirm" /> 
+  <label for="confirm" id="info">I agree with the Terms and Condition</label> <br /> <br />
+  
+  <input type="submit" value="SIGN UP" name="sub" id="sub" onClick="validator()" />
+  <br /> <br />
+
+  </form>
+
+  </div>
+           
+</body>
+
+</html>

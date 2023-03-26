@@ -1,0 +1,142 @@
+
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Extention</title>
+    <meta name="author" content="JudeChuks, 10/07/2022">
+    <meta name="revised" content="11/07/2022">
+    <meta charset="UTF-8">
+    <style>
+body {
+    background: #016f32;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 10px;
+    min-width: 400px;
+}
+button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    width: 200px;
+    margin-right: 3px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+} 
+#textbox {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 2px solid darkblue;
+    font-weight: bold;
+    font-size: 14px;
+}
+#textbox:focus {
+    background: lightgrey;
+}
+#save-btn, #tab-btn{
+    background: darkblue;
+    color : goldenrod;
+} 
+#delete-btn{
+    background: darkred;
+    color : goldenrod;
+}
+#list{
+    margin-top: 5px;
+}
+ul {
+    margin-top: 0;
+    list-style: none;
+    padding-left: 0;
+} 
+li {
+    margin: 3px;
+    font-size: 15px;
+} 
+a {
+    text-decoration: none;
+    padding: 2px 4px 2px 0;
+    color: #fff;
+    } 
+a:visited {
+    color: darkred;
+}  
+a:hover {
+    background: goldenrod;
+} 
+</style>
+</head>
+
+<body>
+    <input id="textbox" type="text" />
+    <button id="save-btn">SAVE LINK</button>
+    <button id="tab-btn">SAVE TAB</button>
+    <button id="delete-btn">DELETE ALL</button>
+    <ul id="list"></ul>
+
+ <script type="text/javascript">
+    let myLeads = []
+    const input = document.getElementById('textbox');
+    const saveBtn = document.getElementById('save-btn');
+    const list = document.getElementById('list');
+    const tabBtn = document.getElementById('tab-btn');
+    const deleteBtn = document.getElementById('delete-btn');
+    const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") );
+
+    input.setAttribute("placeholder", "Paste Url Here") 
+
+   if (leadsFromLocalStorage) {
+        myleads = leadsFromLocalStorage
+        render(myLeads)
+   }
+
+   tabBtn.addEventListener("click", function() {
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+            myLeads.push(tabs[0].url)
+            localStorage.setItem("myLeads", JSON.stringify(myLeads))
+            render(myLeads)
+        })
+   })
+   
+ function render(leads) {
+    let listItems = ""
+    for (let i = 0; i < leads.length; i++) {
+        /* const li = document.createElement("li")
+        li.textContent = leads[i]
+        list.append(li) */
+        //Alternatively
+        //listItems += "<li><a href=leads[I]' target='_blank'>" + leads[i] + "</a></li>" 
+        //Alternatively using template string `...enclosed strings...`
+        listItems += `
+            <li>
+                <a href='${leads[i]}' target='_blank'>
+                    ${leads[i]} 
+                </a>
+            </li>`
+        }
+        list.innerHTML = listItems
+    }
+    
+ saveBtn.addEventListener("click", function() {
+    if (input.value){ //if input is not empty then render
+    myLeads.push(input.value);
+    input.value = "" 
+    localStorage.setItem("myLeads",JSON.stringify(myLeads))
+    render(myLeads)
+    }
+}); 
+
+ deleteBtn.addEventListener("click", function() {
+        localStorage.clear()
+        myLeads = []
+        render(myLeads)
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript Marquee</title>
+    <meta name="revised" content="JudeChuks, 30/05/2022" />
+    <meta name="revised" content="JudeChuks, 31/05/2022" />
+    <meta charset="UTF-8" />
+    <style>
+        * {
+            Padding: 0;
+            Margin: 0;
+        }
+        body{
+            background-color: dimgray;
+        }
+        /* 1em = Browser's default size (which is 16px = 12pt = 100%) */
+
+        h2 {
+            text-align: center;
+            margin: .5em 0em;
+        }
+        .wrapper {
+            display: block;
+            width: 90%;
+            height: 500px;
+            border: 3px solid grey;
+            border-radius: .6em;
+            background-color: aqua;
+            outline: 2px solid red;
+            margin: 40px auto;
+            padding: 0px;
+        }
+        #image{
+            position: relative;
+            display: block;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+        }
+
+    </style>
+</head>
+    
+<body>
+    <h2> JavaScript Marquee </h2>
+
+     <div class="wrapper">
+        <img id="image" src="../../../Images/icon/right.png" alt="item 1" />
+    </div>
+    
+    <script type="text/javascript">
+
+        var image = document.getElementById("image");
+        var x = 0; var y = 0; var val = "";
+
+        function repeat() {
+    // for top slide
+        function startAnimation() {
+        image.setAttribute("src", "../../../Images/icon/right.png");
+            val = "top: 0; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation,500);
+
+        function startAnimation0() {
+            val = "top: 0; left: 10% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation0,1000);
+        
+        function startAnimation1() {
+            val = "top: 0; left: 20% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation1,2000);
+
+        function startAnimation2() {
+            val = "top: 0; left: 30% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation2,3000);
+
+        function startAnimation3() {
+            val = "top: 0; left: 40% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation3,4000);
+
+        function startAnimation4() {
+            val = "top: 0; left: 50% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation4,5000);
+
+        function startAnimation5() {
+            val = "top: 0; left: 60% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation5,6000);
+
+        function startAnimation6() {
+            val = "top: 0; left: 70% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation6,7000);
+
+        function startAnimation7() {
+            val = "top: 0; left: 80% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation7,8000);
+
+        function startAnimation8() {
+            val = "top: 0; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation8,9000);
+
+        function disappear() {
+            val = "visibility: hidden";
+            image.setAttribute("style", val); 
+        } setTimeout(disappear,10000);
+
+    // for right slide
+        function startAnimation9() {
+        image.setAttribute("src", "../../../Images/icon/down.png");
+            val = "top: 10px; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation9,10000);
+        
+        function startAnimation10() {
+            val = "top: 50px; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation10,11000);
+
+        function startAnimation11() {
+            val = "top: 100px; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation11,12000);
+
+        function startAnimation12() {
+            val = "top: 150px; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation12,13000);
+
+        function startAnimation13() {
+            val = "top: 200px; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation13,14000);
+
+        function startAnimation14() {
+            val = "top: 250px; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation14,15000);
+
+        function startAnimation15() {
+            val = "top: 300px; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation15,16000);
+
+        function startAnimation16() {
+            val = "top: 350px; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation16,17000);
+
+        function startAnimation17() {
+            val = "top: 400px; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation17,18000);
+
+        function startAnimation18() {
+            val = "top: 450px; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation18,19000);
+
+        setTimeout(disappear,20000);
+
+        // for bottom slide
+        function startAnimation19() {
+        image.setAttribute("src", "../../../Images/icon/left.png");
+            val = "top: 460px; left: 90% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation19,20000);
+
+        function startAnimation20() {
+            val = "top: 460px; left: 80% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation20,21000);
+        
+        function startAnimation21() {
+            val = "top: 460px; left: 70% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation21,22000);
+
+        function startAnimation22() {
+            val = "top: 460px; left: 60% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation22,23000);
+
+        function startAnimation23() {
+            val = "top: 460px; left: 50% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation23,24000);
+
+        function startAnimation24() {
+            val = "top: 460px; left: 40% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation24,25000);
+
+        function startAnimation25() {
+            val = "top: 460px; left: 30% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation25,26000);
+
+        function startAnimation26() {
+            val = "top: 460px; left: 20% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation26,27000);
+
+        function startAnimation27() {
+            val = "top: 460px; left: 10% ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation27,28000);
+
+        function startAnimation28() {
+            val = "top: 460px; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation28,29000);
+
+        setTimeout(disappear,30000);
+
+         // for left slide
+        function startAnimation29() {
+        image.setAttribute("src", "../../../Images/icon/up.png");
+            val = "top: 460px; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation29,30000);
+        
+        function startAnimation30() {
+            val = "top: 400px; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation30,31000);
+
+        function startAnimation31() {
+            val = "top: 350px; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation31,32000);
+
+        function startAnimation32() {
+            val = "top: 300px; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation32,33000);
+
+        function startAnimation33() {
+            val = "top: 250px; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation33,34000);
+
+        function startAnimation34() {
+            val = "top: 200px; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation34,35000);
+
+        function startAnimation35() {
+            val = "top: 150px; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation35,36000);
+
+        function startAnimation36() {
+            val = "top: 100px; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation36,37000);
+
+        function startAnimation37() {
+            val = "top: 50px; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation37,38000);
+
+        function startAnimation38() {
+            val = "top: 0; left: 0 ";
+            image.setAttribute("style", val); 
+        } setTimeout(startAnimation38,39000);
+
+        setTimeout(disappear,40000);
+
+    } 
+    repeat();
+    setInterval(repeat,40000);
+
+    </script>
+
+
+</body>
+
+</html>

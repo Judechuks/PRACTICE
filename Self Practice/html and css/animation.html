@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<style>
+*{margin: 1px;}
+.square{
+  width: 200px;
+  height: 200px;
+}
+.square:first-child{
+  background-color: aqua;
+}
+.square:nth-child(2){
+  background-color: dodgerblue;
+}
+.square:last-child{
+  background-color: limegreen;
+}
+
+/* .square:first-child:hover{
+  transform: rotateX(180deg);
+  transform: scale(160%);
+}
+.square:nth-child(2):hover{
+  transform: rotateY(180deg);
+  transform: scaleY(150%);
+} */
+.square:last-child:hover{
+  transform: rotate(180deg);
+  /* transform: scaleX(120%); */
+} 
+.square:hover{
+  background-color: midnightblue;
+  /* transition-property: background-color, transform;
+  transition-duration: 2s;
+  transition-delay: .5s, 2s;
+  transition-timing-function: ease-in-out; */
+
+  transition: all 2s ease-in-out .5s;
+}
+
+section{
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: center;
+  gap: .5rem;
+}
+.square{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.animate{
+  /* animation-name: slide;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: .5s;
+  animation-iteration-count: 3;
+  animation-direction: normal;
+  animation-fill-mode: backwards; */
+  animation: 5s ease-in-out .5s 3 normal forwards slide;
+}
+@keyframes slide{
+  0%{
+    transform: translateX(0);
+  }
+  33%{
+    transform: translateX(500px) rotate(180deg);
+  }
+  66%{
+    transform: translateX(-500px) rotate(-180deg);
+  }
+  100%{
+    transform: translateX(0);
+    background-color: rebeccapurple;
+  }
+}
+</style>
+<body>
+   <section>
+    <div class="square">A</div>
+    <div class="square">B</div>
+    <div class="square animate">C</div>
+   </section>
+</body>
+</html>

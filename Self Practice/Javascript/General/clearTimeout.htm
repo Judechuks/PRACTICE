@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClearInterval</title>
+</head>
+<style>
+  h2{    
+    color: green;
+  }
+  p{
+    font-size: 1.5rem;
+    color: green;
+  }
+  p:nth-last-child(2), /*second to the last*/
+  p:last-child{
+    color: red;
+  }
+  #btn{
+    position: fixed;
+    top: 60px;
+    left: 200px;
+    background-color: red;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+</style>
+<body>
+  <h2>Count Down (5 - 0)</h2>
+<div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+</div>
+  <button id="btn">Stop setTimeout</button>
+
+  <script>
+    const btn = document.getElementById("btn");
+    let p = document.getElementsByTagName("p");
+
+    let setTimeout1 = setTimeout (function(){
+      p[0].innerHTML = "5";
+    }, 2000);
+
+    let setTimeout2 = setTimeout (function(){
+      p[1].innerHTML = "4";
+    }, 4000);
+
+    let setTimeout3 = setTimeout (function(){
+      p[2].innerHTML = "3";
+    }, 6000);
+
+    let setTimeout4 = setTimeout (function(){
+      p[3].innerHTML = "2";
+    }, 8000);
+
+    let setTimeout5 = setTimeout (function(){
+      p[4].innerHTML = "1";
+    }, 10000);
+
+    let setTimeout6 = setTimeout (function(){
+      p[5].innerHTML = "0";
+    }, 12000);
+
+    btn.onclick = function stopSetTimeout(){
+      clearTimeout(setTimeout1); //stoping individual setTimeout
+      clearTimeout(setTimeout2); //stoping individual setTimeout
+      clearTimeout(setTimeout3); //stoping individual setTimeout
+      clearTimeout(setTimeout4); //stoping individual setTimeout
+      clearTimeout(setTimeout5); //stoping individual setTimeout
+      clearTimeout(setTimeout6); //stoping individual setTimeout
+    }
+    // btn.onclick = function stopSetTimeout(){
+    //   clearTimeout(setTimeout); //stoping all setTimeout at once
+    // }
+  </script>
+</body>
+</html>

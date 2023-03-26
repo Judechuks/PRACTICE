@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setInterval</title>
+</head>
+<style>
+  div{
+    font-size: 1.5rem;
+    background-color: gray;
+    color: green;
+  }
+</style>
+<body>
+  <div>
+    <p id="p"></p>
+  </div>
+
+  <script>
+    //Timers in Javascript are of two methods:
+    // 2. setInterval: allows functions to be called repeatedly at different interval. It accepts three arguments; function you are calling, the time intervals it should delay to repeat the calling (in milliseconds) and false value. The major arguments are the function and the time.
+
+    let p = document.getElementById("p");
+
+    function appear(){
+      p.innerHTML = "Welcome to my page";
+    }
+    function disappear(){
+      p.innerHTML = "";
+    }
+    setInterval(appear, 1000);
+    setInterval(disappear, 2000);
+  </script>
+</body>
+</html>

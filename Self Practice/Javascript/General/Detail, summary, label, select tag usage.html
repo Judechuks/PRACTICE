@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> practice </title>
+    <style>
+        details {
+            color: white;
+            background-color: #99bbbb;
+        }
+
+        label {
+            color: white;
+            background-color: silver;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <label>City:</label>
+    <select width="80%" height="50%">
+        <optgroup label="India">
+            <option value="mumbai">Mumbai</option>
+            <option value="delhi">Delhi</option>
+        </optgroup>
+        <optgroup label="USA">
+            <option value="florida">Florida</option>
+            <option value="newyork">New York</option>
+        </optgroup>
+    </select>
+    <br>
+    <br>
+    <details>
+        <summary>Some details</summary>
+        <p>Provide more info about the details here.</p>
+    </details>
+    <br>
+    <details>
+        <summary>Calculations</summary>
+        <p>value of (5<sup>3</sup>)<sup>2</sup>&#32;=&#32;15,625</p>
+        <!-- &#32 stands for space character-->
+        <form oninput="result.value=parseInt(num1.value)**2">
+            <label>Square Of:</label>
+            <input type="number" name="num1" value="" placeholder="Enter Number">
+            <br>
+            <br>
+            <label>The Output is&#32;:&#32; </label>
+            &#32;&#32;
+            <!-- &#32; is for a space -->
+            <output name="result"></output>
+    </details>
+    <br>
+     <details>
+        <summary> <b>My Success </b> </summary>
+        <b>My Success is loading...</b>
+        <br>
+        <progress value="90" max="100">
+    </details>
+</body>
+
+</html>
