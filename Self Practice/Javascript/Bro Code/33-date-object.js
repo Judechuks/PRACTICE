@@ -15,21 +15,31 @@ date = date.toDateString();    // Tue Mar 28 2023
 let date1 = new Date(2023, 0, 30, 9, 30, 20, 12); // yr month, day, hr, min, sec, ms
 let date2 = new Date("February 27, 2023 9:30:40:12"); // month day, yr hr, min, sec, ms
 
+// Date getter
 let year = date2.getFullYear();
 let month = date2.getMonth(); // 0=Jan, 1=Feb, 2=Mar, 3=Apr, 4=May and so on
 let dayOfMonth = date2.getDate();  // 1, 2, 3, 4 etc
 let dayOfWeek = date2.getDay();  // numbers; 0=Sun, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat
-let hour = date2.getHours();  // 24 hours
-let minute = date2.getMinutes();
+let hours = date2.getHours();  // 24 hours
+let minutes = date2.getMinutes();
 let seconds = date2.getSeconds();
+let ms = date2.getMilliseconds();
+
+// Date Setter
+// date.setFullYear(2024);  // is not working, bcos we used date.toString (string not object)
+date1.setFullYear(2024);
+date2.setFullYear(2024);
+// etc, same as getter
+
 console.log("Year:", year);
 console.log("Month:", month);
 console.log("Day Of Month:", dayOfMonth);
 console.log("Day Of Week:", dayOfWeek);
-console.log("Hourr:", hour);
-console.log("Minutes:", minute);
+console.log("Hourr:", minutes);
+console.log("Minutes:", minutes);
 console.log("Seconds:", seconds);
+console.log("Milliseconds:", ms);
 
-// document.getElementById("p").innerText = date; 
-// document.getElementById("p1").innerText = date1; 
-// document.getElementById("p2").innerText = date2; 
+document.getElementById("p").innerText = date; 
+document.getElementById("p1").innerText = date1; 
+document.getElementById("p2").innerText = date2; 
