@@ -15,4 +15,6 @@ const promise = new Promise((resolve, reject) => {
   }
 });
 
-// consuming code
+// consuming code (if the promise is resolved). then use .catch for 'reject'
+promise.then(() => console.log(promise))
+       .catch(error => console.log(error));
