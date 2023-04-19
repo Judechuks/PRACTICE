@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game 2</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  #gameContainer{
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+  }
+  #gameBoard{
+    border: 3px solid;
+  }
+  #scoreText{
+    font-size: 4rem;
+    margin-top: -8px;
+  }
+  #resetBtn{
+    line-height: 28px;
+    width: 150px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #555;
+    font-size: 1.2rem;
+    transition: .8s;
+    border-radius: 5px;
+    margin-top: -8px;
+  }
+  #resetBtn:hover{
+    background-color: #555;
+    color: #fff;
+  }
+  footer p{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 1.2rem;
+    color: green;
+  }
+</style>
+<body>
+  <div id="gameContainer">
+    <h2>Snake Game</h2>
+    <canvas id="gameBoard" width="500" height="500"></canvas>
+    <div id="scoreText">0</div>
+    <button id="resetBtn">Reset</button>
+  </div>
+  <footer>
+    <p>@Judechuks</p>
+  </footer>
+
+  <script src="59-snake-game.js"></script>
+</body>
+</html>
