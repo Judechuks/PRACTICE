@@ -66,5 +66,3 @@ console.log(Number.isNaN("Dave")); // false [bcos of the Number method (its type
 
 // 13. isNaN(arg) = determines whether the passed value is a NaN, returns true or false (Only the value is considered and not the datatype)
 console.log(isNaN("Dave")); // true (bcos its value is NaN)
-
-
