@@ -37,4 +37,24 @@ console.log(arr1.flat());  // Expected output: Array [0, 1, 2, 3, 4]
 const arr2 = [0, 1, 2, [[[3, 4]]]];
 console.log(arr2.flat(2)); // Expected output: Array [0, 1, 2, Array [3, 4]]
 
-// 14. 
+// 14. flatMap() method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a map() followed by a flat() of depth 1 (arr.map(...args).flat()), but slightly more efficient than calling those two methods separately.
+// flatMap(callbackFn)
+// flatMap(callbackFn, thisArg)
+console.log([1, 2, 1].flatMap((num) => (num === 2 ? [2, 2] : 1))); // [1, [2,2], 1] when mapped
+// Expected output: Array [1, 2, 2, 1] (after flattened)
+
+// 15. forEach() method executes a provided function once for each array element.
+// forEach(callbackFn)
+// forEach(callbackFn, thisArg)
+const arrayA = ['a', 'b', 'c'];
+arrayA.forEach(element => console.log(element));
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+
+// 16. Array.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object.
+// 16a. Array.from(arrayLike)
+// 16b. Array.from(arrayLike, mapFn)
+// 16c. Array.from(arrayLike, mapFn, thisArg)
+console.log(Array.from('foo')); // Expected output: Array ["f", "o", "o"]
+console.log(Array.from([1, 2, 3], x => x + x)); // Expected output: Array [2, 4, 6]
