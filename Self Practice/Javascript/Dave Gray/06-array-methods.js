@@ -48,3 +48,14 @@ for (const key of iterator) {
 const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
 console.log(animals.lastIndexOf('Dodo')); // Expected output: 3
 console.log(animals.lastIndexOf('Tiger')); // Expected output: 1
+
+// 23. map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+// 23a. map(callbackFn)
+// 2ba. map(callbackFn, thisArg)
+const arrayTwice = [1, 4, 9, 16]; 
+const map1 = arrayTwice.map(x => x * 2); // Pass a function to map
+console.log(map1); // Expected output: Array [2, 8, 18, 32]
+
+// 24. Array.of() static method creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.(duplicates an array)
+console.log(Array.of('foo', 2, 'bar', true)); // output: Array ["foo", 2, "bar", true]
+console.log(Array.of()); // output: Array []
