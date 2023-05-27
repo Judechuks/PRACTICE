@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll words Animation</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+  }
+  h1{
+    margin: 20px 0;
+  }
+  section > div{
+    display: inline-block;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.2rem;
+    overflow: hidden;
+  }
+  .word-list{
+    font-size: 1.2rem;
+    position: relative;
+    animation: cycle 6s infinite
+  }
+  .word-list span{
+    display: block;
+  }
+  .word-list span:nth-child(1){
+    color: salmon;
+  }
+  .word-list span:nth-child(2){
+    color: slateblue;
+  }
+  .word-list span:nth-child(3){
+    color: seagreen;
+  }
+  .word-list span:nth-child(4){
+    color: sienna;
+  }
+  .word-list span:nth-child(5){
+    color: springgreen;
+  }
+
+  @keyframes cycle {
+    0%{ top: 0px; }
+    10%{ top: 0px; }
+    20%{ top: -30px; }
+    30%{ top: -30px; }
+    40%{ top: -60px; }
+    50%{ top: -60px; }
+    60%{ top: -90px; }
+    70%{ top: -90px; }
+    80%{ top: -120px; }
+    90%{ top: -120px; }
+    100%{ top: 0px; }
+  }
+</style>
+<body>
+  <h1>Welcome to our page</h1>
+
+  <section>
+    <div>Learn</div>
+    <div>
+      <div class="word-list">
+        <span>HTML & CSS</span>
+        <span>Javascript</span>
+        <span>Node.js</span>
+        <span>Flutter</span>
+        <span>Python</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
