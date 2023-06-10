@@ -3,7 +3,7 @@
 //           2 arguments; resolve and reject. if the synchronous process (callback) is successful invoke resolve callback else invoke reject
 //           Promises have a STATE, 'pending' then: 'fulfilled' or 'rejected'
 //           the result is what can be returned
-//           2 parts 'producung' code & 'consuming' code
+//           2 parts 'producing' code & 'consuming' code
 
 // producung code
 const promise = new Promise((resolve, reject) => {
