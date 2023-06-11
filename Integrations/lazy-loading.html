@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Lazy Loading</title>
+</head>
+
+<style>
+  .img-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .blur-bg img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1 / 1;
+  }
+  .blur-bg{
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  .bg1{
+    background-image: url(img/bg-1-small.jpg);
+  }
+  .bg2{
+    background-image: url(img/bg-2-small.jpg);
+  }
+  .bg3{
+    background-image: url(img/bg-3-small.jpg);
+  }
+  .bg4{
+    background-image: url(img/bg-4-small.jpg);
+  }
+  .bg5{
+    background-image: url(img/bg-5-small.jpg);
+  }
+  .bg6{
+    background-image: url(img/bg-6-small.jpg);
+  }
+  .bg7{
+    background-image: url(img/bg-7-small.jpg);
+  }
+  .bg8{
+    background-image: url(img/bg-8-small.jpg);
+  }
+  .bg9{
+    background-image: url(img/bg-9-small.jpg);
+  }
+  .blur-bg > img{
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+  .blur-bg.loaded > img{
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 800px){
+    .img-grid{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  /* Alternative Icing */
+  /* Fading Illusion of Image Loading */
+  .blur-bg::before{
+    content: "";
+    position: absolute;
+    inset: 0; /*top, left, right, bottom are zero*/
+    animation: fade 2.5s infinite;
+  }
+  .blur-bg.loaded::before{
+    content: none;
+    animation: none; /*optional since content is gone*/
+  }
+
+  @keyframes fade{
+    0%{
+      background-color: rgba(255, 255, 255, 0);
+    }
+    50%{
+      background-color: rgba(255, 255, 255, 0.1); /*fading color*/
+    }
+    100%{
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+</style>
+
+<body>
+  <section class="load-container">
+    <!-- <article> -->
+      <div class="img-grid">
+        <div class="blur-bg bg1">
+          <img src="img/bgrd-1.jpg" loading="Lazy">
+        </div>
+        <div class="blur-bg bg2">
+          <img src="img/bgrd-2.jpg" loading="Lazy">
+        </div>
+        <div class="blur-bg bg3">
+          <img src="img/bgrd-3.jpg" loading="Lazy">
+        </div>
+        <div class="blur-bg bg4">
+          <img src="img/bgrd-4.jpg" loading="Lazy">
+        </div>
+        <div class="blur-bg bg5">
+          <img src="img/bgrd-5.jpg" loading="Lazy">
+        </div>
+        <div class="blur-bg bg6">
+          <img src="img/bgrd-6.jpg" loading="Lazy">
+        </div>
+        <div class="blur-bg bg7">
+          <img src="img/bgrd-7.jpg" loading="Lazy">
+        </div>
+        <div class="blur-bg bg8">
+          <img src="img/bgrd-8.jpg" loading="Lazy">
+        </div>
+        <div class="blur-bg bg9">
+          <img src="img/bgrd-9.jpg" loading="Lazy">
+        </div>
+      </div>
+    <!-- </article> -->
+  </section>
+</body>
+
+<script>
+  const blur_bgs = document.querySelectorAll('.blur-bg');
+  blur_bgs.forEach( (bg) => {
+    const img = document.querySelector('img');
+
+    function loaded() {
+      // show img
+      bg.classList.add("loaded");
+    }
+    if (img.complete) {
+      loaded(); 
+    } else {
+      img.addEventListener("load", loaded);
+    }
+  });
+</script>
+
+</html>
