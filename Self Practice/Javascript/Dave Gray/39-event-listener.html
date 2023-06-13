@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script defer src="39-event-listener.js"></script>
+  <title>DOM - Document Object Model</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: sans-serif;
+  }
+  nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(1, 1, 39);
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+  }
+  #view1{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    top: 18vh;
+    background-color: gray;
+  }
+  .container{
+    width: 80%;
+    height: 50vh;
+    position: relative;
+    top: 10vh;
+    background-color: darkblue;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container div{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(1, 1, 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .container div h2{
+    font-size: 1.3rem;
+  }
+  .darkgray{
+    background-color: darkgray!important;
+  }
+  .height100{
+    height: 100px;
+  }
+</style>
+<body>
+  <nav>
+    <h1>My Page</h1>
+  </nav>
+  <section id="view1" class="outer">
+    <article class="container">
+      <div>
+        <h2>My 2nd View</h2>
+      </div>
+    </article>
+  </section>
+</body>
+</html>
