@@ -1,0 +1,26 @@
+// Regular Expression (regEx)
+
+document.getElementById("phoneNum").addEventListener("input", (event) => {
+  const regex = /^\(?(\d{3})\)?[-. ]?(\d{3})[-. ]?(\d{4})$/g;
+  const input = document.getElementById("phoneNum");
+  const format = document.querySelector(".phoneFormat");
+  const phone = input.value;
+  const found = regex.test(phone);
+
+  if (!found && phone.length) {
+    input.classList.add("invalid");
+    format.classList.add("visible");
+  } else {
+    input.classList.remove("invalid");
+    format.classList.remove("visible");
+  }
+});
+
+document.getElementById("phoneForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const input = document.getElementById("phoneNum");
+  const regex = /[()-. ]/g;
+  const savedPhoneNum = input.value.replaceAll(regex, ""); // remove every [()-. ] from the input
+  console.log(savedPhoneNum);
+  // send to the database
+})
