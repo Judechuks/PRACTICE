@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Judechuks, 14-June-2023">
+  <title>Bootstrap Tutorial</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<style>
+  .jumbotron{
+    background-color: #2E2D88;
+    color: white;
+  }
+</style>
+<body>
+  <!-- container gives extra padding to the content but container-fluid does not. Bootstrap grid also requires a container -->
+  <div class="container">
+    <div class="page-header">
+    <!-- page-header gives spacing around a text and also gives an underline. -->
+      <h1>Bootstrap Tutorial</h1>
+    </div>
+    <div class="jumbotron">
+      <!-- jumbotron creates a 100% width box with a gray bgcolor and spacing around it  and enlarges the text-->
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis incidunt nihil odio voluptas harum impedit corporis delectus tempore minima vel.</p>
+
+      <!-- Different btns style (color) lg='large', sm='small', xs='extra small',-->
+      <div>
+        <a href="#" class="btn btn-default btn-lg" role="button">Default Btn</a>
+        <button type="submit" class="btn btn-danger">Danger Btn</button>
+        <input type="button" value="Info Btn" class="btn btn-info">
+        <button type="submit" class="btn btn-success">Success Btn</button>
+        <button type="submit" class="btn btn-primary">Primary Btn</button>
+        <button type="submit" class="btn btn-warning">warning Btn</button>
+        <button type="submit" class="btn btn-link btn-lg">Link Btn</button>
+        <button type="submit" class="btn btn-secondary" disabled>Secondary Btn</button>
+        <a href="#" class="btn btn-default btn-lg disabled">Disabled Link</a>
+      </div>
+      <br>
+      <!-- Group of buttons -->
+      <div class="btn-group btngroup-lg" role="group">
+        <button class="btn btn-default">Small</button>
+        <button class="btn btn-default">Medium</button>
+        <button class="btn btn-default">Large</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>
