@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Judechuks, 14-June-2023">
+  <title>Bootstrap Tutorial</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+  <!-- container gives extra padding to the content but container-fluid does not. Bootstrap grid also requires a container -->
+  <div class="container">
+    <div class="page-header">
+    <!-- page-header gives spacing around a text and also gives an underline. -->
+      <h3>Grid System</h3>
+      <p>Bootstrap make use of a twelve column grid system.</p>
+    </div>
+    <div class="row">
+      <!-- bootstrap make use of a twelve column grid system -->
+      <!-- col=column, sm="small screen" md="medium screen" lg="large screen"" xs="extra small screen"-->
+      <!-- md-3="3 columns out of 12 in md" lg-3="3 columns out of 12 in lg" sm-6="6 columns out of 12 in sm" -->
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h3>Column 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quas aut. Iusto commodi eius, delectus id quo odit facere. Sint temporibus vero iste, debitis eius asperiores fugit minima consequatur quidem a laborum amet inventore praesentium expedita quo nobis rerum facere. Voluptatibus ratione beatae rem aliquam ex id iure perferendis quidem!</p>
+        <a href="#" class="btn btn-info">Read More</a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h3>Column 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quas aut. Iusto commodi eius, delectus id quo odit facere. Sint temporibus vero iste, debitis eius asperiores fugit minima consequatur quidem a laborum amet inventore praesentium expedita quo nobis rerum facere. Voluptatibus ratione beatae rem aliquam ex id iure perferendis quidem!</p>
+        <a href="#" class="btn btn-info">Read More</a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h3>Column 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quas aut. Iusto commodi eius, delectus id quo odit facere. Sint temporibus vero iste, debitis eius asperiores fugit minima consequatur quidem a laborum amet inventore praesentium expedita quo nobis rerum facere. Voluptatibus ratione beatae rem aliquam ex id iure perferendis quidem!</p>
+        <a href="#" class="btn btn-info">Read More</a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h3>Column 4</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quas aut. Iusto commodi eius, delectus id quo odit facere. Sint temporibus vero iste, debitis eius asperiores fugit minima consequatur quidem a laborum amet inventore praesentium expedita quo nobis rerum facere. Voluptatibus ratione beatae rem aliquam ex id iure perferendis quidem!</p>
+        <a href="#" class="btn btn-info">Read More</a>
+      </div>
+    </div>
+
+    <br> <hr>
+
+    <!-- Second Row -->
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h3>Plan 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quas aut. Iusto commodi eius, delectus id quo odit facere. Sint temporibus vero iste, debitis eius asperiores fugit minima consequatur quidem a laborum amet inventore praesentium expedita quo nobis rerum facere. Voluptatibus ratione beatae rem aliquam ex id iure perferendis quidem!
+        debitis eius asperiores fugit minima consequatur quidem a laborum amet inventore praesentium expedita quo nobis rerum facere. Voluptatibus ratione beatae rem aliquam ex id iure perferendis quidem!</p>
+        <a href="#" class="btn btn-success">Choose Plan</a>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h3>Plan 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quas aut. Iusto commodi eius, delectus id quo odit facere. Sint temporibus vero iste, debitis eius asperiores fugit minima consequatur quidem a laborum amet inventore praesentium expedita quo nobis rerum facere. Voluptatibus ratione beatae rem aliquam ex id iure perferendis quidem!</p>
+        <a href="#" class="btn btn-success">Choose Plan</a>
+      </div>
+
+      <div class="clearfix visible-sm"></div>
+
+      <!-- NOTE:
+        in a situation where one column becomes longer than the other, then it results to inbalance.
+        to clear the inbalance, use 'clearfix and visible-sm class' before where inbalance started. 
+        visible-sm if the inbalance is happening in the small screen size
+      -->
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h3>Plan 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quas aut. Iusto commodi eius, delectus id quo odit facere. Sint temporibus vero iste, debitis eius asperiores fugit minima consequatur quidem a laborum amet inventore praesentium expedita quo nobis rerum facere. Voluptatibus ratione beatae rem aliquam ex id iure perferendis quidem!</p>
+        <a href="#" class="btn btn-success">Choose Plan</a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h3>Plan 4</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quas aut. Iusto commodi eius, delectus id quo odit facere. Sint temporibus vero iste, debitis eius asperiores fugit minima consequatur quidem a laborum amet inventore praesentium expedita quo nobis rerum facere. Voluptatibus ratione beatae rem aliquam ex id iure perferendis quidem!</p>
+        <a href="#" class="btn btn-success">Choose Plan</a>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>
