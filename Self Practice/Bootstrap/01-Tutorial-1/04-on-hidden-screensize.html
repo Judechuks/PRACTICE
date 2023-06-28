@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Judechuks, 14-June-2023">
+  <title>Bootstrap Tutorial</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+  <section class="container">
+  <div class="page-header">
+    <h3>Hide Content Based On Screen Size</h3>
+  </div>
+    <!-- 'well' adds rounded border & bg 'hidden-sm=hide in sm' -->
+    <article class="well hidden-sm hidden-md hidden-lg">
+      <p>Screen &lt; 768px (sm)</p>
+    </article>
+    <article class="well hidden-md hidden-lg">
+      <p>Screen &gt;= 768px and &lt; 992px (md)</p>
+    </article>
+    <article class="well hidden-lg">
+      <p>Screen &gt;= 992px and &lt; 1200px (lg)</p>
+    </article>
+    <article class="well">
+      <p>Screen &gt; 1200px (xl)</p>
+    </article>
+  </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>
