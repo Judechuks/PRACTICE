@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Judechuks, 15-June-2023">
+  <title>Bootstrap Tutorial</title>
+  <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7/css/bootstrap.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+</head>
+<style>
+  .logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 4px;
+    padding-right: 6px;
+  }
+</style>
+<body>
+  <section class="container">
+  <!-- navbar-default, navbar-inverse, navbar-fixed-top 'sr-only'='screen readers only' -->
+  <nav class="navbar navbar-default">
+    <article class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#na vbar-collapse-1" aria-expanded="false">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="pull-left"><img src="../img/m-logo.png" class="logo"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Email</a></li>
+              <li><a href="#">Phone</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Set Appointment</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search Here">
+          </div>
+          <button class="btn btn-default">Search</button>
+        </form>
+      </div>   <!--/ .navbar-collapse -->
+    </article> <!--/ .container-fluid -->
+  </nav>
+  </section>
+  <br>
+  <section class="container">
+  <div class="page-header">
+    <h3>Collapsable Navbar</h3> 
+  </div>
+  </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+</html>
