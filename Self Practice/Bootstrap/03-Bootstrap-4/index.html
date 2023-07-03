@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Judechuks, 19-June-2023">
+  <title>Bootstrap Tutorial</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand"><img src="../img/m-logo.png" class="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+          <li class="nav-item"><a href="#connect" class="nav-link">Connect</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- IMAGE SLIDER -->
+  <section id="slides" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#slides" data-slide-to="0" class="active"></li>
+      <li data-target="#slides" data-slide-to="1"></li>
+      <li data-target="#slides" data-slide-to="2"></li>
+    </ul>
+    <article class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../img/1.jpg">
+        <div class="carousel-caption">
+          <h1 class="display-2">Bootstrap</h1>
+          <h3>Complete Website layout</h3>
+          <button type="button" class="btn btn-outline-light btn-lg">VIEW DEMO</button>
+          <button type="button" class="btn btn-primary btn-lg">Get Started</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/city-bgrd.jpg">
+      </div>
+      <div class="carousel-item">
+        <img src="../img/nature-1.jpeg">
+      </div>
+    </article>
+  </section>
+  <!-- JUMBOTRON -->
+  <section class="container-fluid" id="about">
+    <article class="row jumbotron">
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+        <p class="lead">A web hosting service allows individuals and organizations to make their website accessible via the World wide Web.</p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+        <a href="#"><button type="button" class="btn btn-outline-secondary">Web Hosting</button></a>
+      </div>
+    </article>
+  </section>
+  <!-- WELCOME SECTION -->
+  <section class="container-fluid padding" id="services">
+    <article class="row welcome text-center">
+      <div class="col-12">
+        <h1 class="display-4">Built with ease.</h1>
+        <hr>
+        <div class="col-12">
+          <p class="lead">Welcome to my Bootstrap 4 website tutorial! Bootstrap is a free and open-source front-end library with HTML and CSS based designs.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- THREE COLUMN SECTION -->
+  <section class="container-fluid padding">
+    <article class="row text-center padding">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fas fa-code"></i>
+        <h3>HTML5</h3>
+        <p>Built with the latest version of HTML, HTML5.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fas fa-bold"></i>
+        <h3>BOOTSTRAP</h3>
+        <p>Built with the latest version of Bootstrap, Bootstrap 4.</p>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <i class="fab fa-css3"></i>
+        <h3>CSS#</h3>
+        <p>Built with the latest version of CSS, CSS3.</p>
+      </div>
+    </article>
+    <hr class="my-4">
+  </section>
+  <!-- TWO COLUMN SECTION -->
+  <section class="container-fluid padding">
+    <article class="row padding">
+      <div class="col-lg-6">
+        <h2>If you build it...</h2>
+        <p>The columns will automatically stack on top of each other when the screen is less than 576px wide.</p>
+        <p>Resize the browser window to see the effect. Responsive web design has become more important as the amount of mobile traffic now accounts for more than half of total internet traffic.</p>
+        <p>It can also display the web page differently depending on the screen size or viewing device.</p>
+        <br>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+      <div class="col-lg-6 two-column">
+        <img src="../img/1.jpg" class="img-fluid" alt="...">
+      </div>
+    </article>
+  </section>
+  <hr class="my-4">
+  <!-- FIXED BACKGROUND -->
+  <figure>
+    <article class="fixed-wrap">
+      <div id="fixed"></div>
+    </article>
+  </figure>
+  <!-- EMOJI SECTION -->
+  <button class="fun" data-toggle="collapse" data-target="#emoji">click for fun</button>
+  <section id="emoji" class="collapse">
+    <article class="container-fluid padding">
+      <div class="row text-center">
+        <div class="col-sm-6 col-md-3">
+          <img class="gif" src="../animoji/animoji-panda-emojipedia.gif">
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <img class="gif" src="../animoji/animoji-poo-emojipedia.gif">
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <img class="gif" src="../animoji/animoji-unicorn-emojipedia.gif">
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <img class="gif" src="../animoji/animoji-chicken-emojipedia.gif">
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- MEET THE TEAM -->
+  <section class="container-fluid padding" id="team">
+    <article class="row welcome text-center">
+      <div class="col-12">
+        <h1 class="display-4">Meet the Team</h1>
+        <hr>
+      </div>
+    </article>
+  </section>
+  <!-- CARDS -->
+  <section class="container-fluid padding">
+    <article class="row padding">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="../img/employee1.jpg" class="card-img-top" height="300">
+          <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit neque eum reiciendis suscipit voluptatibus corporis libero id optio illo dignissimos.</p>
+            <a href="#" class="btn btn-outline-secondary">See Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card">
+            <img src="../img/employee2.jpg" class="card-img-top" height="300">
+            <div class="card-body">
+              <h4 class="card-title">Mary Jo</h4>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit neque eum reiciendis suscipit voluptatibus corporis libero id optio illo dignissimos.</p>
+              <a href="#" class="btn btn-outline-secondary">See Profile</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card">
+            <img src="../img/employee3.jpg" class="card-img-top" height="300">
+            <div class="card-body">
+              <h4 class="card-title">Phil Carl</h4>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit neque eum reiciendis suscipit voluptatibus corporis libero id optio illo dignissimos.</p>
+              <a href="#" class="btn btn-outline-secondary">See Profile</a>
+            </div>
+          </div>
+      </div>
+    </article>
+  </section>
+  
+  <!-- TWO COLUMN SECTION -->
+  <section class="container-fluid padding">
+    <article class="row padding">
+      <div class="col-lg-6">
+        <h2>Our Philosphy</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe dolores sed nam architecto quasi aliquid delectus possimus quia. Provident officiis commodi similique nobis error explicabo.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem sequi soluta beatae ipsa magni numquam id, possimus exercitationem repellat rem officiis placeat error excepturi natus dicta in! Unde dignissimos corrupti pariatur eum inventore iusto magnam blanditiis quasi placeat culpa cum et sapiente ab veniam neque natus, totam rem explicabo, consectetur omnis cupiditate fugit ex dolorum possimus! Nam vitae magni eligendi et labore, sapiente voluptatibus! Hic numquam tenetur asperiores optio velit.</p>
+        <br>
+      </div>
+      <div class="col-lg-6 two-column">
+        <img src="../img/strategic58.png" class="img-fluid" width="100%">
+      </div>
+    </article>
+    <hr class="my-4">
+  </section>
+  <!-- CONNECT -->
+  <section class="container-fluid padding" id="connect">
+    <article class="row text-center padding">
+      <div class="col-12">
+        <h2>connect</h2>
+      </div>
+      <div class="col-12 social padding">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </article>
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <section class="container-fluid">
+      <article class="row text-center">
+        <div class="col-md-4">
+          <a href="#" class="navbar-brand"><img src="../img/m-logo.png" class="logo"></a>
+          <hr class="light">
+          <p>555-555-555</p>
+          <p>email@myemail.com</p>
+          <p>100 street name</p>
+          <p>city, state, 00000</p>
+        </div>
+        <div class="col-md-4">
+          <hr class="light">
+          <h5>Our Hours</h5>
+          <hr class="light">
+          <p>Monday: 9am - 5pm</p>
+          <p>Saturday: 10am - 4pm</p>
+          <p>Sunday: Closed</p>
+        </div>
+        <div class="col-md-4">
+          <hr class="light">
+          <h5>Service Area</h5>
+          <hr class="light">
+          <p>City, State, 00000</p>
+          <p>City, State, 00000</p>
+          <p>City, State, 00000</p>
+          <p>City, State, 00000</p>
+        </div>
+        <div class="col-12">
+          <hr class="light-100">
+          <h5>&copy;judechuks.com </h5>
+        </div>
+      </article>
+    </section>
+  </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>
