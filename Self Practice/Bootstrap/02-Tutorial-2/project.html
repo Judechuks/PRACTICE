@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Judechuks, 17-June-2023">
+  <title>Bootstrap Tutorial</title>
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<style>
+  body{
+    padding-top: 50px;
+    /* padding-bottom: 60px; */
+  }
+  .carousel-inner img{
+    width: 100%;
+    height: 520px!important;
+  }
+  .flex{
+    display: flex;
+  }
+  .navbar-text{
+    gap: 10px;
+  }
+  .thumbnail img{
+    width: 100%;
+  }
+  .plan .btn{
+    margin-bottom: 15px;
+  }
+  footer .grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .self-center{
+    justify-self: center;
+  }
+  @media (max-width: 768px){
+    body{
+      /* padding-bottom: 170px; */
+      padding-bottom: 0px;
+      margin: 0;
+    }
+    footer .grid-3{
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <article class="container">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <!-- data-target=".navbar-collapse" points towards the container housing the menu if its 'class' use '.', 'id' use '#'-->
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand">Judechuks</a>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Learn 
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Languages</li>
+              <li><a href="#">C++</a></li>
+              <li><a href="#">C#</a></li>
+              <li><a href="#">Java</a></li>
+              <li><a href="#">Javascript</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </nav>
+  <!-- data-interval="time-in-millseconds" -->
+  <section id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <!-- Carousel indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Carousel Images -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="../img/1.jpg">
+        <article class="carousel-caption">
+          <h1>Theme 1</h1>
+        </article>
+      </div>
+      <div class="item">
+        <img src="../img/city-bgrd.jpg">
+        <article class="carousel-caption">
+          <h1>Theme 2</h1>
+        </article>
+      </div>
+      <div class="item">
+        <img src="../img/Lake-Zürich.jpg">
+        <article class="carousel-caption v-align-middle">
+          <h1>Theme 3</h1>
+        </article>
+      </div>
+    </div>
+    <!-- Left and Right buttons -->
+    <a href="#myCarousel" class="left carousel-control" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a href="#myCarousel" class="right carousel-control" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </section>
+  <!-- JUMBOTRON -->
+  <section class="container">
+    <article class="jumbotron text-center">
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae eaque quae. Corrupti, deleniti! Maxime, nobis cum ex deleniti adipisci nisi exercitationem id laudantium, hic accusamus, beatae veritatis distinctio blanditiis.</p>
+      <button type="button" class="btn btn-primary">TUTORIALS</button>
+      <button type="button" class="btn btn-success">SUBSCRIBE</button>
+    </article>
+
+    <!-- PLAN -->
+    <section class="row plan">
+      <article class="col-sm-4">
+        <a href="#" class="thumbnail">
+          <img src="../img/1.jpg">
+        </a>
+        <h3>PLAN 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero minima consequuntur cum quia excepturi provident! Nostrum numquam doloremque consectetur voluptas mollitia, voluptatum assumenda veritatis laboriosam cupiditate sed quidem quod? Quaerat, eos saepe ea dolore eaque deserunt temporibus neque dolorum sint accusamus sapiente aut esse id necessitatibus eligendi dicta repellendus. Veniam, est repellat placeat sequi aperiam harum debitis facere distinctio libero.</p>
+        <button type="button" class="btn btn-info">Opt in</button>
+      </article>
+      <article class="col-sm-4">
+        <a href="#" class="thumbnail">
+          <img src="../img/2.jfif">
+        </a>
+        <h3>PLAN 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero minima consequuntur cum quia excepturi provident! Nostrum numquam doloremque consectetur voluptas mollitia, voluptatum assumenda veritatis laboriosam cupiditate sed quidem quod? Quaerat, eos saepe ea dolore eaque deserunt temporibus neque dolorum sint accusamus sapiente aut esse id necessitatibus eligendi dicta repellendus. Veniam, est repellat placeat sequi aperiam harum debitis facere distinctio libero.</p>
+        <button type="button" class="btn btn-info">Opt in</button>
+      </article>
+      <article class="col-sm-4">
+        <a href="#" class="thumbnail">
+          <img src="../img/3.jfif">
+        </a>
+        <h3>PLAN 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero minima consequuntur cum quia excepturi provident! Nostrum numquam doloremque consectetur voluptas mollitia, voluptatum assumenda veritatis laboriosam cupiditate sed quidem quod? Quaerat, eos saepe ea dolore eaque deserunt temporibus neque dolorum sint accusamus sapiente aut esse id necessitatibus eligendi dicta repellendus. Veniam, est repellat placeat sequi aperiam harum debitis facere distinctio libero.</p>
+        <button type="button" class="btn btn-info">Opt in</button>
+      </article>
+    </section>
+  </section>
+  <!-- FOOTER -->
+  <!-- <footer class="navbar navbar-inverse navbar-fixed-bottom"> -->
+  <footer class="navbar-inverse">
+    <article class="container">
+      <div class="grid-3">
+        <!-- Brand -->
+         <a href="#" class="navbar-brand self-center">Judechuks</a>
+        <!-- Copyright -->
+         <p class="navbar-text self-center">Copyright &copy; Judechuks &commat; 2023</p>
+        <!-- social-media icons -->
+        <p class="navbar-text flex self-center">
+          <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
+          <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        </p>
+      </div>
+    </article>
+  </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>
