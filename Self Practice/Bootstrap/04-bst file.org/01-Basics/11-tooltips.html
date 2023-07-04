@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Judechuks, 23-June-2023">
+  <title>Bootstrap Tutorial</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+  <div class="container-fluid">
+    <div class="page-header">
+      <h2>Tooltip</h2>
+    </div>
+  </div>
+
+    <article class="container">
+      <p>Hover the link below</p>
+      <!-- data-placement can be left, right, bottom, or top(default) -->
+      <a href="#" data-toggle="tooltip" title="Example of a tooltip" data-placement="bottom">Tooltip on hover</a>
+      <br> <br>
+      <p>
+        <button class="btn btn-success" data-toggle="tooltip" title="Button tooltip">Tooltip Button</button>
+      </p>
+    </article>
+
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>   
+</body>
+</html>
