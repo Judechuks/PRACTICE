@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Judechuks, 23-June-2023">
+  <title>Bootstrap Tutorial</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+  <div class="container-fluid">
+    <div class="page-header">
+      <h2>Tooltip and Pop Over</h2>
+    </div>
+  </div>
+
+    <article class="container">
+      <p>Hover the link below</p>
+      <a href="#" data-toggle="tooltip" title="Example of a tooltip" data-placement="bottom">Tooltip on hover</a>
+      <br> <br>
+        <button class="btn btn-success" data-toggle="tooltip" title="Button tooltip">Tooltip Button</button>
+        <br> <br>
+        <!-- data-placement="bottom" is used to position the popover, left, right(default), top, bottom -->
+        <a href="#" data-toggle="popover" title="Popover Heading" data-content="The Popover Content" data-placement="top">PopOver - Click Me</a>
+        <br> <br>
+        <!-- data-trigger="focus", triggers automatic close, when any area  on the page is clicked -->
+        <a href="#" data-toggle="popover" title="Popover Heading" data-content="The Popover Content" data-placement="bottom" data-trigger="focus">PopOver - Click Me</a>
+        <br> <br>
+        <!-- data-trigger="hover", triggers the popover when the element is hovered -->
+        <a href="#" data-toggle="popover" title="Popover Heading" data-content="The Popover Content" data-placement="bottom" data-trigger="hover">PopOver - Hover Me</a>
+    </article>
+
+  <script>
+    $(document).ready(function(){
+      // The tooltip
+      $('[data-toggle="tooltip"]').tooltip();
+      // The popover
+      $('[data-toggle="popover"]').popover();
+    });
+  </script>   
+</body>
+</html>
