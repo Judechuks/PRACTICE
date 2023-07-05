@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../lightbox2-2.11.4/dist/css/lightbox.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar">
+<nav class="navbar navbar-inverse">
+  <!-- Navigation Toggle Button -->
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+    <span class="sr-only">Navigation Toggle</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <header class="navbar-header">
+    <a href="#" class="navbar-brand">Photo Gallery</a>
+  </header>
+  <ul class="nav navbar-nav navbar-right" id="nav">
+    <li><a href="index.html">Home</a></li>
+    <li class="active"><a href="nature.html">Nature</a></li>
+    <li><a href="#science">Science</a></li>
+    <li><a href="#art">Art</a></li>
+  </ul>
+</nav> 
+
+<!-- PHOTO GALLERY -->
+<section class="gallery">
+  <div class="page-header text-center">
+    <h2>Photo Gallery</h2>
+  </div>
+  <div class="row">
+    <!-- using lightbox in place of modal -->
+    <article class="col-sm-4">
+      <a href="../../img/1.jpg" data-lightbox="gallery" data-title="First Image" class="thumbnail">
+        <img src="../../img/1.jpg">
+      </a>
+    </article>
+    <article class="col-sm-4">
+      <a href="../../img/city-bgrd.jpg" data-lightbox="gallery" data-title="Second Image" class="thumbnail hgt">
+        <img src="../../img/city-bgrd.jpg">
+      </a>
+    </article>
+    <article class="col-sm-4">
+      <a href="../../img/nature-1.jpeg" data-lightbox="gallery" data-title="Third Image" class="thumbnail">
+        <img src="../../img/nature-1.jpeg">
+      </a>
+    </article>
+    <article class="clearfix"></article>
+    <article class="col-sm-4">
+      <a href="../../img/shop-stacks.png" data-lightbox="gallery" data-title="Fourth Image" class="thumbnail">
+        <img src="../../img/shop-stacks.png">
+      </a>
+    </article>
+    <article class="col-sm-4">
+      <a href="../../img/Lake-Zürich.jpg" data-lightbox="gallery" data-title="Fifth Image" class="thumbnail">
+        <img src="../../img/Lake-Zürich.jpg" class="img-thumbnail">
+      </a>
+    </article>
+    <article class="col-sm-4">
+      <a href="../../img/strategic58.png" data-lightbox="gallery" data-title="Sixth Image" class="thumbnail">
+        <img src="../../img/strategic58.png" class="img-thumbnail">
+      </a>
+    </article>
+  </div>
+</section>
+
+<footer class="navbar navbar-inverse">
+  <p class="text-center">copyright Reserved by Judechuks</p>
+</footer> 
+</body>
+<!-- Lightbox Js file --> 
+<script src="../../lightbox2-2.11.4/dist/js/lightbox.js"></script>
+</html>
