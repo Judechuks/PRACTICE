@@ -1,0 +1,45 @@
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  h1, h2{
+    margin: 0;
+  }
+  section{
+    width: 100%;
+    min-height: 100vh;
+    /* position: relative; */
+  }
+  #home img{
+    width: 100%;
+    height: 93vh;
+  }
+  #contact{
+    background-color: silver;
+  }
+  .navbar{
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 0 20px;
+  }
+  .carousel-caption{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: fit-content;
+  }
+  .gallery img{
+    width: 100%;
+    height: 100%;
+  }
+  footer .text-center{
+    padding: 10px;
+    color: white;
+  }
+  .row{
+    margin: 0;
+  }
