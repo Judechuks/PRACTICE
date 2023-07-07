@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Judechuks, 26-June-2023">
+  <title>Bootstrap Tutorial</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <!-- Bootstrap tooltip -->
+  <script src="js/tooltip.js"></script>
+</head>
+<body>
+
+  <!-- JAVASCRIPT BEHAVIOUR -->
+  <hr>
+  <h3>Tab Button in Bootstrap</h3>
+  <hr>
+  <div class="row mb-5">
+    <div class="col-4">
+      <div class="list-group" role="tablist">
+        <a href="#home" class="list-group-item list-group-item-action active" data-toggle="list">Home</a>
+        <a href="#about" class="list-group-item list-group-item-action" data-toggle="list">About</a>
+        <a href="#contact" class="list-group-item list-group-item-action" data-toggle="list">Contact</a>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-pane fade show position-absolute bg-light" id="home" role="tabpanel">
+        <h4>Home Page</h4>
+        <p>This is the Home Page...</p>
+      </div>
+      <div class="tab-pane fade position-absolute bg-light" id="about" role="tabpanel">
+        <h4>About Page</h4>
+        <p>This is the About Page...</p>
+      </div>
+      <div class="tab-pane fade position-absolute bg-light" id="contact" role="tabpanel">
+        <h4>Contact Page</h4>
+        <p>This is the Contact Page...</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>
