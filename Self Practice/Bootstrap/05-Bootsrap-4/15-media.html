@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Judechuks, 27-June-2023">
+  <title>Bootstrap Tutorial</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <!-- Bootstrap tooltip -->
+  <script src="js/tooltip.js"></script>
+</head>
+<style>
+  .media img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+</style>
+<body>
+
+  <div class="container">
+    <!-- MEDIA OBJECT -->
+    <hr>
+    <h3>Media Object</h3>
+    <hr>
+    <div class="media">
+      <img src="../img/employee1.jpg" class="d-flex mr-3">
+      <div class="media-body">
+        <h5>Media Heading</h5>
+        Themes and styles also help keep your document coordinated.
+      </div>
+    </div>
+    
+     <hr> <br> <br>
+    
+    <!-- NESTING MEDIA OBJECTS -->
+    <hr> <h2>Nesting Media Objects</h2> <hr>
+    <br>
+    <div class="media">
+      <img src="../img/employee1.jpg" class="d-flex mr-3">
+      <div class="media-body">
+        <h5>Media Heading</h5>
+        Themes and styles also help keep your document coordinated.
+
+        <div class="media mt-3">
+          <a href="#" class="d-flex">
+            <img src="../img/employee1.jpg">
+          </a>
+          <div class="media-body ml-2">
+          <h5>Media Heading</h5>
+          <p>Themes and styles also help keep your document coordinated.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOP ALIGNED (DEFAULT) -->
+    <hr>
+    <h3>Top Aligned (Default) </h3>
+    <hr>
+    <div class="media">
+      <img src="../img/employee1.jpg" class="d-flex align-self-start mr-3">
+      <div class="media-body">
+        <h5>Top Aligned Media</h5>
+        <p>Themes and styles also help keep your document coordinated.</p>
+        <p>Themes and styles also help keep your document coordinated.</p>
+      </div>
+    </div>
+    
+     <hr> 
+     <br> <br>
+
+    <!-- CENTER ALIGNED -->
+    <hr>
+    <h3>Center Aligned </h3>
+    <hr>
+    <div class="media">
+      <img src="../img/employee1.jpg" class="d-flex align-self-center mr-3">
+      <div class="media-body">
+        <h5>Center Aligned Media</h5>
+        <p>Themes and styles also help keep your document coordinated.</p>
+        <p>Themes and styles also help keep your document coordinated.</p>
+      </div>
+    </div>
+    
+     <hr> 
+     <br> <br>
+
+    <!-- BOTTOM ALIGNED -->
+    <hr>
+    <h3>Bottom Aligned </h3>
+    <hr>
+    <div class="media">
+      <img src="../img/employee1.jpg" class="d-flex align-self-end mr-3">
+      <div class="media-body">
+        <h5>Bottom Aligned Media</h5>
+        <p>Themes and styles also help keep your document coordinated.</p>
+        <p>Themes and styles also help keep your document coordinated.</p>
+      </div>
+    </div>
+    
+     <hr> 
+     <br> <br>
+
+    <!-- MEDIA LIST -->
+    <hr>
+    <h3>Media List </h3>
+    <hr>
+    <ul class="list-unstyled">
+      <li class="media">
+        <img src="../img/employee1.jpg" class="d-flex mr-3">
+        <div class="media-body">
+          <h5>Bottom Aligned Media</h5>
+          <p>Themes and styles also help keep your document coordinated.</p>
+          <p>Themes and styles also help keep your document coordinated.</p>
+        </div>
+      </li>
+      <li class="media">
+        <img src="../img/employee1.jpg" class="d-flex mr-3">
+        <div class="media-body">
+          <h5>Bottom Aligned Media</h5>
+          <p>Themes and styles also help keep your document coordinated.</p>
+          <p>Themes and styles also help keep your document coordinated.</p>
+        </div>
+      </li>
+      <li class="media">
+        <img src="../img/employee1.jpg" class="d-flex mr-3">
+        <div class="media-body">
+          <h5>Bottom Aligned Media</h5>
+          <p>Themes and styles also help keep your document coordinated.</p>
+          <p>Themes and styles also help keep your document coordinated.</p>
+        </div>
+      </li>
+    </ul>
+    
+     <hr> 
+     <br> <br>
+  </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>
