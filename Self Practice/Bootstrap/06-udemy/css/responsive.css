@@ -1,0 +1,42 @@
+@media only screen and (max-width: 1024px){
+  .title-text{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 768px){
+  .sticky{
+    padding: 0% 5%;
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .title-text{
+    width: 80%;
+  }
+  .content-1 .circle{
+    margin-left: 35%;
+  }
+  .sticky{
+    padding: 2% 5%;
+    top: 20px;
+  }
+  .site-title{
+    margin-top: 60px;
+  }
+  .site-title p{
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .site-title h2{
+    font-size: 1.9em;
+  }
+  .title-text{
+    width: 100%;
+  }
+  .btn-sub2{
+    display: none;
+  }
+}
