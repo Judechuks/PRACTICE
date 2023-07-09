@@ -1,0 +1,118 @@
+.border-animation::after{
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #ef233c;
+  display: block;
+  position: relative;
+  top: 3px;
+  transition: all 400ms ease;
+}
+.border-animation:hover::after{
+  width: 100%;
+}
+
+/*====== Homepage Button Animation ======*/
+.btn-sub1:hover{
+  background-color: transparent;
+  padding-right: 30px;
+}
+.fa-angle-right{
+  transform: rotate(0deg);
+  transition: 500ms;
+}
+.btn-sub2:hover{
+  border: 1px solid #edf2f4;
+  background-color: #352c31;
+}
+.fa-angle-double-right{
+  transform: rotate(0deg);
+  transition: 500ms;
+}
+
+/*========== Pricing Animation ==========*/
+.content-3 .basic a:hover,
+.content-3 .enterprise a:hover{
+  background-color: #e30022;
+  color: white;
+}
+@media only screen and (min-width: 1024px) {
+  .basic .basic-border, .enterprise .basic-border{
+    position: absolute;
+    background-color: #e30022;
+    transition: 800ms;
+  }
+  .content-3 .basic .basic-border:nth-child(1),
+  .content-3 .enterprise .basic-border:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 0.8px;
+  }
+  .content-3 .basic .basic-border:nth-child(2),
+  .content-3 .enterprise .basic-border:nth-child(2){
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 30px;
+  }
+  .content-3 .basic .basic-border:nth-child(3),
+  .content-3 .enterprise .basic-border:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 0.8px;
+    height: 30px;
+  }
+  .content-3 .basic .basic-border:nth-child(4),
+  .content-3 .enterprise .basic-border:nth-child(4){
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 1px;
+  }
+  .content-3 .enterprise .basic-border:nth-child(2){
+    width: 0.8px;
+  }
+  .pro .pro-span{
+    position: absolute;
+    background-color: #e30022;
+    transition: 800ms;
+  }
+  .pro .pro-span:nth-child(1){
+    bottom: 40%;
+    right: 0;
+    width: 1px;
+    height: 130px;
+  }
+  .pro .pro-span:nth-child(2){
+    bottom: 40%;
+    left: 0;
+    width: 1px;
+    height: 130px;
+  }
+}
+
+/*========== Our Team ==========*/
+.content-5 .social-icon a:hover{
+  background-color: #e30022;
+  color: white;
+}
+
+/*========== Footer ==========*/
+footer span:hover{
+  background-color: white;
+  color: #3f494c;
+}
+.top a:hover{
+  color: #f7fff7;
+}
+
+/*========== Sticky Navbar ==========*/
+.sticky {
+  background-color: #000;
+  padding: 0% 4%;
+  transition: 400ms;
+}
+.top a:hover{
+  color: #f7fff7;
+}
