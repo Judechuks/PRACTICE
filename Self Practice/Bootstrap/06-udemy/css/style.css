@@ -1,0 +1,336 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+.navbar-brand span{
+  font-size: 1.0625rem; /* 17px */
+	font-family: Pacifico, cursive; 
+}
+body{ 
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+} 
+
+ /*========== BANNER ==========*/
+.site-wrapper{
+  width: 100%;
+  height: 100%;
+  background-image: url(../Stock/bgrd-8-laptop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #f7fff7;
+}
+.navbar-nav li a{
+  font-size: 0.9em;
+  margin: 0 10px;
+  color: #f7fff7 !important;
+}
+.site-title{
+  text-align: center;
+  margin-top: 7%;
+  height: 74vh;
+}
+.site-title h2{
+  font-size: 3em;
+  margin: 5% 0%;
+}
+.site-title p{
+  width: 50vw;
+  /* height: 5vh; */
+  font-size: 1em;
+  color: #f6f8ff;
+}
+.title-span{
+  color: #ef233c;
+}
+.btn-sub1{
+  font-family: 'Patua One', sans-serif;
+  border: 1px solid #ef233c;
+  background-color: #edf2f4;
+  color: #ef233c;
+  border-radius: 3px;
+  padding: 0.4em 1em;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+.btn-sub2{
+  font-family: 'Patua One', sans-serif;
+  border: 1px solid #edf2f4;
+  background-color: #ef233c;
+  color: #edf2f4;
+  border-radius: 3px;
+  padding: 0.4em 1em; 
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+.site-title i{
+  padding-left: 0.3em;
+}
+
+/*========== FEATURES ==========*/
+.content-1 h6{
+  font-size: 0.9em;
+  color: #ef233c;
+}
+.content-1 .col-md-12 .title-border{
+  content: "";
+  width: 30%;
+  height: 2px;
+  display: block;
+  background-color: #ef233c;
+  border-radius: 50%;
+  margin: 1%; 
+  margin-left: 35%;
+}
+.content-1 .col-md-12 p{
+  font-size: 0.9rem; 
+  color: #3f494c;
+}
+.content-1 .circle{
+  cursor: pointer;
+}
+
+/*== 3 ICON SECTION ==*/
+.content-1 .circle{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-left: 9vw;
+  background-color: #f7fff7;
+  border: 1px solid rgb(63, 73, 76, 0.205);
+  color: #ef233c;
+  transition: all 200ms ease;
+}
+.content-1 .description a{
+  text-decoration: none;
+}
+.content-1 .description p{
+  font-size: 0.9rem;
+}
+
+/*========== ABOUT US ==========*/
+.content-2 .row .col-1{
+  background-image: url(../Stock/grassland.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.content-2 .col-md-6 p{
+  font-size: 0.9rem;
+}
+.content-2 .progress-bars{
+  margin-bottom: 8vh;
+}
+.progress .pro-1,
+.progress .pro-2,
+.progress .pro-3{
+  width: 0;
+  transition: all 2s ease;
+}
+
+/*========== PRICING  ==========*/
+.content-3{
+  width: 100%;
+  background-color: #efefff;
+}
+.content-3 .row{
+  padding-bottom: 4%;
+}
+.content-3 .col-md-12 p{
+  font-size: .9rem;
+  color: #ef233c;
+}
+.content-3 .col-md-12 h3{
+  padding-bottom: 2%;
+}
+.content-3 .pro{
+  border: 1px solid rgba(23, 23, 38, 0.2);
+  border-radius: 3px;
+  background-color: #fffbfe;
+}
+.content-3 .pro p{
+  border: 1px solid rgba(23, 23, 38, 0.2);
+  background-color: #e30022;
+  color: white;
+  border-top: none;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 3% 35%;
+  margin-bottom: 10%;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.content-3 .pro .price .dollar{
+  font-size: 1.19rem;
+  margin-top: 20px;
+  padding-left: 10px;
+  position: relative;
+  top: -20px;
+}
+.price-month{
+  font-size: .9rem;
+}
+.price-details{
+  padding: 5% 20%;
+}
+.content-3 .pro h6{
+  padding: 3%;
+  font-size: 1rem;
+}
+.content-3 .pro a{
+  display: inline-block;
+  padding: 8px 40px;
+  margin: 10%;
+  background-color: #e30022;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.content-3 .enterprise p{
+  padding: 3% 28%;
+}
+.content-3 .basic a,
+.content-3 .enterprise a{
+  background-color: #fff;
+  color: black;
+  border: 1px solid #e30022;
+  transition: all 700ms ease;
+}
+.content-3 .col-md-3{
+  padding: 0;
+}
+.content-3 .price-details hr{
+  height: 1.5px;
+}
+
+/*========== TABS WITH ICON  ==========*/
+.content-4 .nav-tabs{
+  margin: 4px;
+  border: 1px solid rgb(232, 232, 232);
+  border-bottom: 0;
+  text-align: center;
+  cursor: pointer;
+  background-color: #edf2f4;
+}
+.content-4 .tab-item{
+  text-decoration: none;
+  color: #3f494c;
+}
+.content-4 .tab-item i{
+  display: block;
+  font-size: 2.82rem;
+  padding: 0.4em 1.7em 0;
+}
+.content-4 .tab-item span{
+  font-size: 1.15rem;
+  display: inline-block;
+  padding-bottom: 1em;
+  width: 100%;
+}
+.content-4 .tab-item.active{
+  color: #ef233c;
+}
+.tab-content{
+  margin-bottom: 5%;
+  transition: all 400ms ease;
+}
+
+
+/*========== TEAMS  ==========*/
+.content-5 h6,
+.content-6 h6{
+  color: #ef233c;
+}
+.content-5 .row{
+  margin-top: 8%;
+}
+.content-5 .member-1 .avatar{
+  margin-top: 20px 0;
+}
+.content-5 .circle{
+  border-radius: 100px;
+  width: 35%;
+  padding-top: 35px;
+  position: relative;
+  z-index: 4;
+}
+.content-5 .avatar span::after{
+  content: "";
+  width: 90%;
+  height: 100px;
+  background-color: #edf2f4;
+  position: absolute;
+  display: block;
+  top: 3px;
+  z-index: 0;
+}
+.content-5 .avatar img{
+  height: 175px;
+}
+.content-5 .member-1 .desc .info{
+  padding: 8%;
+  font-size: 1rem;
+}
+.content-5 .social-icon{
+  background-color: #edf2f4;
+  padding: 4%;
+}
+.content-5 .social-icon a{
+  border: 1px solid rgba(123, 123, 123, 0.4);
+  padding: 4px 8px;
+  border-radius: 40px;
+  transition: all 500ms ease;
+}
+
+/*========== CONTACT US  ==========*/
+.content-6 p{
+  font-size: 1rem;
+}
+.content-6 .contact span{
+  color: #ef233c;
+  cursor: pointer;
+}
+.content-6 .btn-submit{
+  background-color: #ef233c;
+  color: white;
+  cursor: pointer;
+}
+
+/*========== FOOTER  ==========*/
+footer{
+  background-color: #000;
+  padding-top: 4%;
+  margin: 0;
+  position: relative;
+}
+footer span{
+  padding: 0.3em 0.7em;
+  color: #fff;
+  background-color: #242423;
+  border-radius: 50%;
+  margin: 13px 3px;
+  transform-origin: all 500ms ease;
+}
+footer p{
+  margin: 0;
+  color: #3f494c;
+  padding-bottom: 8px;
+}
+footer .top a{
+  position: absolute;
+  top: 69%;
+  right: 2%;
+  color: #3f494c; 
+  transform-origin: all 500ms ease;
+}
+#error{
+  color: #ef233c;
+  font-size: .9rem;
+}
