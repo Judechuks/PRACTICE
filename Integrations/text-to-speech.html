@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Judechuks, 07/07/2023">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/wavy-icon.png">
+  <link rel="stylesheet" href="../../PROJECT/assets/fontawesome-free-6.1.1-web/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Text to Speech</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  .hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #010758, #490d61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .hero h1{
+    font-size: 2.82rem;
+    font-weight: 500;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    color: white;
+  }
+  .hero h1 span{
+    color: #ff2963;
+  }
+  #text{
+    width: 60%;
+    height: 250px;
+    background: #403d84;
+    color: #fff;
+    font-size: 1rem;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 30px;
+  }
+  #text::placeholder{
+    font-size: 1rem;
+    color: #ddd;
+  }
+  .row{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  #listen{
+    background: #ff2963;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border-radius: 35px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+  #listen .fa-play,
+  #listen .fa-pause{
+    margin-right: 10px;
+  }
+  #voice{
+    flex: 1;
+    color: #fff;
+    background: #403d84;
+    height: 40px;
+    padding: 0 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 35px;
+    appearance: none; /*removes the default caret icon*/
+    /* To add personal dropdown icon */
+    background-image: url(img/caret-down-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-x: calc(100% - 20px);
+    background-position-y: 8px;
+  }
+</style>
+<body>
+  <div class="hero">
+    <h1>Text To Speech <span>Converter</span></h1>
+    <textarea id="text" placeholder="Write anything here...">
+    Welcome!
+    I'm Jay.
+    I'm here to assist you.
+    How may I help you?
+    </textarea>
+    <div class="row">
+      <select id="voice"></select>
+      <button id="listen"><i class="fa fa-play"></i>Listen</button>
+    </div>
+  </div>
+</body>
+<script>
+
+  /*===== Creating The Different Speech Readers (Voices) =====*/ 
+  let speech = new SpeechSynthesisUtterance();
+  let voices = [];
+  let voiceSelect = document.querySelector("#voice");
+
+  window.speechSynthesis.onvoiceschanged = ()=> {
+    voices = window.speechSynthesis.getVoices();
+    speech.voice = voices[0];
+
+    voices.forEach((voice, i) => (voiceSelect.options[i] = new Option(voice.name, i)));
+  }
+
+  voiceSelect.addEventListener("change", ()=> {
+    speech.voice = voices[voiceSelect.value];
+  });
+
+  /*========== Creating The Text To speech Reader ==========*/ 
+  const listen = document.querySelector("#listen");
+  const playIcon = document.querySelector("#listen i");
+  listen.addEventListener("click", ()=> {
+    speech.text = document.querySelector("#text").value;
+    window.speechSynthesis.speak(speech);
+
+  });
+</script>
+</html>
