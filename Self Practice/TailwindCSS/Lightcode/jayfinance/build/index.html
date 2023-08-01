@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay Xchange</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-color-primary text-white tracking-wider">
+  <header class="sticky top-0 z-50">
+    <nav class="container flex justify-between items-center">
+      <div class="py-5 text-color-secondary font-bold text-3xl">
+        <a href="#home">
+          <span class="text-white">Jay</span>Xchange.
+        </a>
+      </div>
+      <div>
+        <ul class="hidden lg:flex items-center space-x-6">
+          <li><a href="#home" class="hover:text-color-secondary ease-in duration-500">Home</a></li>
+          <li><a href="#features" class="hover:text-color-secondary ease-in duration-500">Features</a></li>
+          <li><a href="#testimonial" class="hover:text-color-secondary ease-in duration-500">Testimonial</a></li>
+          <li><a href="#pricing" class="hover:text-color-secondary ease-in duration-500">Pricing</a></li>
+          <li><a href="#blog" class="hover:text-color-secondary ease-in duration-500">Blog</a></li>
+          <li><a href="#contact" class="hover:text-color-secondary ease-in duration-500">Contact</a></li>
+
+          <li><button class="bg-color-secondary px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-500">free trial</button></li>
+        </ul>
+        </ul>
+      </div>
+
+      <!-- Mobile screen  -->
+      <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+        <i class="fas fa-bars text-2xl"></i>
+      </div>
+
+      <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
+        <ul class="h-full grid place-items-center py-20">
+          <li><a id="hLink" href="#home" class="hover:text-color-secondary ease-in duration-500">Home</a></li>
+          <li><a id="hLink" href="#features" class="hover:text-color-secondary ease-in duration-500">Features</a></li>
+          <li><a id="hLink" href="#testimonial" class="hover:text-color-secondary ease-in duration-500">Testimonial</a></li>
+          <li><a id="hLink" href="#pricing" class="hover:text-color-secondary ease-in duration-500">Pricing</a></li>
+          <li><a id="hLink" href="#blog" class="hover:text-color-secondary ease-in duration-500">Blog</a></li>
+          <li><a id="hLink" href="#contact" class="hover:text-color-secondary ease-in duration-500">Contact</a></li>
+
+          <li><button class="btn">free trial</button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!--============ HOME ============-->
+    <section id="home" class="relative">
+      <div class="blob1"></div>
+      <div class="blob2"></div>
+      <div class="container py-20">
+        <div class="flex flex-col items-center z-20 md:flex-row">
+          <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
+              <h1 class="title mb-4">Awesome App for Your Financial.</h1>
+              <p class="leading-relaxed mb-10">This should be used to tell a story and let your users know a little more about app and it’s use, How can benefit them.</p>
+              <button class="btn">Download app</button>
+          </div>
+          <div class="md:w-1/2">
+              <img src="./img/hero4.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--========== FEATURES ==========-->
+    <section id="features" class="bg-color-primary-light">
+      <div class="container py-20">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+          <h4 class="font-bold text-color-secondary mb-4">Our Future</h4>
+          <h1 class="title">Easy To Manage Your All Payments By Our App</h1>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8">
+          <!-- Card No 1 -->
+          <div class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-500">
+            <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+              <i class="fa-solid fa-calendar-days text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold py-4">Expense Tracking</h3>
+            <p class="leading-relaxed">We use an application designed a testing gnose to keep away</p>
+          </div>
+          <!-- Card No 2 -->
+          <div class="bg-color-primary-dark border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer">
+            <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+              <i class="fa-solid fa-chart-column text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold py-4">Finance Snapshot</h3>
+            <p class="leading-relaxed">We use an application designed a testing gnose to keep away</p>
+          </div>
+          <!-- Card No 3 -->
+          <div class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-500">
+            <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+              <i class="fa-solid fa-phone text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold py-4">Support 24/7</h3>
+            <p class="leading-relaxed">We use an application designed a testing gnose to keep away</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--======== SAVING MONEY ========-->
+    <section id="saving-money">
+      <div class="container py-20 relative">
+        <div class="blob1"></div>
+        <div class="blob2"></div>
+        <div class="flex flex-col items-center justify-between md:flex-row">
+          <div class="mb-12 md:w-1/2">
+            <img src="./img/hero3.png" alt="Second Hero">
+          </div>
+          <div class="text-center md:text-left md:w-1/2 md:ml-20">
+            <h4 class="font-bold text-color-secondary mb-4">Saving Money</h4>
+            <h1 class="title mb-4">Best Financing App To Save Your Money</h1>
+            <p class="leading-relaxed mb-10">Best financing app ever in the world. Easy to use and very user friendly for mobile banking. You can control your card easily and send money some one just one click.</p>
+            <button class="btn">Read More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--======== SAVING MONEY ========--> 
+    <section id="how-it-works" class="bg-color-primary-light">
+      <div class="container py-20">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+          <h4 class="font-bold text-color-secondary mb-4">How It Works</h4>
+          <h1 class="title">Grow Up Your Money Saving</h1>
+        </div>
+
+        <div class="flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0 md:space-x-6">
+          <!-- card 1  -->
+          <div class="text-center cursor-pointer">
+            <div class="relative bg-color-primary-dark inline-block px-6 py-3 rounded-lg cursor-pointer hover:bg-color-secondary ease-in duration-500">
+              <p class="text-6xl lg:after:content-[''] lg:after:flex lg:after:bg-[url('img/line.png')] lg:after:absolute lg:after:top-4 lg:after:left-32 2xl:after:left-52 lg:after:bg-no-repeat lg:after:h-7 lg:after:w-52">1</p>
+            </div>
+            <h3 class="text-xl font-bold py-4">Install The App</h3>
+            <p class="leading-relaxed">We use an application designed a testing gnose to keep away</p>
+          </div>
+          <!-- card 2  -->
+          <div class="text-center cursor-pointer">
+            <div class="relative inline-block px-6 py-3 rounded-lg cursor-pointer bg-color-secondary">
+              <p class="text-6xl lg:after:content-[''] lg:after:flex lg:after:bg-[url('img/line-bottom.png')] lg:after:absolute lg:after:top-10 lg:after:left-32 2xl:after:left-52 lg:after:bg-no-repeat lg:after:h-7 lg:after:w-52">2</p>
+            </div>
+            <h3 class="text-xl font-bold py-4">Setup Your Profile</h3>
+            <p class="leading-relaxed">We use an application designed a testing gnose to keep away</p>
+          </div>
+        <!-- card 3  -->
+          <div class="text-center cursor-pointer">
+            <div class="relative bg-color-primary-dark inline-block px-6 py-3 rounded-lg cursor-pointer hover:bg-color-secondary ease-in duration-500">
+              <p class="text-6xl">3</p>
+            </div>
+            <h3 class="text-xl font-bold py-4">Enjoy The Features!</h3>
+            <p class="leading-relaxed">We use an application designed a testing gnose to keep away</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--======== TESTIMONIALS ========--> 
+    <section id="testimonial">
+      <div class="container py-20">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+            <h4 class="font-bold text-color-secondary mb-4">User Review</h4>
+            <h1 class="title">What Clients Say About Our App After Use It</h1>
+        </div>
+
+        <!-- review container  -->
+        <div class="mt-8">
+          <div class="flex items-center justify-center flex-wrap">
+            <img src="./img/user1.jpg" alt="user1" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic active-pic" onclick="showReview()">
+            <img src="./img/user2.jpg" alt="user2" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
+            <img src="./img/user3.jpg" alt="user3" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
+            <img src="./img/user4.jpg" alt="user4" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
+            <img src="./img/user5.jpg" alt="user5" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
+          </div>
+          <div class="grid place-items-center text-center m-auto md:w-4/5 min-h-[40vh]">
+            <div class="user-text active-text">
+              <p class="md:text-2xl mb-6 relative"><i class="fa fa-quote-left"></i>If you are looking for the best finance platform to get started with, then you are in the right place. Look no further and take the leap as I did and you won't regret it.<i class="fa fa-quote-right"></i></p>
+              <h4 class="font-bold text-color-secondary mb-1">Markin Nesus</h4>
+              <p>IOS developer</p>
+            </div>
+            <div class="user-text">
+              <p class="md:text-2xl mb-6 relative"><i class="fa fa-quote-left"></i>Jayxchange provides the best and reliable exchange service that you can can dream of. Kudos!!!<i class="fa fa-quote-right"></i></p>
+              <h4 class="font-bold text-color-secondary mb-1">Vera Duncan</h4>
+              <p>Flutter developer</p>
+            </div>
+            <div class="user-text">
+              <p class="md:text-2xl mb-6 relative" ><i class="fa fa-quote-left"></i>I have used numerous finance platform and none comes close to jayxchange<i class="fa fa-quote-right"></i></p>
+              <h4 class="font-bold text-color-secondary mb-1">Pirtle Karol</h4>
+              <p>Android developer</p>
+            </div>
+            <div class="user-text">
+              <p class="md:text-2xl mb-6 relative"><i class="fa fa-quote-left"></i>If you want to grow and keep your money in safe place, then Jayxchange is for you.<i class="fa fa-quote-right"></i></p>
+              <h4 class="font-bold text-color-secondary mb-1">Mark Joe</h4>
+              <p>React developer</p>
+            </div>
+
+            <div class="user-text">
+              <p class="md:text-2xl mb-6 relative"><i class="fa fa-quote-left"></i>Jayxchange offers you the best with always available and relaibe customer support that you can think of.<i class="fa fa-quote-right"></i></p>
+              <h4 class="font-bold text-color-secondary mb-1">Leila Domniuc</h4>
+              <p>Angular developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
