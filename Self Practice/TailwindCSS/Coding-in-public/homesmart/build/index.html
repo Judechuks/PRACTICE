@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homesmart</title>
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body class="max-w-[2000px] mx-auto text-neutral-900 dark:text-neutral-200 bg-white dark:bg-neutral-800">
+<!--========== NAV MENU ==========-->
+<nav class="mx-auto p-4 bg-amber-400">
+  <div class="container mx-auto flex items-center justify-between">
+    <a href="#" aria-label="Home Page" class="focus:outline-none focus-visible:ring-4 ring-neutral-400 rounded-sm ring-offset-4 ring-offset-amber-400 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-9 z-50 hover:opacity-75 transition-opacity">
+      <img src="./assets/logo.svg" alt="logo" width="200" class="w-48 md:w-64 lg:w-72">
+    </a>
+    <button id="menu" class="lg:hidden focus:outline-none focus-visible:ring-4 ring-neutral-400 rounded-sm ring-offset-4 ring-offset-amber-400 text-neutral-900 hover:text-neutral-600 transition-colors" aria-expanded="false" aria-label="Open Menu">
+      <i class="fa fa-bars text-[1.3rem]"></i>
+    </button>
+    <!-- Menu Bar -->
+    <div role="menubar" class="hidden flex-col gap-4 absolute z-40 right-0 left-0 top-16 bg-amber-400 shadow-xl text-center text-lg p-6 items-center lg:flex lg:flex-row lg:static lg:shadow-none lg:justify-between lg:w-full">
+      <a role="menuitem" href="#" class="py-1 px-6 dark:text-neutral-900 focus:outline-none focus-visible:ring-4 ring-neutral-400 rounded-sm ring-offset-4 ring-offset-amber-400 hover:text-neutral-600 transition-colors">Home</a>
+      <a role="menuitem" href="#" class="py-1 px-6 dark:text-neutral-900 focus:outline-none focus-visible:ring-4 ring-neutral-400 rounded-sm ring-offset-4 ring-offset-amber-400 hover:text-neutral-600 transition-colors lg:mr-auto">Contact</a>
+      <a role="menuitem" href="#" class="py-1 px-6 dark:text-neutral-900 focus:outline-none focus-visible:ring-4 ring-neutral-400 rounded-sm ring-offset-4 ring-offset-amber-400 hover:text-neutral-600 transition-colors">Login</a>
+      <a role="menuitem" href="#" class="py-2 px-6 bg-teal-900 text-white shadow-xl hover:shadow-none transition-shadow focus:outline-none focus-visible:ring-4 ring-neutral-400 rounded-md ring-offset-4 ring-offset-amber-400">Sign Up</a>
+    </div>
+  </div>
+</nav>
+<!--========== HEADER ==========-->
+<header class="relative pt-16 md:pt-24 lg:pt-48">
+  <div class="absolute inset-0 bottom-8 md:bottom-24 xl:bottom-32 -z-10 bg-gradient-to-b from-amber-400 to-amber-600"></div>
+  <div class="container mx-auto grid grid-rows-1 place-items-end px-2">
+    <img src="./assets/couch.png" alt="Couch" class="row-start-1 row-end-2 col-start-1 col-end-2 mx-auto">
+    <img src="./assets/app.svg" alt="App" class="row-start-1 row-end-2 col-start-1 col-end-2 mx-auto w-40 sm:w-52 md:w-64 lg:w-72">
+  </div>
+</header>
+<!--========== MAIN ==========-->
+<main class="grid gap-12 sm:gap-16 md:gap-24 lg:gap-32 px-8 overflow-hidden">
+  <a href="#" class="py-2 px-6 bg-amber-400 dark:text-neutral-900 font-semibold mx-auto my-12 flex gap-2 items-center shadow-xl hover:shadow-none transition-shadow focus:outline-none focus-visible:ring-4 ring-neutral-400 rounded-md ring-offset-4 ring-offset-white dark:ring-amber-400 dark:ring-offset-neutral-800">
+    <i class="fa fa-download"></i>
+    <span>Download App</span>
+  </a>
+  <!--========== QUALITY ==========-->
+  <section aria-labelledby="qualities" class="relative">
+  <img src="./assets/dots.svg" alt="left dots" class="hidden lg:block absolute top-1/2 -translate-y-1/2 -left-24 xl:-left-7" aria-hidden="true">
+  <img src="./assets/dots.svg" alt="right dots" class="hidden lg:block absolute top-1/2 -translate-y-1/2 -right-24 xl:-right-7" aria-hidden="true">
+    <h2 id="qualities" class="sr-only">Our Qualities</h2>
+
+    <article class="container mx-auto max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between">
+      <div class="grid gap-4 justify-items-center text-center md:flex-1">
+        <div class="w-24 h-24 rounded-full border-8 border-amber-400 p-4">
+          <i class="fa fa-lock fa-3x"></i>
+        </div>
+        <h3 class="text-3xl font-bold">Safe</h3>
+        <p class="">Our products are secure and private out-of-the-box</p>
+      </div>
+      <div class="grid gap-4 justify-items-center text-center md:flex-1">
+        <div class="w-24 h-24 rounded-full border-8 border-amber-400 p-4">
+          <i class="fa fa-bolt fa-3x"></i>
+        </div>
+        <h3 class="text-3xl font-bold">Efficient</h3>
+        <p class="">Feel good about the wallet and the environment</p>
+      </div>
+      <div class="grid gap-4 justify-items-center text-center md:flex-1">
+        <div class="w-24 h-24 rounded-full border-8 border-amber-400 p-4">
+          <svg viewBox="0 0 20 20" fill="currentColor" class="w-14 h-14 pr-2 pb-2">
+  <path fill-rule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+</svg>
+
+        </div>
+        <h3 class="text-3xl font-bold">Proven</h3>
+        <p class="">Leading the Smart Home world for 10 years</p>
+      </div>
+    </article>
+  </section>
+  <!--========== PARTNERS ==========-->
+  <section aria-labelledby="partners" class="text-center grid-gap-8 place-items-center">
+    <div class="grid gap-4">
+      <h2 id="partners" class="text-4xl font-bold text-amber-400">Our Partners</h2>
+      <p class="w-full max-w-lg mx-auto mt-2 mb-8">We've partnered with hundreds of smart home brands to help you create a smart home that fits your needs and doen't lock you in.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8 md:gap-x-16 max-w-2xl mx-auto">
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl rounded-md">
+        <img src="./assets/partner1.svg" alt="Partner 1" class="w-16 h-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl eounded-md">
+        <img src="./assets/partner2.svg" alt="Partner 2" class="w-16 h-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl eounded-md">
+        <img src="./assets/partner3.svg" alt="Partner 3" class="w-16 h-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl eounded-md">
+        <img src="./assets/partner4.svg" alt="Partner 4" class="w-16 h-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl eounded-md">
+        <img src="./assets/partner5.svg" alt="Partner 5" class="w-16 h-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl eounded-md">
+        <img src="./assets/partner6.svg" alt="Partner 6" class="w-16 h-16">
+      </div>
+      <div class="p-4 bg-white dark:bg-neutral-600 shadow-md dark:shadow-xl eounded-md">
+        <img src="./assets/partner7.svg" alt="Partner 7" class="w-16 h-16">
+      </div>
+    </div>
+  </section>
+  <!--========== HOME FEATURE ==========-->
+  <section aria-labelledby="home" class="relative">
+    <div class="flex flex-wrap-reverse gap-8 justify-center">
+      <div class="flex gap-6 flex-wrap flex-col items-start lg:justify-center">
+        <div class="flex flex-wrap flex-col items-start gap-2">
+          <h2 class="text-4xl font-bold">Relax, you're home!</h2>
+          <p class="max-w-md">All our supported hardware includes traditional inputs so you can integrate our products into your house in a way that's best for everyone.</p>
+        </div>
+        <a href="#" class="py-2 px-6 bg-amber-400 dark:text-neutral-900 font-semibold flex gap-2 items-center shadow-xl hover:shadow-none transition-shadow focus:outline-none focus-visible:ring-4 ring-neutral-400 rounded-md ring-offset-4 ring-offset-white dark:ring-amber-400 dark:ring-offset-neutral-800">Sign Up
+  </a>
+      </div>
+      <img src="./assets/table.png" alt="Table">
+    </div>
+    <div class="absolute -bottom-6 -right-32 -z-10 aspect-square md:border-8 border-amber-400 rounded-full md:w-64 lg:w-96 xl:max-w-lg"></div>
+    <div class="bg-teal-900 h-24 xl:h-48 -mx-8 mt-12 xl:mt-0 xl:absolute w-screen -bottom-8 -z-10"></div>
+  </section>
+</main>
+<!--========== CONTACT ==========-->
+<section aria-labelledby="contact" class="container mx-auto px-8 overflow-hidden">
+  <div class="flex flex-wrap justify-center gap-12 md:gap-6 lg:gap-20">
+    <div class="md:flex-1 md:max-w-sm relative">
+      <img src="./assets/lamp.png" alt="lamp" class="mx-auto">
+      <a href="#" class="py-2 px-6 bg-amber-400 dark:text-neutral-900 w-max font-semibold mx-auto mt-12 md:mb-12 flex gap-2 items-center shadow-xl hover:shadow-none transition-shadow focus:outline-none focus-visible:ring-4 ring-neutral-400 rounded-md ring-offset-4 ring-offset-white dark:ring-amber-400 dark:ring-offset-neutral-800">
+        <i class="fa fa-download"></i>
+        <span>Download App</span>
+      </a>
+      <img src="./assets/app.svg" alt="App" width="240" class="hidden md:block drop-shadow-xl absolute left-1/2 -translate-x-1/2 max-w-16 xl:max-w-xs">
+      <!-- custom class of 'max-w-16' = '16rem' -->
+      <!-- second circle -->
+      <div class="absolute -bottom-18 left-1/2 -translate-x-1/2 -z-10 aspect-square md:border-8 border-amber-400 rounded-full md:w-72 lg:w-96"></div>
+    </div>
+    <form class="relative border-8 border-neutral-900 p-6 rounded-lg grid gap-8 md:flex-1 md:max-w-lg my-4 md:my-12 lg:my-16 bg-white dark:bg-neutral-800 w-full">
+      <h2 id="contact" class="text-3xl font-bold">Let's Connect</h2>
+      <div class="relative">
+        <input type="text" id="name" class="peer form-input px-3 w-full border-4 border-amber-400 rounded-md focus:ring-4 dark:focus:ring-offset-2 focus:ring-amber-400 focus:border-amber-400 focus:outline-none dark:bg-amber-400 dark:text-neutral-900 placeholder-transparent" placeholder="YOUR NAME">
+        <label for="name" class="text-neutral-500 text-sm font-bold absolute -top-4 left-2 -translate-y-1/2 transition-all duration-800 peer-placeholder-shown:left-4 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300">YOUR NAME</label>
+      </div>
+      <div class="relative">
+        <input type="email" id="email" class="peer form-input px-3 w-full border-4 border-amber-400 rounded-md focus:ring-4 dark:focus:ring-offset-2 focus:ring-amber-400 focus:border-amber-400 focus:outline-none dark:bg-amber-400 dark:text-neutral-900 placeholder-transparent" placeholder="YOUR EMAIL">
+        <label for="email" class="text-neutral-500 text-sm font-bold absolute -top-4 left-2 -translate-y-1/2 transition-all duration-800 peer-placeholder-shown:left-4 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300">YOUR EMAIL</label>
+      </div>
+      <div class="relative">
+        <textarea name="content" id="content" cols="20" rows="5" class="peer form-textarea resize-none px-3 w-full border-4 border-amber-400 rounded-md focus:ring-4 dark:focus:ring-offset-2 focus:ring-amber-400 focus:border-amber-400 focus:outline-none dark:bg-amber-400 dark:text-neutral-900 placeholder-transparent" placeholder="HOW CAN WE HELP?"></textarea>
+        <label for="content" class="text-neutral-500 text-sm font-bold absolute -top-3 left-2 -translate-y-1/2 transition-all duration-800 peer-placeholder-shown:left-4 peer-placeholder-shown:top-4 peer-placeholder-shown:text-neutral-900 peer-focus:-top-4 peer-focus:left-2 peer-focus:text-neutral-600 dark:peer-focus:text-neutral-300">HOW CAN WE HELP?</label>
+      </div>
+      <a role="menuitem" href="#" class="py-2 px-6 bg-neutral-900 text-white w-max shadow-xl hover:shadow-none transition-shadow focus:outline-none focus-visible:ring-4 ring-neutral-400 rounded-md ring-offset-4 ring-offset-white dark:ring-offset-amber-400">Sign Up</a>
+    </form>
+  </div>
+</section>
+<!--========== FOOTER ==========-->
+<footer class="bg-teal-900 w-full py-4">
+  <div class="w-full flex flex-col md:flex-row px-4 justify-between gap-5">
+    <article class="basis-1/3">
+      <a href="#" aria-label="Home Page" class="focus-visible:ring-4 ring-neutral-400 rounded-sm hover:opacity-50 transition-opacity">
+      <img src="./assets/logo.svg" alt="logo" width="200" class="w-36 md:w-40 lg:w-48">
+      </a>
+      <p class="text-sm text-justify mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <nav class="flex gap-3 my-4 justify-center phone:justify-start">
+        <span class="w-10 h-10 bg-amber-400 hover:bg-amber-500 rounded-full p-2">
+          <a href="#" class=""><i class="fab fa-twitter text-2xl text-center text-white"></i></a>
+        </span>
+        <span class="w-10 h-10 bg-amber-400 hover:bg-amber-500 rounded-full p-2">
+          <a href="#" class=""><i class="fab fa-facebook text-2xl text-center text-white"></i></a>
+        </span>
+        <span class="w-10 h-10 bg-amber-400 hover:bg-amber-500 rounded-full p-2">
+          <a href="#" class=""><i class="fab fa-instagram text-2xl text-center text-white"></i></a>
+        </span>
+        <span class="w-10 h-10 bg-amber-400 hover:bg-amber-500 rounded-full p-2">
+          <a href="#" class=""><i class="fab fa-linkedin text-2xl text-center text-white"></i></a>
+        </span>
+      </nav>
+    </article>
+    <article class="basis-2/3 flex flex-col gap-y-4 phone:flex-row text-center">
+      <div class="basis-1/3">
+        <h3 class="text-xl font-bold phone:mb-4">Useful Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="basis-1/3">
+        <h3 class="text-xl font-bold phone:mb-4">Our Services</h3>
+        <ul>
+          <li><a href="#">Interior Design</a></li>
+          <li><a href="#">Home Furnishing</a></li>
+          <li><a href="#">Design Planning</a></li>
+          <li><a href="#">Material Sales</a></li>
+          <li><a href="#">Foreign Homes</a></li>
+        </ul>
+      </div>
+      <div class="basis-1/3">
+        <h3 class="text-xl font-bold phone:mb-4">Contact Us</h3>
+        <p class="mb-3">A108 Adam Street, New York, NY 535022 United States</p>
+        <span class="font-bold">Phone: </span><a href="tel:+2348146666666">+2348146666666</a> <br>
+        <span class="font-bold">Email: </span><a href="mailto:info@gmail.com">info@gmail.com</a>
+      </div>
+    </article>
+  </div>
+  <div class="w-full text-center py-2">
+    <p class="">&copy; Copyright <b>Homesmart.</b> All Rights Reserved</p>
+    <p class="text-sm">Designed by Judechuks</p>
+  </div>
+</footer>
+</body>
+</html>
