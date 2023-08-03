@@ -6,6 +6,9 @@
 .btn{
   @apply bg-color-secondary px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-500;
 }
+.card_btn{
+  @apply w-full px-9 py-3 bg-color-primary rounded-md capitalize font-bold hover:bg-color-primary ease-in duration-200;
+}
 .title{
   @apply text-3xl md:text-4xl font-bold leading-snug;
 }
@@ -23,10 +26,40 @@
 }
 .user-text.active-text{
   display: block;
+  animation: moveup 1s linear forwards;
+}
+.user-pic{
+  transition: all 0.2s ease;
 }
 .fa-quote-right{
   @apply absolute -bottom-10 right-0 text-color-secondary;
 }
 .fa-quote-left{
   @apply absolute -top-10 left-0 text-color-secondary;
+}
+
+@keyframes moveup{
+  0%{
+    margin-top: 40px;
+    opacity: 0;
+  }
+  50%{
+    margin-top: 20px;
+    opacity: 0.1;
+  }
+  100%{
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+.card{
+  perspective: 1000px;
+}
+.front, .back{
+  backface-visibility: hidden;
+  transition: all 0.4s ease;
+}
+.front{
+  overflow: hidden;
 }
