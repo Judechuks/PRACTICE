@@ -1128,6 +1128,14 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.-rotate-y-180 {
+  transform: rotateY(-180deg);
+}
+
 /*========== MY CUSTOM CSS ==========*/
 
 .btn {
