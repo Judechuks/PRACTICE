@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React CDN Setup</title>
+  <!-- Script tags including React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+  <main id="app"></main>
+  <script type="text/babel">
+    // ReactDOM.render(
+    //   <h1>Hello World!</h1>,
+    //   document.querySelector("#app")
+    // );
+
+    /* 1. Assign to a variable */ 
+    /* 
+      var greeting = <h1>Hello React!</h1>
+      ReactDOM.render(greeting, document.querySelector("#app"))
+    */
+
+    /* 2. Assign to a variable based on a condition */ 
+    /* 
+      var canGreet = true;
+      if(canGreet){
+        greeting = <h1>Hello React!</h1>
+      }
+      ReactDOM.render(greeting, document.querySelector("#app"))
+     
+
+    /* 3. Can be used as a return value of a function */ 
+    /*
+    function Greeting(){
+      return <h1>Hello React!</h1>
+    }
+    greeting = Greeting()
+    ReactDOM.render(greeting, document.querySelector("#app"))
+    */ 
+
+    /* 4. Can be used as argument of a function */ 
+    /*
+    function Greet(message){
+      ReactDOM.render(message, document.querySelector("#app"))
+    }
+    Greet(<h1>Hello React!</h1>)
+    */ 
+
+  </script>
+</body>
+</html>
