@@ -8,4 +8,4 @@ some of my learning and practice file
 #### Self Practice
 #### TheNewBoston
 
-And other subfolders
+And other subfolders in the above listed folders.
