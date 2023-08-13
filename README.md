@@ -1,5 +1,5 @@
 ## PRACTICE
-some of my learning and practice file
+Some of my learning and practice files
 
 ### CONTENT
 #### EJ Media
