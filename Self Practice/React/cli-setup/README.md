@@ -109,3 +109,5 @@ Your `index.css` file contains some default styling. You can clear all that and 
 Run your build process with the `npm run dev` command in the terminal. You should get this message below in your terminal‌:
 ![Server is Ready](Readme-img/server-ready.png)
 <p align="center">The message you get after running your Vite server that provides localhost link, network, and help.</p>
+
+Hold the ctrl key and click on the link at Local – here it's http://127.0.0.1:5174. It will open a new tab in your browser if you do that.
