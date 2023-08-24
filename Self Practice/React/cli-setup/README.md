@@ -111,3 +111,36 @@ Run your build process with the `npm run dev` command in the terminal. You shoul
 <p align="center">The message you get after running your Vite server that provides localhost link, network, and help.</p>
 
 Hold the ctrl key and click on the link at Local – here it's http://127.0.0.1:5174. It will open a new tab in your browser if you do that.
+
+Our styles are broken because we cleared the default CSS in the index.css file to input our directives.
+
+## Step 8 – Start Writing Tailwind CSS
+You can start using Tailwind’s utility classes to style your content. Navigate to your App.jsx file, where you should see this below:
+![Tailwind Utility Content](Readme-img/tailwind-utility.png)
+<p align="center">Screenshot of the App.jsx file</p>
+
+Clear the return element starting from line 9, and replace it with the text below to test your Tailwind to know if it is working. Input this:
+
+`
+<h1 className="text-3xl font-bold underline text-center">Hello world!</h1> 
+`
+<p align="center">h1 element with tailwind css classnames</p>
+
+Now you have this:
+
+![App Component](Readme-img/app-component.png)
+<p align="center">Adding the h1 element to the App.jsx file</p>
+
+According to the above image, `text-3xl font-bold text-red-500 underline text-center` has been added as a className to the div element. This is the standard for writing Tailwind CSS styling.
+
+You can learn more about Tailwind classnames [here.](https://tailwindcss.com/docs) Your browser should update automatically.
+
+You can now start building your React projects and style them with Tailwind CSS.
+
+## Conclusion
+
+You have now created a React and Tailwind CSS app using Vite, a frontend build tool. You have learned what Vite is and how to create a Vite app with a React template, as well as how to install Tailwind and other dependencies.
+
+### Credits
+Segun Ajibola
+freeCodeCamp
