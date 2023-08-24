@@ -143,4 +143,8 @@ You have now created a React and Tailwind CSS app using Vite, a frontend build t
 
 ### Credits
 Segun Ajibola
+[Segun's Linkedin](https://linkedin.com/in/segunajibola)
+[Segun's Github](https://github.com/segunajibola)
+
 freeCodeCamp
+[freeCodeCamp.org](https://freecodecamp.org)
