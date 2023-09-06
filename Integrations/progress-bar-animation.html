@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jude, 31/8/2023">
+  <title>Progress Bar Animation</title>
+</head>
+<style>
+  body{
+    background: #000;
+    color: #fff;
+  }
+  .progress-bar{
+    width: 450px;
+    height: 24px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+  .progress-bar::after{
+    content: '';
+    background: linear-gradient(135deg, #fd0000, #1d00ff);
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    animation: progress 2s linear forwards 7;
+  }
+  @keyframes progress{
+    100%{
+      width: 90%;
+    }
+  }
+</style>
+<body>
+  <div class="progress-bar"></div>
+</body>
+</html>
