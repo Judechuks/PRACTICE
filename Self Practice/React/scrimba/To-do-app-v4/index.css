@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, :before, :after{
+  margin: 10px;
+  padding: 8px;
+  box-sizing: content-box;
+}
+body{
+  background-color: lightgray;
+}
+.todo-list{
+  background-color: white;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #afefef;
+  box-shadow: 
+  /* The top layer shadow */
+  0 1px 1px rgba(0, 0, 0, 0.15),
+  /* The second layer */
+  0 10px 0 -5px #eee,
+  /* The third layer */
+  0 10px 1px -4px rgba(0, 0, 0, 0.15),
+  /* The fourth layer */
+  0 20px 0 -10px #eee,
+  /* The fifth layer */
+  0 20px 1px -9px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+}
+.todo-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 20px 0;
+  width: 70%;
+  border-bottom: 1px solid #cecece;
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  color: #333333;
+}
+input[type=checkbox]{
+  margin-right: 10px;
+}
+input[type=checkbox]:focus{
+  outline: 0;
+}
