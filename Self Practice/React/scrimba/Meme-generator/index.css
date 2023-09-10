@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *, :before, :after{ */
+*{
+  box-sizing: content-box;
+}
+body{
+  margin: 0;
+  background-color: whitesmoke;
+}
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #2A6645, #6441A5);
+}
+header > img {
+  height: 80%;
+  margin-left: 10%;
+}
+header > p {
+  font-family: v1323, monospace;
+  color: whitesmoke;
+  font-size: 2.5rem; 
+  margin-left: 60px;
+}
+.meme {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+.meme > img{
+  width: 100%;
+  height: 450px;
+}
+.meme > h2 {
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  line-height: .9;
+  left: 0;
+  right: 0;
+  font-size: 2.5rem;
+  text-shadow: -2px -2px 1px black, 
+               2px -2px 1px black,
+               2px 2px 1px black,
+               -2px 2px 1px black;
+}
+.top{
+  top: 15px;
+} 
+.bottom{
+  bottom: 20px;
+} 
+.meme-form {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
+.meme-form > button {
+  border: 0;
+  outline: 1px solid #6441A5;
+  font-family: v1323, monospace;
+  font-size: 1.5625rem; /*25px*/
+  letter-spacing: 1.5px;
+  line-height: 1.35;
+  padding-inline: 20px;
+  border-radius: 0 5px 5px 0;
+  color: white;
+  background: #6441A5;
+}
+.meme-form > button:hover {
+  background-color: #433175;
+}
+.meme-form > input{
+  border: 1px solid #6441A5;
+  width: 100%;
+  outline: 0;
+  padding: 4px 8px;
+  font-size: 1.1rem;
+}
+.meme-form > input::placeholder{
+  font-family: v1323, monospace;
+  font-size: 1.5625rem; /*25px*/
+  text-align: center;
+}
