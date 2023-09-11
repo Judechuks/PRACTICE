@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *, :before, :after{ */
+*{
+  box-sizing: content-box;
+}
+body{
+  margin: 0;
+}
+.taskContainer {
+  width: 80%;
+  margin: 2rem auto;
+  background-color: #ccc;
+  border-radius: 5px 5px 0 0; 
+}
+.addTask {
+  display: flex;
+}
+.addTask input {
+  flex-basis: 90%;
+  outline: 0;
+  padding: .1rem .4rem;
+  font-size: 1.1rem;
+  border: 3px solid #011b8f;
+}
+.addTask input:focus {
+  border-radius: 5px 0 0 5px;
+}
+.addBtn {
+  flex-basis: 10%;
+  padding: .5rem .8rem;
+  background: #011b8f;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  font-weight: 600;
+}
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 3px;
+  color: #fff;
+}
+.task, .key {
+  width: 100%;
+  font-size: 1.1rem;
+  padding-inline: 6px;
+  font-weight: 600;
+  background-color: #333;
+}
+.key {
+  width: 3%;
+  background-color: #011b8f;
+}
+.completeBtn, .deleteBtn {
+  padding: 0 .8rem;
+  background: #027502;
+  font-weight: 600;
+}
+.deleteBtn{
+  background: #8f1b01;
+}
