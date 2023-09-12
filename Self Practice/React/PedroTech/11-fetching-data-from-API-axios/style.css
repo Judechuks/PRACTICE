@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *, :before, :after{ */
+*{
+  box-sizing: content-box;
+}
+body{
+  margin: 0;
+}
+.showBtn {
+  padding: 0 .8rem;
+  background: #011b8f;
+  color: white;
+  font-weight: 600;
+}
