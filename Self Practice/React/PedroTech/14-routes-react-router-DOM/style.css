@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *, :before, :after{ */
+*{
+  box-sizing: content-box;
+}
+body{
+  margin: 0;
+}
+h1{
+ font-size: 2.5rem;
+ font-weight: bold;
+ margin-bottom: 20px;
+ color: #011b8f;
+}
+nav{
+  color: white;
+  background: blue;
+}
+nav a{
+  display: inline-block;
+ font-size: 1.2rem;
+ border-right: 1px solid;
+ padding: 4px 8px;
+}
