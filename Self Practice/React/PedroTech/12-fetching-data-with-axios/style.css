@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *, :before, :after{ */
+*{
+  box-sizing: content-box;
+}
+body{
+  margin: 0;
+}
+.showBtn {
+  padding: .2rem .8rem;
+  background: #011b8f;
+  color: white;
+  font-weight: 600;
+}
+.container{
+  width: fit-content;
+  margin: 20px auto;
+  outline: 2px solid #011b8f;
+  border-radius: 5px;
+}
+.container input{
+  padding: .1rem .4rem;
+}
+.container input:focus{
+  outline: 0;
+}
