@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *, :before, :after{ */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: sans-serif;
+  background-color: #000;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+h1{
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #011b8f;
+}
+h2{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.count-container {
+  width: fit-content;
+  margin-inline: auto;
+  position: relative;
+}
+.count {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: #fff;
+  font-family: sans-serif;
+  display: grid;
+  place-content: center;
+}
+.minus, .plus{
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 20px;
+  color: white;
+  background-color: #011b8f;
+  position: absolute;
+  bottom: 0;
+}
+.plus {
+  right: 0;
+}
