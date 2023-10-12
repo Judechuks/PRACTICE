@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *, :before, :after{ */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: sans-serif;
+  background-color: #ccc;
+}
+h1{
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+h2{
+  font-size: 2rem;
+  font-weight: bold;
+}
+h3{
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.container {
+  border: 2px solid blue;
+  border-radius: 5px;
+  padding: 40px;
+  width: 60%;
+  margin: 40px auto;
+  background-color: gray;
+  text-align: center;
+}
+.btn {
+  background-color: #00f;
+  padding: .2rem .6rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.btn:hover {
+  background-color: #008;
+}
+.container .btn {
+  margin-bottom: 20px;
+  padding: 10px 30px;
+}
+
+@media (max-width: 560px){
+  .container {
+    width: 96%;
+    padding: 10px;
+  }
+}
