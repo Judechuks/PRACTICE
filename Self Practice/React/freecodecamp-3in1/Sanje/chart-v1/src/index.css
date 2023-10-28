@@ -1,0 +1,17 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.delete-btn{
+  visibility: hidden;
+  display: inline-block;
+}
+.table-row:hover .delete-btn{
+  visibility: visible;
+}
