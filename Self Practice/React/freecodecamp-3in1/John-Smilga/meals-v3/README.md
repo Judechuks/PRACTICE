@@ -28,13 +28,13 @@ Users can search for meals, keep favorites, choose a random meal and also see th
 #### 7. React-Icon
 
 #### CREDIT
-John Smilga, whose lessons and tutorials I followed and learnt alot.
+John Smilga, whose lessons and tutorials I followed and learned a lot from.
 Freecodecamp
 
 #### ADDITIONAL FEATURES
 I went further to add more features:
-#### 1. Loading component to indicate that the meal is still being fetched from the API
-#### 2. Being able to like (add to favorite) as well as unliking (removing from favorites)
+#### 1. Loading component to indicate that request is still ongoing
+#### 2. Being able to like (add to favorite) as well as unlike (removing from favorites)
 #### 3. A close button to also remove a meal from favorites
 #### 4. A red like-button to indicate that the meal is already in a favorite
 #### 5. A title for the meals in the favorite list
