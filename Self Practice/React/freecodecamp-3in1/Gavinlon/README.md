@@ -1,5 +1,5 @@
 # EMPLOYEE TEAM ALLOCATION
-A web app the manager/project manager can allocate each members into their respective teams. 
+A web app for managers/project managers to allocate each members into their respective teams. 
 
 ## LINK
 **[Team Allocation](https://8kyd87.csb.app/)**
@@ -29,13 +29,11 @@ A web app the manager/project manager can allocate each members into their respe
 #### 8. React-Router
 
 #### CREDIT
-GavinLon, whose lessons and tutorials I followed and learnt alot.
+GavinLon, whose lessons and tutorials I followed and learned a lot.
 Freecodecamp
 
 #### ADDITIONAL FEATURES
 I went further to add more features:
-#### 1. NotFound for a non exiting url (for the react-router)
-#### 2. Being able to like (add to favorite) as well as unliking (removing from favorites)
-#### 3. A close button to also remove a meal from favorites
-#### 4. A red like-button to indicate that the meal is already in a favorite
-#### 5. A title for the meals in the favorite list
+#### 1. Loading component to indicate that request is still ongoing
+#### 2. Unique Images for each employee
+#### 3. A quick update when new members are being added/removed from the employees' list
