@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: blue;
+  text-align: center;
+  font-family: sans-serif;
+}
+section{
+background-color: rebeccapurple;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.container{
+  width: 400px;
+  height: 400px;
+  background-color: #ccc;
+  border: 15px ridge maroon;
+}
+img{
+  width: 50px;
+}
+

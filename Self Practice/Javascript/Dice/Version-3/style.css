@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: blue;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+section{
+background-color: rebeccapurple;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.container{
+  width: 400px;
+  height: 400px;
+  background-color: #ccc;
+  border: 15px ridge hsl(0, 100%, 25%);
+}
+img{
+  width: 50px;
+  cursor: pointer;
+}
+.winner{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.msg-box{
+  width: 40%;
+  height: 300px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0px black;
+  border-radius: 20px;
+}
+.msg-box .fa-times{
+  font-size: 2rem;
+  color: #a00;
+  position: relative;
+  top: 20px;
+  left: 40%;
+  cursor: pointer;
+}
+.msg{
+  font-size: 3rem;
+}
