@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*========== UTILTIES ==========*/
+.flex{
+  display: flex;
+} 
+.justify-between{
+  justify-content: space-between;
+} 
+.items-center{
+  align-items: center;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.delete-btn{
+  visibility: hidden;
+  display: inline-block;
+}
+.table-row:hover .delete-btn{
+  visibility: visible;
+}
+.link{
+  color: #1d00ff;
+  transition: .8s;
+}
+.link:hover{
+  color: #1d00aa;
+}
+nav li::after{
+  content: "";
+  display: block;
+  width: 0%;
+  background-color: #1d00aa;
+  height: 3px;
+  margin-top: 3px;
+  margin-inline: auto;
+  transition: 1s;
+}
+nav li:hover::after{
+  width: 100%;
+}
+.brand{
+  text-align: center;
+}
+.brand img{
+  display: block;
+  width: 70px;
+  margin-inline: auto;
+}
+.i{
+  display: inline;
+}
+
+/*======= PROGRESS BAR =======*/
+.progress-body{
+  height: 100vh;
+  width: 100%;
+  background-color: var(--black);
+  display: grid;
+  align-items: center;
+}
+.progress-bar{
+  width: 450px;
+  height: 24px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.progress-bar::after{
+  content: 'Loading...';
+  line-height: 1;
+  text-align: center;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #fd0000, #1d00ff);
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  position: absolute;
+  animation: progress 2s linear forwards infinite;
+}
+@keyframes progress{
+  100%{
+    width: 95%;
+  }
+}
+@media (max-width: 540px){
+  .progress-bar{
+    width: 90%;
+  }
+}
