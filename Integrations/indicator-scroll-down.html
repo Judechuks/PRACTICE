@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indicator Scroll Down</title>
+</head>
+<style>
+  html, body{
+    height: 100%;
+  }
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background: #212121;
+    overflow: hidden;
+  }
+  .mouse-btn{
+    margin: 10px auto;
+    width: 40px;
+    height: 80px;
+    border: 1px solid #7a7a7c;
+    border-radius: 20px;
+    display: flex;
+  }
+  .mouse-scroll{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #737375;
+    border-radius: 50%;
+    margin: auto;
+    animation: scrolling 1s linear infinite;
+  }
+  .container_mouse .text{
+    color: #c2c2c2;
+  }
+  @keyframes scrolling {
+    0%{
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(20px);
+    }
+  }
+</style>
+<body>
+  <div class="container_mouse">
+    <span class="mouse-btn">
+      <span class="mouse-scroll"></span>
+    </span>
+    <span class="text">Scroll Down</span>
+  </div>
+</body>
+</html>
