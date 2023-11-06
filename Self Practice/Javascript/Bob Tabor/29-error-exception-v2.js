@@ -5,7 +5,7 @@ function beforeTryCatch(){
   console.log(obj.b);
   console.log('If Exception occurs, you won\'t see this message');
 }
-// beforerTryCatch();
+// beforeTryCatch();
 
 function afterTryCatch(){
   try{
