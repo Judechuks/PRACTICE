@@ -3,6 +3,7 @@ let num = 0;
 for (let i = 0; i < 5; i++){
   setTimeout(()=> {
     num += i;
-  }, 1000);
+    console.log(num);
+  }, 6000);
 }
-console.log(num);
+// The program will wait until it is 6 seconds before displaying the result
