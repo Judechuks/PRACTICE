@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masking Text</title>
+</head>
+<style>
+  .img{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: url(./img/bgrd-8.jpg);
+  }
+  .img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    /* background: url(./img/frame.png); */
+    background: url(./img/wavy-icon.png);
+    width: 800px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: screen;
+    /* mix-blend-mode: exclusion; */
+  }
+</style>
+<body>
+  <div class="img"></div>
+</body>
+</html>
