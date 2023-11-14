@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="judechuks 14/11/2023">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries Dropdown List</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+  h1 {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  body {
+    background-color: #fafafa;
+  }
+  .dropdown-group {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+    margin-top: 3rem;
+  }
+
+  select {
+    width: 100%;
+    min-width: 15ch;
+    max-width: 30ch;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+</style>
+<body>
+  <h1>Select Country State City Zip</h1>
+    <form class="dropdown-group">
+      <select id="Country" size="1">
+        <option value="" selected="selected">-- Select Country --</option>
+      </select>
+
+      <select id="State" size="1">
+        <option value="" selected="selected">-- Select State --</option>
+      </select>
+
+      <select id="City" size="1">
+        <option value="" selected="selected">-- Select City --</option>
+      </select>
+
+      <select id="Zip" size="1">
+        <option value="" selected="selected">-- Select Zip --</option>
+      </select>
+    </form>
+</body>
+<script>
+  
+  // List of countries, state, city, zipcode
+  const countryStateInfo = {
+    USA: {
+      California: {
+        "Los Angeles": ["90001", "90002", "90003", "90004"],
+        "San Diego": ["92093", "92101"],
+      },
+      Texas: {
+        Dallas: ["75201", "75202"],
+        Austin: ["73301", "73344"],
+      },
+    },
+    Germany: {
+      Bavaria: {
+        Munich: ["80331", "80333", "80335", "80336"],
+        Nuremberg: ["90402", "90403", "90404", "90405"],
+      },
+      Hessen: {
+        Frankfurt: ["60306", "60308", "60309", "60310"],
+        Surat: ["55246", "55247", "55248", "55249"],
+      },
+    },
+  };
+
+  // function that loads the country, state, city, zip
+  window.onload = function(){
+    const countrySelection = document.querySelector("#Country"),
+    stateSelection = document.querySelector("#State"),
+    citySelection = document.querySelector("#City"),
+    zipSelection = document.querySelector("#Zip");
+
+    // disable the selects
+    stateSelection.disabled = true;
+    citySelection.disabled = true;
+    zipSelection.disabled = true;
+
+    // load the countries
+    for (let country in countryStateInfo) {
+    // Option is a constructor that creates a new HTML option element
+    // it can take up to 4 arguments (text, value, default selected, selected or not)
+      countrySelection.options[countrySelection.options.length] = new Option(country, country);
+    }
+
+    // country change
+    countrySelection.onchange = (e) => {
+      stateSelection.disabled = false;
+
+      // clear all options from state selection
+      stateSelection.length = 1; // remove all options bar (when there is change of country)
+      citySelection.length = 1; // remove all options bar (when there is change of country)
+      zipSelection.length = 1; // remove all options bar (when there is change of country)
+      
+      for (let state in countryStateInfo[e.target.value]) {
+      stateSelection.options[stateSelection.options.length] = new Option(state, state);
+      }
+    }
+
+    // state change 
+    stateSelection.onchange = (e) => {
+      citySelection.disabled = false;
+      citySelection.length = 1; // remove all options bar (when there is change of state)
+      zipSelection.length = 1; // remove all options bar (when there is change of state)
+      for (let city in countryStateInfo[countrySelection.value][e.target.value]) {
+        citySelection.options[citySelection.options.length] = new Option(city, city);
+      }
+    }
+
+    // city change 
+    citySelection.onchange = (e) => {
+      zipSelection.disabled = false;
+      zipSelection.length = 1; // remove all options bar (when there is change of city)
+      let zips = countryStateInfo[countrySelection.value][stateSelection.value][e.target.value];
+      /*
+      for(let i = 0; i < zips.length; i++){
+         zipSelection.options[zipSelection.options.length] = new Option(zips[i], zips[i]);
+      }
+      // you can use map method instead as shown below
+      */
+      zips.map((zip) => zipSelection.options[zipSelection.options.length] = new Option(zip, zip));
+    }
+  }
+</script>
+</html>
