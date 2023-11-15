@@ -4,12 +4,19 @@ const first = document.querySelector('.first');
 const second = document.querySelector('.second');
 const third = document.querySelector('.third');
 const btn = document.querySelector('.btn');
-function handleName(name, cb){
-  const fullname = `${name} smith`;
-  cb(fullname); // callback function
-}
 
 // event listeners
 btn.addEventListener('click', () => {
-  console.log('Button Clicked!')
-})
+  setTimeout(() => {
+    first.style.color = "red";
+    setTimeout(() => {
+      second.style.color = "blue";
+      setTimeout(() => {
+        third.style.color = "green";
+      }, 2000);
+    }, 3000);
+  }, 1000);
+  first.style.color = "initial";
+  second.style.color = "initial";
+  third.style.color = "initial";
+});
