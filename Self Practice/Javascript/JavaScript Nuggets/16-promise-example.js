@@ -8,9 +8,9 @@ const btn = document.querySelector('.btn');
 
 // event listeners
 btn.addEventListener('click', () => {
-  addColor(1000, '.first', 'red', 'Hey!')
+  addColor(1000, '.first', 'red', 'Hey!') // you can pass data
   .then((data) => addColor(3000, '.second', 'green', data)
-    .then((data) => {
+    .then((data) => { // you can pass data
       addColor(2000, '.third', 'blue');
       console.log(data);
     })
@@ -23,7 +23,7 @@ btn.addEventListener('click', () => {
   third.style.color = 'initial';
 });
 
-function addColor(time, selector, color, data){
+function addColor(time, selector, color, data){ // you can pass data
   const element = document.querySelector(selector);
   return new Promise((resolve, reject) => {
   if (element) {
