@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../Assets/fontawesome-free-6.1.1-web/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title>Pagination</title>
+</head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, #410358, #4700bc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination{
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #383838;
+  padding: 10px 40px;
+  border-radius: 6px;
+}
+ul{
+  margin: 20px 30px;
+}
+li{
+  display: inline-block;
+  margin: 0 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.375rem; /*22px*/
+  font-weight: 500;
+  line-height: 45px;
+  cursor: pointer;
+  background-position: 0 -45px;
+  transition: background-position .5s;
+}
+li.active{
+  color: #fff;
+  background-image: linear-gradient(#ff4568, #ff4568);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.prev-btn, .next-btn{
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem; /*19.2px*/
+  font-weight: 500;
+  color: #383838;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: .5s;
+}
+.prev-btn:hover, 
+.next-btn:hover{
+  transform: scale(1.05);
+}
+.fa-arrow-left-long, 
+.fa-arrow-right-long{
+  font-size: 1.6rem;
+}
+.fa-arrow-left-long{
+  margin-right: 10px;
+}
+.fa-arrow-right-long{
+  margin-left: 10px;
+}
+</style>
+<body>
+  <div class="container">
+    <div class="pagination">
+      <button class="prev-btn"><i class="fa fa-arrow-left-long"></i>prev</button>
+      <ul>
+        <li class="link active" value="1">1</li>
+        <li class="link" value="2">2</li>
+        <li class="link" value="3">3</li>
+        <li class="link" value="4">4</li>
+        <li class="link" value="5">5</li>
+        <li class="link" value="6">6</li>
+      </ul>
+      <button class="next-btn">next<i class="fa fa-arrow-right-long"></i></button>
+    </div>
+  </div>
+</body>
+<script>
+let links = document.getElementsByClassName('link');
+let prevBtn = document.querySelector('.prev-btn');
+let nextBtn = document.querySelector('.next-btn');
+
+links = [...links] // turning it into an array, so i can use forEach method
+let currentValue = 1;
+
+// remove active from all links
+function removeActiveFromAll() {
+  for (const link of links) {
+    link.classList.remove('active');
+  }
+}
+
+// activeLink function to remove active from other items except itself
+function activeLink(){
+  removeActiveFromAll()
+  event.target.classList.add('active');
+  currentValue = event.target.value;
+}
+
+// when any link is clicked it should call activeLink function
+links.forEach(link => {
+  link.addEventListener('click', activeLink);
+});
+
+prevBtn.addEventListener('click', prev);
+nextBtn.addEventListener('click', next);
+
+function prev(){
+  if (currentValue > 1) {
+    removeActiveFromAll();
+    currentValue--;
+    links[currentValue - 1].classList.add('active');
+  }
+}
+function next(){
+  if (currentValue < links.length) {
+    removeActiveFromAll();
+    currentValue++;
+    links[currentValue - 1].classList.add('active');
+  }
+}
+</script>
+</html>
