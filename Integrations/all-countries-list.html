@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="judechuks 14/11/2023">
+  <title>Countries Dropdown list</title>
+</head>
+<style>
+  body{
+    display: grid;
+    font-family: sans-serif;
+  }
+  input{
+    display: block;
+    margin: 10px 0 10px 0;
+  }
+  h1{
+    color: teal;
+  }
+  .container{
+    margin: auto;
+  }
+</style>
+<body>
+  <div class="container">
+    <h1>All Countries Dropdown List</h1>
+    <!-- <input type="text" list="countries">
+    <datalist id="countries"></datalist> -->
+    <select id="countries" name="countries"></select>
+  </div>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const selectDrop = document.querySelector('#countries');
+    fetch('https://restcountries.com/v3.1/all').then(res => res.json()).then(data => {
+      let output = "";
+      data.forEach(country => {
+        output += `<option value="${country.name.common}">${country.name.common}</option>`
+      });
+      selectDrop.innerHTML = output
+    }).catch(err => console.log(err))
+  });
+</script>
+</html>
