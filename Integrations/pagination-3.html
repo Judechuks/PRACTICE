@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Judechuks, 19/11/2023">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagination</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-image: linear-gradient(to top right, #1b0029, #392147);
+    min-height: 100vh;
+    line-height: 20px;
+    font-family: sans-serif;
+  }
+  .container{
+    margin: 40px auto 0;
+  }
+  .list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    column-gap: 20px;
+  }
+  .item{
+    max-width: 280px;
+  }
+  .item .img{
+    background-image: linear-gradient(to top right, #d89cd1, #d499d4);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+  }
+  .item .img img{
+    width: 100%;
+    height: 200px;
+    transition: .5s;
+  }
+  .item:hover img{
+    transform: translate(0, -8px);
+  }
+  .item .content{
+    background: #ffffff24;
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+    transform: translate(0, -20px);
+    backdrop-filter: blur(20px);
+    color: #fff;
+  }
+  .title{
+    font-size: x-large;
+  }
+  .item .content .des{
+    opacity: .7;
+    margin: 10px 0;
+  }
+  .item .content .price{
+    font-size: large;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+  }
+  .item .content .add{
+    background-color: #5b74ff;
+    font-size: 1rem;
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
+  }
+  .item .add:hover{
+    background-color: #8192ef;
+  }
+  .listPage{
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+  }
+  .listPage li{
+    background-color: #ffffffbd;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    margin: 4px 8px;
+    font-weight: 800;
+    border-radius: 50%;
+    transition: .5s;
+    cursor: pointer;
+  }
+  .listPage li:hover{
+    background-color: #8192ef;
+    color: #fff;
+  }
+  .listPage .active{
+    background-color: #8192ef;
+    color: #fff;
+  }
+  .listPage .prev, .listPage .next{
+    width: 90px;
+    border-radius: 20px;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="list">
+      <!-- list 1 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-1.jpg" alt="image 1">
+        </div>
+        <div class="content">
+          <div class="title">Product 1</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 2 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-2.jpg" alt="image 2">
+        </div>
+        <div class="content">
+          <div class="title">Product 2</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 3 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-3.jpg" alt="image 3">
+        </div>
+        <div class="content">
+          <div class="title">Product 3</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 4 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-4.jpg" alt="image 4">
+        </div>
+        <div class="content">
+          <div class="title">Product 4</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 5 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-5.jpg" alt="image 5">
+        </div>
+        <div class="content">
+          <div class="title">Product 5</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 6 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-6.jpg" alt="image 6">
+        </div>
+        <div class="content">
+          <div class="title">Product 6</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 7 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-7.jpg" alt="image 7">
+        </div>
+        <div class="content">
+          <div class="title">Product 7</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 8 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-8.jpg" alt="image 8">
+        </div>
+        <div class="content">
+          <div class="title">Product 8</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 9 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-9.jpg" alt="image 9">
+        </div>
+        <div class="content">
+          <div class="title">Product 9</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 10 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-1.jpg" alt="image 10">
+        </div>
+        <div class="content">
+          <div class="title">Product 10</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 11 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-2.jpg" alt="image 11">
+        </div>
+        <div class="content">
+          <div class="title">Product 11</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 12 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-3.jpg" alt="image 12">
+        </div>
+        <div class="content">
+          <div class="title">Product 12</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 13 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-4.jpg" alt="image 13">
+        </div>
+        <div class="content">
+          <div class="title">Product 13</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 14 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-5.jpg" alt="image 14">
+        </div>
+        <div class="content">
+          <div class="title">Product 14</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 15 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-6.jpg" alt="image 15">
+        </div>
+        <div class="content">
+          <div class="title">Product 15</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 16 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-7.jpg" alt="image 16">
+        </div>
+        <div class="content">
+          <div class="title">Product 16</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 17 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-8.jpg" alt="image 17">
+        </div>
+        <div class="content">
+          <div class="title">Product 17</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+      <!-- list 18 -->
+      <div class="item">
+        <div class="img">
+          <img src="img/bgrd-9.jpg" alt="image 18">
+        </div>
+        <div class="content">
+          <div class="title">Product 18</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam explicabo eius vero ipsam ea vitae voluptatum id placeat laboriosam.</div>
+          <div class="price">$203.5</div>
+          <button class="add">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- Pagination -->
+    <ul class="listPage">
+      <!-- <li class="active">1</li> -->
+    </ul>
+  </div>
+</body>
+<script>
+  let thisPage = 1;
+  let limit = 6;
+  let list = document.querySelectorAll('.list .item');
+
+  function loadItem(){
+    let beginGet = limit * (thisPage - 1);
+    let endGet = limit * thisPage - 1;
+    list.forEach((item, key) => {
+      if (key >= beginGet && key <= endGet){
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    listPage();
+  };
+  loadItem();
+
+  function listPage(){
+    let count = Math.ceil(list.length / limit);
+    let listPageElement = document.querySelector('.listPage');
+    listPageElement.innerHTML = '';
+
+    // previous btn
+    if (thisPage !== 1) {
+      let prev = document.createElement('li');
+      prev.innerText = "Prev";
+      prev.classList.add("prev");
+      prev.setAttribute('onclick', `changePage(${thisPage - 1})`);
+      listPageElement.appendChild(prev);
+    }
+
+    // page number btn
+    for (let i = 1; i <= count; i++) {
+      let newPage = document.createElement('li');
+
+      newPage.innerText = i;
+      if (i === thisPage) {
+        newPage.classList.add('active');
+      }
+      newPage.setAttribute('onclick', `changePage(${i})`);
+      listPageElement.appendChild(newPage);
+    }
+
+    // next btn
+    if (thisPage !== count) {
+      let next = document.createElement('li');
+      next.innerText = "Next";
+      next.classList.add("next");
+      next.setAttribute('onclick', `changePage(${thisPage + 1})`);
+      listPageElement.appendChild(next);
+    }
+  }
+
+  function changePage(i) {
+    thisPage = i;
+    loadItem();
+  }
+</script>
+</html>
