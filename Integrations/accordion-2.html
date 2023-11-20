@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Judechuks, 20/11/2023">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion</title>
+</head>
+<style>
+button.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+button.accordion.active,
+button.accordion:hover {
+  background-color: #ddd;
+}
+button.accordion::after {
+  content: '\02795'; /* Unicode character for "plus" sign(+) is '\02795' */ 
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+button.accordion.active::after {
+  content: "\2796";/* Unicode character for "minus" sign(-) is '\2796' */ 
+}
+div.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+  opacity: 0;
+}
+
+div.panel.show {
+  opacity: 1;
+  max-height: 500px;
+}
+</style>
+</head>
+<body>
+  <h2>Accordion Example</h2>
+  <p>In this example we have added a "plus" sign to each button. When the user clicks on the button,the "plus" sign is replaced with"minus"sign.</p>
+  <button class="accordion">Tiger</button>
+  <div class="panel">
+    <p>The tiger is the largest cat species, most recognisable for their pattern of dark vertical stripes on reddish-orange fur with a lighter underside.</p>
+  </div>
+  <button class="accordion">Lion</button>
+  <div class="panel">
+    <p>The lion is one of the big cats in the genus Panthera and a member of the family Felidae.The commonly used term African lion collectively denotes the several subspecies in Africa.</p>
+  </div>
+  <button class="accordion">Cheetah</button>
+  <div class="panel">
+    <p>The cheetah, also known as the hunting leopard, is a big cat that occurs mainly in easternand southern Africa and a few parts of Iran</p>
+  </div>
+</body>
+<script>
+  let acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+      this.classList.toggle("active"); // this refers to the button, the next silbling is the panel class
+      this.nextElementSibling.classList.toggle("show");
+    }
+  }
+</script>
+</html>
