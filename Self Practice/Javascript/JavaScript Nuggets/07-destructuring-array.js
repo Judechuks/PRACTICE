@@ -1,7 +1,7 @@
 // faster/easier way to access/unpack variables from arrays/objects
 
-const fruits = ['orange', 'banana', 'lemon'];
-const friends = ['john', 'peter', 'bob', 'anna', 'kelly'];
+const fruits = ["orange", "banana", "lemon"];
+const friends = ["john", "peter", "bob", "anna", "kelly"];
 
 const fruit1 = fruits[0];
 const fruit2 = fruits[1];
@@ -25,9 +25,9 @@ console.log(frnd1, frnd3, frnd5); // john bob kelly
 const [f1, , f3, , f5, f6, f7] = friends;
 console.log(f1, f3, f5, f6, f7); // john bob kelly undefined undefined
 
-let first = 'bob';
-let second = 'john';
+let first = "bob";
+let second = "john";
 
 // swapping values
-[second, first] = [first, second]
+[second, first] = [first, second];
 console.log(first, second); // john bob
