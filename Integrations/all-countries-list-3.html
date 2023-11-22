@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Judechuks, 20/11/2023" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Countries</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ddebfc;
+    }
+    .container {
+      width: 600px;
+      padding: 20px 25px 25px;
+      border-radius: 12px;
+      border: 3px solid #efa31d;
+      background: #fff;
+      box-shadow: 0 7px 29px 0 rgba(100, 100, 111, 0.2);
+    }
+    .container h3 {
+      margin: 25px auto;
+      position: relative;
+    }
+    .container h3::after {
+      content: "";
+      width: 80px;
+      height: 3px;
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      background: #efa31d;
+    }
+    .form-select {
+      width: 100%;
+      padding: 5px;
+      font-size: 1rem;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .form-select:focus {
+      outline-color: #efa31d;
+    }
+    .form-select option {
+      font-size: 1rem;
+      background-color: #ccc;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h3>Select Country State and City</h3>
+      <select class="form-select country" onchange="loadStates()">
+        <option selected>Select Country</option>
+      </select>
+      <select class="form-select state" onchange="loadCities()">
+        <option selected>Select State</option>
+      </select>
+      <select class="form-select city">
+        <option selected>Select City</option>
+      </select>
+    </div>
+  </body>
+  <script>
+    var config = {
+      cUrl: "https://api.countrystatecity.in/v1/countries",
+      ckey: "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==",
+    };
+
+    var countrySelect = document.querySelector(".country"),
+      stateSelect = document.querySelector(".state"),
+      citySelect = document.querySelector(".city");
+
+    function loadCountries() {
+      let apiEndPoint = config.cUrl;
+
+      fetch(apiEndPoint, { headers: { "X-CSCAPI-KEY": config.ckey } })
+        .then((Response) => Response.json())
+        .then((data) => {
+          // console.log(data);
+
+          data.forEach((country) => {
+            const option = document.createElement("option");
+            option.value = country.iso2;
+            option.textContent = country.name;
+            countrySelect.appendChild(option);
+          });
+        })
+        .catch((error) => console.error("Error loading countries:", error));
+
+      stateSelect.disabled = true;
+      citySelect.disabled = true;
+      stateSelect.style.pointerEvents = "none";
+      citySelect.style.pointerEvents = "none";
+    }
+
+    function loadStates() {
+      stateSelect.disabled = false;
+      citySelect.disabled = true;
+      stateSelect.style.pointerEvents = "auto";
+      citySelect.style.pointerEvents = "none";
+
+      const selectedCountryCode = countrySelect.value;
+      // console.log(selectedCountryCode);
+      stateSelect.innerHTML = '<option value="">Select State</option>'; // for clearing the existing states
+      citySelect.innerHTML = '<option value="">Select City</option>'; // Clear existing city options
+
+      fetch(`${config.cUrl}/${selectedCountryCode}/states`, {
+        headers: { "X-CSCAPI-KEY": config.ckey },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // console.log(data);
+
+          data.forEach((state) => {
+            const option = document.createElement("option");
+            option.value = state.iso2;
+            option.textContent = state.name;
+            stateSelect.appendChild(option);
+          });
+        })
+        .catch((error) => console.error("Error loading states:", error));
+    }
+
+    function loadCities() {
+      citySelect.disabled = false;
+      citySelect.style.pointerEvents = "auto";
+
+      const selectedCountryCode = countrySelect.value;
+      const selectedStateCode = stateSelect.value;
+      // console.log(selectedCountryCode, selectedStateCode);
+
+      citySelect.innerHTML = '<option value="">Select City</option>'; // Clear existing city options
+
+      fetch(
+        `${config.cUrl}/${selectedCountryCode}/states/${selectedStateCode}/cities`,
+        { headers: { "X-CSCAPI-KEY": config.ckey } }
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          // console.log(data);
+
+          data.forEach((city) => {
+            const option = document.createElement("option");
+            option.value = city.iso2;
+            option.textContent = city.name;
+            citySelect.appendChild(option);
+          });
+        })
+        .catch((error) => console.error("Error loading cities:", error));
+    }
+
+    window.onload = loadCountries;
+  </script>
+</html>
