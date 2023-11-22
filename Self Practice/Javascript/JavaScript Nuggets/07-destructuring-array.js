@@ -15,7 +15,7 @@ console.log(john, peter, bob); // john peter bob
 
 // you can use different variables
 const [mentor, bestie, pal, anna] = friends;
-console.log(mentor, peter, pal, anna); // john peter bob anna
+console.log(mentor, bestie, pal, anna); // john peter bob anna
 
 // accessing some persons while skipping some, you leave empty space
 const [frnd1, , frnd3, , frnd5] = friends;
