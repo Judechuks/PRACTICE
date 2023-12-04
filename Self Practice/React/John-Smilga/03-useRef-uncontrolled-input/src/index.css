@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*========== UTILTIES ==========*/
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+body {
+  background: #f9f9f9;
+}
+main {
+  width: 90vw;
+  max-width: fit-content;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  gap: 50px;
+  overflow: hidden;
+}
+.form {
+  display: grid;
+  gap: 10px;
+  background-color: #eee;
+  padding: 20px;
+  margin: -20px;
+}
+.form-control {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  align-items: center;
+}
+label {
+  flex-basis: 20%;
+}
+.form-control input,
+.btn {
+  padding: 0.3rem 0.5rem;
+  outline-color: #1d00aa;
+  border-radius: 5px;
+}
+.form-control input {
+  border: 1px solid;
+  width: 100%;
+}
+.btn {
+  display: block;
+  background-color: #1d00ff;
+  font-weight: 500;
+  color: white;
+  transition: 0.8s;
+}
+.btn:hover {
+  background-color: #1d00aa;
+}
+.removeBtn {
+  color: #800;
+  cursor: pointer;
+}
+.error {
+  color: #800;
+  font-size: 0.8rem;
+  margin-top: -10px;
+}
