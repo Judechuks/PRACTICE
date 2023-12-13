@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*========== UTILTIES ==========*/
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+body {
+  background: #f9f9f9;
+}
+main {
+  width: 90vw;
+  max-width: fit-content;
+  margin: auto;
+  /* background-color: #fff; */
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  overflow: hidden;
+}
+.form {
+  display: grid;
+  gap: 10px;
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 5px;
+}
+.form-control {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-control input,
+.btn {
+  padding: 0.3rem 0.5rem;
+  outline-color: #1d00aa;
+  border-radius: 5px;
+}
+.form-control input {
+  border: 1px solid;
+  width: 100%;
+}
+.btn {
+  display: block;
+  color: #1d00ff;
+  font-weight: 600;
+}
+.btn:hover {
+  color: #1d00aa;
+}
+.removeBtn {
+  color: #800;
+  cursor: pointer;
+}
+.item-container {
+  /* background-color: #fff; */
+  max-width: 600px;
+  margin-inline: auto;
+}
+.item {
+  background-color: #fff;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+}
+#person {
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 60px auto 0;
+  padding: 0 20px 20px;
+}
+#person img {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  top: -50px;
+  margin: 0 auto -20px;
+}
