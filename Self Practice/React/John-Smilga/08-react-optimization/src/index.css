@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*========== UTILTIES ==========*/
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 2rem;
+}
+body {
+  background: #f9f9f9;
+  text-align: center;
+}
+main {
+  width: 90vw;
+  max-width: fit-content;
+  margin: auto;
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  overflow: hidden;
+}
+.btn {
+  display: block;
+  background-color: #1d00ff;
+  color: white;
+  padding: 8px 15px;
+  margin: 12px auto;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.removeBtn {
+  color: #800;
+  cursor: pointer;
+}
+.products {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 60px auto 0;
+  padding: 0 20px 20px;
+  text-align: center;
+}
+.product {
+  max-width: 350px;
+  padding-bottom: 20px;
+  background-color: #fff;
+}
+.product img {
+  width: 100%;
+  aspect-ratio: 2/1.2;
+  display: block;
+}
