@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline</title>
+  </head>
+  <style>
+    :root {
+      --main-blue: rgb(106, 6, 236);
+      --main-pink: rgb(220, 0, 240);
+      --main-bottom-gradient: linear-gradient(
+        to bottom,
+        var(--main-blue),
+        var(--main-pink)
+      );
+      --main-right-gradient: linear-gradient(
+        to right,
+        var(--main-blue),
+        var(--main-pink)
+      );
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .main {
+      width: 100%;
+      height: auto;
+      background-color: rgb(245, 245, 245);
+      font-family: Poppins, sans-serif;
+      padding: 50px 0;
+      display: grid;
+      place-items: center;
+    }
+    .main .heading {
+      font-size: 1.6875rem; /*27px*/
+      font-weight: 500;
+      color: var(--main-blue);
+      position: relative;
+      margin-bottom: 80px;
+    }
+    .heading::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 4px;
+      left: 50%;
+      bottom: -5px;
+      background: linear-gradient(to right, var(--main-blue), var(--main-pink));
+      transform: translateX(-50%);
+    }
+    /*===== container =====*/
+    .container {
+      width: 70%;
+      height: auto;
+      position: relative;
+    }
+    .container ul::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: var(--main-bottom-gradient);
+    }
+    .container ul {
+      list-style: none;
+    }
+    .container ul li {
+      width: 50%;
+      height: auto;
+      padding: 15px 20px;
+      background-color: #fff;
+      box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.384);
+      border-radius: 10px;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    .container ul li:nth-child(odd) {
+      float: left;
+      clear: right;
+      text-align: right;
+      transform: translateX(-30px);
+    }
+    .container ul li:nth-child(odd) .date {
+      right: 20px;
+    }
+    .container ul li:nth-child(even) {
+      float: right;
+      clear: left;
+      transform: translateX(30px);
+    }
+    .container ul li:last-child {
+      margin-bottom: 0;
+    }
+    .container ul li .title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--main-blue);
+    }
+    ul li p {
+      font-size: 0.9rem;
+      color: #444;
+      margin: 7px 0;
+      line-height: 23px;
+    }
+    ul li a {
+      font-size: 0.9rem;
+      color: var(--main-blue);
+      text-decoration: none;
+    }
+    ul li .date {
+      position: absolute;
+      top: -40px;
+      /* left: 20px; */
+      width: 135px;
+      height: 35px;
+      color: #fff;
+      border-radius: 20px;
+      background: var(--main-right-gradient);
+      display: grid;
+      place-items: center;
+      font-size: 0.85rem;
+    }
+    ul li .circle {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 0;
+      /* left: 0; */
+      background: var(--main-pink);
+      border-radius: 50%;
+    }
+    ul li .circle::after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-color: var(--main-blue);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .container ul li:nth-child(odd) .circle {
+      right: -31px;
+      transform: translate(50%, -50%);
+    }
+    .container ul li:nth-child(even) .circle {
+      left: -29px;
+      transform: translate(-50%, -50%);
+    }
+
+    /*===== Media Query =====*/
+    @media screen and (max-width: 1224px) {
+      .container {
+        width: 85%;
+      }
+    }
+    @media screen and (max-width: 933px) {
+      .container {
+        width: 80%;
+        transform: translateX(15px);
+      }
+      .container ul li {
+        width: 100%;
+        float: none;
+        clear: none;
+        margin-bottom: 80px;
+      }
+      .container ul li:nth-child(odd) {
+        transform: translateX(0);
+        text-align: left;
+      }
+      .container ul li:nth-child(odd) .date {
+        left: 20px;
+      }
+      .container ul li:nth-child(odd) .circle {
+        left: -30px;
+        transform: translate(-50%, -50%);
+      }
+      .container ul li:nth-child(even) {
+        transform: translateX(0);
+      }
+      .container ul::after {
+        left: -30px;
+      }
+    }
+  </style>
+  <body>
+    <main class="main">
+      <h3 class="heading">Responsive Timeline</h3>
+      <div class="container">
+        <ul>
+          <li>
+            <h3 class="title">Frontend Developer</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
+              ex, consequuntur ratione dicta deserunt aperiam!
+            </p>
+            <a href="#">Read more ></a>
+            <span class="circle"></span>
+            <span class="date">January 2022</span>
+          </li>
+          <li>
+            <h3 class="title">Backend Developer</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
+              ex, consequuntur ratione dicta deserunt aperiam!
+            </p>
+            <a href="#">Read more ></a>
+            <span class="circle"></span>
+            <span class="date">March 2022</span>
+          </li>
+          <li>
+            <h3 class="title">Fullstack Developer</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
+              ex, consequuntur ratione dicta deserunt aperiam!
+            </p>
+            <a href="#">Read more ></a>
+            <span class="circle"></span>
+            <span class="date">May 2022</span>
+          </li>
+          <li>
+            <h3 class="title">App Developer</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
+              ex, consequuntur ratione dicta deserunt aperiam!
+            </p>
+            <a href="#">Read more ></a>
+            <span class="circle"></span>
+            <span class="date">June 2022</span>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
