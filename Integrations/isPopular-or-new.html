@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #444;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+    :root {
+      --background-color: #1a1a1a;
+      --text-color: #eee;
+      --border-radius: 30px;
+    }
+    .card {
+      width: min(370px, 100%); /*max-width and normal width*/
+      color: var(--text-color);
+      position: relative;
+    }
+    .card .author {
+      background-color: var(--background-color);
+      width: 60%;
+      height: 70px;
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      gap: 20px;
+      padding: 10px;
+      border-top-left-radius: var(--border-radius);
+      border-top-right-radius: var(--border-radius);
+    }
+    .card .author img {
+      width: 100%;
+    }
+    .card .author .name {
+      font-weight: bold;
+    }
+    .card .image {
+      background-color: var(--background-color);
+      text-align: center;
+      border-top-right-radius: var(--border-radius);
+    }
+    .card .image img {
+      width: 90%;
+      transform: rotate(15deg);
+      transition: 0.5s;
+    }
+    .card .image img:hover {
+      transform: rotate(25deg) scale(1.1) translate(10px, -20px);
+      cursor: pointer;
+    }
+    .card .info {
+      background-color: var(--background-color);
+      padding: 30px;
+      text-align: center;
+    }
+    .card .info .name {
+      font-size: 1.7rem;
+    }
+    .card .more {
+      background-color: var(--background-color);
+      padding: 0 30px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      border-bottom-left-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+    }
+    .card .more .buttons {
+      display: flex;
+      gap: 5px;
+    }
+    .card .more .buttons button {
+      font-family: "Poppins", sans-serif;
+      color: var(--text-color);
+      background-color: #313131;
+      border: 1px solid #454545;
+      cursor: pointer;
+    }
+    .card .more .buttons button:nth-child(1) {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .card .more .buttons button:nth-child(2) {
+      padding: 0px 20px;
+      border-radius: var(--border-radius);
+    }
+    .card .options ul {
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 5px;
+      border: 1px solid #313131;
+      width: max-content;
+      border-radius: 20px;
+    }
+    .card .options ul li {
+      background-color: var(--color);
+      width: 15px;
+      height: 15px;
+      list-style: none;
+      border-radius: 50%;
+    }
+    .card::before {
+      content: "";
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 70px;
+      border-bottom-left-radius: var(--border-radius);
+      box-shadow: -30px 30px 0px var(--background-color);
+    }
+    .card::after {
+      /* content: "text"; */
+      background-color: var(--background-color);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: calc(40% - 10px);
+      height: 60px;
+      border-radius: var(--border-radius);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+    @container style(--isPopular: true) {
+      .card::after {
+        content: "🔥 Popular";
+      }
+      .card .more {
+        box-shadow: 0 10px 0 #ff6723;
+      }
+    }
+    @container style(--isNew: true) {
+      .card::after {
+        content: "🎀 New";
+      }
+      .card .more {
+        box-shadow: 0 10px 0 #00abed;
+      }
+    }
+  </style>
+  <body>
+    <article class="card" style="--isNew: true">
+      <header class="author">
+        <div><img src="./img/wavy-icon.png" alt="Nike shoe" /></div>
+        <div>
+          <div class="name">JayWears</div>
+          Elegant shoes
+        </div>
+      </header>
+      <div class="image">
+        <img src="./img/Nike-Dunk-CMFT.png" alt="Nike shoe" />
+      </div>
+      <div class="info">
+        <div class="name">Nike Dunk CMFT</div>
+        <div class="price">$1200</div>
+      </div>
+      <div class="more">
+        <div class="buttons"><button>🛒</button><button>Buy now</button></div>
+        <div class="options">
+          <label for="">Option</label>
+          <ul>
+            <li style="--color: #fe6969"></li>
+            <li style="--color: #ffa666"></li>
+            <li style="--color: #ffdd66"></li>
+            <li style="--color: #323232"></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
