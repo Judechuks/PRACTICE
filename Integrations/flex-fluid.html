@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Judechuks, 30/10/2023">
-  <title>Flex Fluid</title>
-</head>
-<style>
-  body{
-    background: #000;
-  }
-  form{
-    border: 2px solid gray;
-    padding: 1em;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    border-radius: 4px;
-  }
-  .name, .email{
-    padding: .5em 1em;
-    background-color: rgb(150, 150, 150);
-    border: 1px solid white;
-    border-radius: 4px;
-  }
-  .name{
-    flex: 1 0 130px;
-  }
-  .email{
-    flex: 1 0 130px;
-  }
-  button{
-    flex: 1 0 40px;
-    background-color: blue;
-    color: white;
-    border: 0;
-    border-radius: 4px;
-    padding: .5em 1em;
-  }
-</style>
-<body>
-  <form action="">
-    <input type="text" class="name" placeholder="Name" />
-    <input type="email" class="email" placeholder="Email" />
-    <button>Subscribe</button>
-  </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Judechuks, 30/10/2023" />
+    <title>Flex Fluid</title>
+  </head>
+  <style>
+    body {
+      background: #000;
+    }
+    form {
+      border: 2px solid gray;
+      padding: 1em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      border-radius: 4px;
+    }
+    .name,
+    .email {
+      padding: 0.5em 1em;
+      background-color: rgb(150, 150, 150);
+      border: 1px solid white;
+      border-radius: 4px;
+    }
+    .name {
+      flex: 1 0 130px;
+    }
+    .email {
+      flex: 1 0 130px;
+    }
+    button {
+      flex: 1 0 40px;
+      background-color: blue;
+      color: white;
+      border: 0;
+      border-radius: 4px;
+      padding: 0.5em 1em;
+    }
+  </style>
+  <body>
+    <form action="">
+      <input type="text" class="name" placeholder="Name" />
+      <input type="email" class="email" placeholder="Email" />
+      <button>Subscribe</button>
+    </form>
+  </body>
 </html>
