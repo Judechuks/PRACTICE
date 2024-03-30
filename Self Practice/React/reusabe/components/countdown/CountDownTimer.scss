@@ -3,4 +3,30 @@
   color: var(--white-clr);
   font-size: 1.8rem;
   font-family: consolas, monospace;
+  /* uncomment for the digital countdown
+  display: flex;
+
+  span:not(:first-child)::before {
+    content: ":";
+    margin-inline: 10px;
+  }
+  span:not(:first-child)::after {
+    margin-left: 32px;
+    display: block;
+    font-size: 1.2rem;
+  }
+  span:nth-child(1)::after {
+    content: "Days";
+    display: block;
+    font-size: 1.2rem;
+  }
+  span:nth-child(2)::after {
+    content: "Hrs";
+  }
+  span:nth-child(3)::after {
+    content: "Mins";
+  }
+  span:nth-child(4)::after {
+    content: "Secs";
+  } */
 }
