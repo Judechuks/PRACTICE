@@ -46,7 +46,7 @@ const CountDownTimer = ({ date, time }) => {
   });
 
   function pad(unit) {
-    console.log("just padded");
+    // console.log("just padded");
     return ("0" + unit).length > 2 ? unit : "0" + unit;
   }
 
