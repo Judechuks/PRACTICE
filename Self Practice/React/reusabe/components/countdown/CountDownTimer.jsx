@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import "./CountDownTimer.scss";
 
-const CountDownTimer = () => {
+const CountDownTimer = ({ date, time }) => {
   // countdown starts here
   const calculateTimeLeft = () => {
-    let date = `03-30-2025`;
-    let time = "16:34";
     const dateAndTime = `${date} ${time}`;
     const eventDate = new Date(dateAndTime);
     const difference = eventDate - Date.now(); // values are in milliseconds
@@ -39,27 +37,22 @@ const CountDownTimer = () => {
     if (!timeLeft[interval]) {
       return;
     }
-    timerComponents.push(
-      <span key={index}>
-        {timeLeft[interval]} {interval}{" "}
-      </span>
-    );
+    timerComponents.push(<span key={index}>{pad(timeLeft[interval])}</span>);
+    // timerComponents.push(
+    //   <span key={index}>
+    //     {timeLeft[interval]} {interval}{" "}
+    //   </span> // 0 Days 0 Hrs 0 Mins 4 secs
+    // );
   });
 
-  // function updateTime() {
-  //   secs = pad(secs);
-  //   mins = pad(mins);
-  //   hrs = pad(hrs);
-  //   days = pad(days);
-  // }
-
-  // function pad(unit) {
-  //   return ("0" + unit).length > 2 ? unit : "0" + unit;
-  // }
+  function pad(unit) {
+    console.log("just padded");
+    return ("0" + unit).length > 2 ? unit : "0" + unit;
+  }
 
   return (
     <div className="countdown">
-      {timerComponents.length ? timerComponents : <span>Event Ended</span>}
+      {timerComponents.length ? timerComponents : <h1>Event Ended</h1>}
     </div>
   );
 };
