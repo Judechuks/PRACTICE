@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detect tab switch</title>
+  </head>
+  <body>
+    <script>
+      // to detect when a user switches tabs
+      // Method 1:
+      // when the user loses focus
+      window.addEventListener("blur", () => {
+        document.title = "Break up";
+      });
+      // when the user's focus is back to your tab
+      window.addEventListener("focus", () => {
+        document.title = "Patch up";
+      });
+
+      // Method 2:
+      document.addEventListener("visibilitychange", () => {
+        document.title = document.visibilityState;
+        // it can either be hidden or visible
+      });
+    </script>
+  </body>
+</html>
