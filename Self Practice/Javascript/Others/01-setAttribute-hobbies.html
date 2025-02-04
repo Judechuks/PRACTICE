@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Likes and Dislike</title>
+    <script defer src="01-setAttribute-hobbies.js"></script>
+  </head>
+  <style>
+    li {
+      text-transform: capitalize;
+      list-style-position: inside;
+    }
+    li::after {
+      content: attr(data-after);
+      margin-left: 10px;
+    }
+  </style>
+  <body>
+    <ol id="my-list">
+      <h4>Like Or Dislike</h4>
+    </ol>
+    <!-- <p>Check your console</p> -->
+  </body>
+</html>

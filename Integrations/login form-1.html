@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Judechuks, 18/9/2022">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Judechuks, 18/9/2022" />
     <title>Transparent login form</title>
-    <link rel="stylesheet" href="../../PROJECT/assets/fontawesome-free-6.1.1-web/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="../../PROJECT/assets/fontawesome-free-6.1.1-web/css/all.min.css" />
+  </head>
   <style>
-    body{
+    body {
       margin: 0;
       padding: 0;
       min-height: 100vh;
       font-family: sans-serif;
-      background: no-repeat url("../../PROJECT/assets/images/VR.png") center/cover;
+      background: no-repeat url("../../PROJECT/assets/images/VR.png")
+        center/cover;
     }
-    .login-box{
+    .login-box {
       width: 320px;
       height: 420px;
       background: rgba(0, 0, 0, 0.5);
@@ -24,11 +27,11 @@
       top: 50%;
       left: 50%;
       position: absolute;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       box-sizing: border-box;
       padding: 5px 30px;
     }
-    i.fa-user-circle{
+    i.fa-user-circle {
       font-size: 6rem;
       color: #1c8adb;
       background-color: #fff;
@@ -38,16 +41,17 @@
       top: -3rem;
       cursor: pointer;
     }
-    h1{
+    h1 {
       text-transform: uppercase;
       text-align: center;
       margin: 60px auto 30px;
     }
-    label{
-       display: block;
-       margin-bottom: 8px;
+    label {
+      display: block;
+      margin-bottom: 8px;
     }
-    #pass, #user{
+    #pass,
+    #user {
       margin-bottom: 18px;
       padding: 4px 4px 4px 28px;
       font-size: 1.063rem;
@@ -58,11 +62,10 @@
       color: #fff;
     }
     #pass::placeholder,
-    #user::placeholder
-    {
+    #user::placeholder {
       color: #bbb;
     }
-    #login-btn{
+    #login-btn {
       display: block;
       margin: 0 auto 18px;
       font-size: 1.3rem;
@@ -75,27 +78,27 @@
       background-color: #1c8adb;
       color: #fff;
     }
-    #login-btn:hover{
+    #login-btn:hover {
       cursor: pointer;
       background: #1cbcdd;
-      
     }
-    .forgot{
+    .forgot {
       color: #fff;
       text-decoration: none;
     }
-    .forgot:hover{
+    .forgot:hover {
       color: #1c8adb;
     }
-    i.fa-user, i.fa-lock{
+    i.fa-user,
+    i.fa-lock {
       position: absolute;
       color: #1c8adb;
-      padding: 6px 0  0 4px;
+      padding: 6px 0 0 4px;
       font-size: 1.1rem;
     }
   </style>
 
-<body>
+  <body>
     <div class="login-box">
       <i class="fa fa-user-circle"></i>
 
@@ -103,13 +106,13 @@
       <form>
         <label for="user">Username</label>
         <i class="fa fa-user"></i>
-        <input type="text" placeholder="Enter Username" id="user">
+        <input type="text" placeholder="Enter Username" id="user" />
         <label for="pass">Password</label>
         <i class="fa fa-lock"></i>
-        <input type="password" placeholder="Enter Password" id="pass">
-        <input type="submit" value="Login" id="login-btn">
+        <input type="password" placeholder="Enter Password" id="pass" />
+        <input type="submit" value="Login" id="login-btn" />
         <a href="#" class="forgot">Forgot Password?</a>
       </form>
     </div>
-</body>
+  </body>
 </html>

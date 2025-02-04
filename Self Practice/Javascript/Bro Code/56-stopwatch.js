@@ -16,6 +16,7 @@ startBtn.addEventListener("click", () => {
   if (paused) {
     paused = false;
     startTime = Date.now() - elapsedTime;
+    console.log(Date.now());
     intervalId = setInterval(updateTime, 1000);
   }
 });
@@ -36,7 +37,7 @@ resetBtn.addEventListener("click", () => {
   timeDisplay.textContent = `00:00:00`;
 });
 
-function updateTime(){
+function updateTime() {
   elapsedTime = Date.now() - startTime;
   secs = Math.floor((elapsedTime / 1000) % 60);
   mins = Math.floor((elapsedTime / (1000 * 60)) % 60);
@@ -48,6 +49,6 @@ function updateTime(){
 
   timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
 }
-function pad(unit){
-  return (("0") + unit).length > 2 ? unit : "0" + unit;
+function pad(unit) {
+  return ("0" + unit).length > 2 ? unit : "0" + unit;
 }
