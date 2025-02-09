@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Scroll</title>
+  </head>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    * {
+      margin: 0;
+      /* padding: 0; */
+    }
+    .wrapper {
+      /* border: 2px solid gray; */
+      width: 90%;
+      max-width: 1536px;
+      margin-inline: auto;
+      position: relative;
+      height: 100px;
+      margin-top: 2rem;
+      overflow: hidden;
+      mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0)
+      );
+    }
+    .item {
+      width: 200px;
+      height: 100px;
+      border-radius: 6px;
+      background-color: red;
+      position: absolute;
+      left: max(calc(200px * 8), 100%);
+      animation: scrollLeft 30s linear infinite;
+      /* for identification */
+      text-align: center;
+      line-height: 100px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    @keyframes scrollLeft {
+      to {
+        left: -200px; /* the width of the boxes */
+      }
+    }
+    /* -1 makes the animation starts immediate according without starting from the right */
+    .item1 {
+      animation-delay: calc(30s / 8 * (8 - 1) * -1);
+    }
+    .item2 {
+      animation-delay: calc(30s / 8 * (8 - 2) * -1);
+    }
+    .item3 {
+      animation-delay: calc(30s / 8 * (8 - 3) * -1);
+    }
+    .item4 {
+      animation-delay: calc(30s / 8 * (8 - 4) * -1);
+    }
+    .item5 {
+      animation-delay: calc(30s / 8 * (8 - 5) * -1);
+    }
+    .item6 {
+      animation-delay: calc(30s / 8 * (8 - 6) * -1);
+    }
+    .item7 {
+      animation-delay: calc(30s / 8 * (8 - 7) * -1);
+    }
+    .item8 {
+      animation-delay: calc(30s / 8 * (8 - 8) * -1);
+    }
+  </style>
+  <body>
+    <section class="wrapper">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+      <div class="item item7">7</div>
+      <div class="item item8">8</div>
+    </section>
+  </body>
+</html>
