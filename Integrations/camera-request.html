@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Request</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.2);
+      padding-inline: 10px;
+    }
+    h1 {
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 1.3rem;
+    }
+    #cameraFeed {
+      width: 320px;
+      height: 240px;
+      border: 2px solid black;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    .btn-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .btn-container button {
+      flex: 1 0 40px;
+      padding: 8px 16px;
+      font-size: 1rem;
+      border: none;
+      color: #ccc;
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: 0.3s;
+    }
+    #showCamera {
+      background-color: rgb(0, 125, 0);
+    }
+    #showCamera:hover {
+      background-color: rgb(0, 105, 0);
+    }
+    #closeCamera {
+      background-color: rgb(125, 0, 0);
+    }
+    #closeCamera:hover {
+      background-color: rgb(105, 0, 0);
+    }
+  </style>
+  <body>
+    <main class="wrapper">
+      <section>
+        <h1>Camera Feed</h1>
+        <video id="cameraFeed" autoplay></video>
+        <div class="btn-container">
+          <button type="button" id="showCamera">Show Camera</button>
+          <button type="button" id="closeCamera">Close Camera</button>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    const showCameraBtn = document.getElementById("showCamera");
+    const closeCameraBtn = document.getElementById("closeCamera");
+    const cameraFeed = document.getElementById("cameraFeed");
+    let stream = null;
+
+    showCameraBtn.addEventListener("click", showCamera);
+    closeCameraBtn.addEventListener("click", closeCamera);
+
+    // showCamera function
+    async function showCamera() {
+      const response = confirm("Are you sure you want to Turn on the Camera?");
+      if (response) {
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({ video: true });
+          cameraFeed.srcObject = stream;
+        } catch (error) {
+          console.error("Error accessing camera", error);
+          alert("Error accessing camera. " + error.message);
+          // alert("Error accessing camera. Please check permissions");
+        }
+      }
+      return;
+    }
+
+    function closeCamera() {
+      const response = confirm("Are you sure you want to Close the Camera?");
+      if (response && stream) {
+        const tracks = stream.getTracks();
+        tracks.forEach((track) => {
+          track.stop(); // stop all track
+          cameraFeed.srcObject = null; // clear the video element
+          stream = null; // reset the stream variable
+        });
+      }
+      return;
+    }
+  </script>
+</html>
+
+<!--   <script>
+    const showCameraBtn = document.getElementById("showCamera");
+    const cameraFeed = document.getElementById("cameraFeed");
+
+    showCameraBtn.addEventListener("click", showCamera);
+
+    function showCamera() {
+      const response = confirm("Are you sure you want to Turn on the Camera?");
+      if (response) {
+        navigator.mediaDevices
+          .getUserMedia({ video: true })
+          .then((stream) => {
+            cameraFeed.srcObject = stream;
+          })
+          .catch((error) => {
+            console.error("Error accessing camera", error);
+            alert("Error accessing camera. Please allow Permission.");
+          });
+      }
+      return;
+    }
+
+    function closeCamera() {}
+  </script> -->
