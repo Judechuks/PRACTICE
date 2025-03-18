@@ -13,6 +13,12 @@ const Sidebar = (props) => {
         <h4 className="text-snippet">
           {index + 1}. {note.body.split("\n")[0].split("#")}
         </h4>
+        <button
+          className="delete-btn"
+          onClick={(event) => props.deleteNote(event, note.id)}
+        >
+          <i className="fa fa-trash"></i>
+        </button>
       </div>
     </div>
   ));
