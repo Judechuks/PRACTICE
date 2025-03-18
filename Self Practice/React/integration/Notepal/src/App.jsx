@@ -8,7 +8,7 @@ import Editor from "./components/Editor";
 function App() {
   // fetch initial notes from localStorage
   const [notes, setNotes] = useState(
-    () => JSON.parse(localStorage.getItem("notepal")) || []
+    () => JSON.parse(localStorage.getItem("notepal")) || [] // lazy load initialization
   );
   // create and set id of the current note
   const [currentNoteId, setCurrentNoteId] = useState(
@@ -53,7 +53,7 @@ function App() {
   return (
     <main>
       {notes.length > 0 ? (
-        <Split sizes={[30, 70]} direction="horizontal" className="split">
+        <Split sizes={[25, 75]} direction="horizontal" className="split">
           <Sidebar
             notes={notes}
             currentNote={findCurrentNote()}
@@ -84,11 +84,10 @@ const [notes, setNotes] = useState(
   JSON.parse(localStorage.getItem("notepal")) || []
 );
 ```
-In the code above, React gets to fetch notes from the localStorage everytime state changes (As user is constantly typing text into the textarea), this can reduce performance. As a result of this, React has come up with a way of initializing state once by passing the value to a callback function. This process is known as **Lazy State Initialization**
+In the code above, React gets to fetch notes from the localStorage storage every time the state changes (as the user is constantly typing text into the textarea), which can reduce performance. As a result of this, React has come up with a way of initializing state once by passing the value to a callback function. This process is known as **Lazy State Initialization**
 So the code would look like:
 ```
 const [notes, setNotes] = useState(
   () => JSON.parse(localStorage.getItem("notepal")) || []
 );
-```
 */
