@@ -30,8 +30,8 @@ function App() {
     setCurrentNoteId(newNote.id);
   }
 
-  // get the current note that is selected based on the id and update it's content based on the text typed into the textarea (onChange)
-  function updateNote(text) {
+  // get the current note that is selected based on the id and update it's content based on the text typed into the textarea (onChange), but does not rearange the notes
+  /* function updateNote(text) {
     setNotes((oldNotes) =>
       oldNotes.map((oldNote) => {
         return oldNote.id === currentNoteId
@@ -39,6 +39,22 @@ function App() {
           : oldNote;
       })
     );
+  } */
+
+  // rearanges the notes to the top after being updated
+  function updateNote(text) {
+    setNotes((oldNotes) => {
+      const newArray = [];
+      for (let i = 0; i < oldNotes.length; i++) {
+        const oldNote = oldNotes[i];
+        if (oldNote.id === currentNoteId) {
+          newArray.unshift({ ...oldNote, body: text });
+        } else {
+          newArray.push(oldNote);
+        }
+      }
+      return newArray;
+    });
   }
 
   // set the current note based on the id of the note that was clicked from the list of notes in the sidebar
