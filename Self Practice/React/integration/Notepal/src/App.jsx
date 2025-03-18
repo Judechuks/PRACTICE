@@ -57,6 +57,12 @@ function App() {
     });
   }
 
+  function deleteNote(event, noteId) {
+    event.stopPropagation();
+    // filter and return only notes that were not clicked (based on their id)
+    setNotes((oldNotes) => oldNotes.filter((oldNote) => oldNote.id !== noteId));
+  }
+
   // set the current note based on the id of the note that was clicked from the list of notes in the sidebar
   function findCurrentNote() {
     return (
@@ -75,6 +81,7 @@ function App() {
             currentNote={findCurrentNote()}
             setCurrentNoteId={setCurrentNoteId}
             newNote={createNewNote}
+            deleteNote={deleteNote}
           />
           {currentNoteId && notes.length > 0 && (
             <Editor currentNote={findCurrentNote()} updateNote={updateNote} />
