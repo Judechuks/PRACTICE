@@ -8,7 +8,7 @@ function App() {
   const [dice, setDice] = useState(allNewDice ())
   const [tenzies, setTenzies] = useState(false)
 
-  useEffect(() => {
+  useEffect(() => {  // using UseEffect to keep states in sync
     const allHeld = dice.every(die => die.isHeld)
     const firstValue = dice[0].value
     const allSameValue = dice.every(die => die.value === firstValue)
