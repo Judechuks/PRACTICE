@@ -5,6 +5,7 @@ import FetchAndPaginate from "./pages/FetchAndPaginate";
 import FetchOnClick from "./pages/FetchOnClick";
 import FetchOnScroll from "./pages/FetchOnScroll";
 import CountryDetails from "./pages/CountryDetails";
+import MutateData from "./pages/MutateData";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/click" element={<FetchOnClick />} />
         <Route path="/scroll" element={<FetchOnScroll />} />
         <Route path="/countries/:id" element={<CountryDetails />} />
+        <Route path="/mutate" element={<MutateData />} />
       </Routes>
     </BrowserRouter>
   );
