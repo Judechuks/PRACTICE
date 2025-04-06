@@ -26,6 +26,12 @@ const Header = () => {
       >
         Scroll for More
       </a>
+      <a
+        href="/mutate"
+        className={location.pathname == "/mutate" ? "active" : ""}
+      >
+        Mutate
+      </a>
     </header>
   );
 };
