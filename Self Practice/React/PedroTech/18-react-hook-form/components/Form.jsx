@@ -1,6 +1,6 @@
-import {useForm} from 'react-hook-form'
-import {yupResolver} from '@hookform/resolvers/yup'
-import * as yup from 'yup'
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 /*
 Install react-hook-form and yup to use them,
@@ -10,38 +10,78 @@ npm install react-hook-form yup
 To use resolver, you need to install it,
 go to the terminal in the project's directory and type:
 npm install @hookform/resolvers
-*/ 
+*/
 function Form() {
   const schema = yup.object().shape({
     fullName: yup.string().required("Your Full Name is Required!"),
-    email: yup.string().email("Must include @domain.com").required("Your Email is Required!"),
-    age: yup.number().typeError('Age must be a number').positive("No Negative Number").integer().min(15, "Sorry, You are under age. 15+").required(),
-    password: yup.string().min(4, "Password must be at least 4 characters").max(20).required("Your Password is Required!"),
-    confirmPassword: yup.string().oneOf([yup.ref("password"), null], "Passwords Don't Match").required("Retype Password Again!")
-  })
-  const {register, handleSubmit, formState: {errors} } = useForm({
-    resolver: yupResolver(schema)
-  })
+    email: yup
+      .string()
+      .email("Must include @domain.com")
+      .required("Your Email is Required!"),
+    age: yup
+      .number()
+      .typeError("Age must be a number")
+      .positive("No Negative Number")
+      .integer()
+      .min(15, "Sorry, You are under age. 15+")
+      .required(),
+    password: yup
+      .string()
+      .min(4, "Password must be at least 4 characters")
+      .max(20)
+      .required("Your Password is Required!"),
+    confirmPassword: yup
+      .string()
+      .oneOf([yup.ref("password"), null], "Passwords Don't Match")
+      .required("Retype Password Again!"),
+  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
 
   const onSubmit = (data) => {
-    console.log(data)
-  }
+    console.log("Old Data", data); // user data including confirmPassword field
+
+    // To remove confirmPassword field from the data object use the spread operator And:
+
+    // 1. the delete operator
+    const newData1 = { ...data };
+    delete newData1.confirmPassword;
+    console.log("New Data 1", newData1); // user data without confirmPassword field
+
+    // 2. create a new object with all properties of the data object except the confirmPassword field
+    const newData2 = {
+      fullName: data.fullName,
+      email: data.email,
+      age: data.age,
+      password: data.password,
+    };
+    console.log("New Data 2", newData2);
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='form-container'>
-      <input type='text' placeholder='Full Name' {...register("fullName")} />
+    <form onSubmit={handleSubmit(onSubmit)} className="form-container">
+      <input type="text" placeholder="Full Name" {...register("fullName")} />
       <p className="error">{errors.fullName?.message}</p>
-      <input type='text' placeholder='Email' {...register("email")} />
+      <input type="text" placeholder="Email" {...register("email")} />
       <p className="error">{errors.email?.message}</p>
-      <input type='number' placeholder='Age' {...register("age")} />
+      <input type="number" placeholder="Age" {...register("age")} />
       <p className="error">{errors.age?.message}</p>
-      <input type='password' placeholder='Password' {...register("password")} />
+      <input type="password" placeholder="Password" {...register("password")} />
       <p className="error">{errors.password?.message}</p>
-      <input type='password' placeholder='Confirm Password' {...register("confirmPassword")} />
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        {...register("confirmPassword")}
+      />
       <p className="error">{errors.confirmPassword?.message}</p>
-      <input type='submit' className='btn' />
+      <input type="submit" className="btn" />
     </form>
-  )
+  );
 }
- 
-export default Form 
+
+export default Form;
