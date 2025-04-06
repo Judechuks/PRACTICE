@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server --watch db.json --port 4000"
+    "server": "json-server --watch db.json --port 4000",
+    "city server": "json-server --watch cities.json --port 4040"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.71.5",
