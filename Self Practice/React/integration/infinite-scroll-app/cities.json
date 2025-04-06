@@ -1,0 +1,40 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "Abu Dhabi",
+      "country": "United Arab Emirates",
+      "population": 6035000
+    },
+    {
+      "id": 2,
+      "name": "Amsterdam",
+      "country": "Netherlands",
+      "population": 8217528
+    },
+    {
+      "id": 3,
+      "name": "Ankara",
+      "country": "Turkey",
+      "population": 5000000
+    },
+    {
+      "id": 4,
+      "name": "Athens",
+      "country": "Greece",
+      "population": 6640462
+    },
+    {
+      "id": 5,
+      "name": "Baghdad",
+      "country": "Iraq",
+      "population": 7000000
+    },
+    {
+      "id": 6,
+      "name": "Baku",
+      "country": "Azerbaijan",
+      "population": 2000000
+    }
+  ]
+}
