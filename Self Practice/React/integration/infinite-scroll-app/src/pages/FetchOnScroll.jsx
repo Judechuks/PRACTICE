@@ -15,7 +15,7 @@ const fetchCountries = ({ pageParam }) => {
 const FetchOnScroll = () => {
   const navigate = useNavigate();
 
-  const { data, isLoading, isError, error, fetchNextPage, isFetching } =
+  const { data, isLoading, isError, error, fetchNextPage, isFetchingNextPage } =
     useInfiniteQuery({
       queryKey: ["countries"],
       queryFn: fetchCountries,
@@ -107,7 +107,7 @@ const FetchOnScroll = () => {
 
       {/* Click to fetch */}
       <div ref={ref}>
-        {isFetching && <p className="scroll-loading">Loading...</p>}
+        {isFetchingNextPage && <p className="scroll-loading">Loading...</p>}
       </div>
     </main>
   );
