@@ -1,40 +1,108 @@
 import axios from "axios";
-import { useInfiniteQuery } from "@tanstack/react-query";
+import {
+  useInfiniteQuery,
+  useMutation,
+  useQuery,
+  useQueryClient,
+} from "@tanstack/react-query";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 const pageLimit = 4;
 
-const fetchCountries = ({ pageParam }) => {
+// functions
+const fetchCities = ({ pageParam }) => {
   return axios.get(
-    `http://localhost:4000/cities?_page=${pageParam}&_per_page=${pageLimit}`
+    `http://localhost:4040/cities?_page=${pageParam}&_per_page=${pageLimit}`
   );
 };
 
+const fetchCountries = () => {
+  return axios.get(`http://localhost:4000/countries`);
+};
+
+const addCity = (city) => {
+  return axios.post(`http://localhost:4040/cities`, city);
+};
+
+// component
 const MutateData = () => {
+  const [showForm, setShowForm] = useState(false);
+  // const [formData, setFormData] = useState(false);
+
+  // fetch countries
+  const { data: countries } = useQuery({
+    queryKey: ["countries"],
+    queryFn: fetchCountries,
+    staleTime: 60000,
+    refetchOnWindowFocus: false,
+  });
+
+  // fetch cities
   const { data, isLoading, isError, error, fetchNextPage, hasNextPage } =
     useInfiniteQuery({
-      queryKey: ["countries"],
-      queryFn: fetchCountries,
+      queryKey: ["cities"],
+      queryFn: fetchCities,
       initialPageParam: 1, // initial page to load
       getNextPageParam: (_lastPage, allPages) => {
-        // console.log("All pages", allPages);
-        // console.log("All pages Data", allPages[allPages.length - 1].data.next);
-
-        // If your api does not provide the next page value, Then You will have to calculate the next page number from the the pages that your data amounts to. For example if the total data is 200 and your limit or per page is 5, then your number of pages would be 200/5 = 40
-
-        // When your api does not return the next page
-        /* if (allPages.length < 5) {
-        // where 5 is the total number of pages you data amounted to.
-        return allPages.length + 1;
-      } else {
-        return undefined;
-      } */
-
-        // Since json-server version '^1.0.0-beta.3' returns the next page, then all I have to do is return the next page
         return allPages[allPages.length - 1].data.next;
       },
       staleTime: 60000,
       refetchOnWindowFocus: false,
     });
+
+  // queryClient from the QeryClientProvider
+  const queryClient = useQueryClient();
+
+  // mutation query
+  const { mutate } = useMutation({
+    mutationFn: addCity,
+    onSuccess: () => {
+      queryClient.invalidateQueries("cities"); // causes a clear in cache and refetches data which causes a re-render
+    },
+  });
+
+  // form validation using react-hook-form
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm();
+
+  function handleCitySubmission(recievedData) {
+    mutate({
+      ...recievedData,
+      population: parseInt(recievedData.population),
+    });
+    setShowForm(false);
+    setValue("name", "");
+    setValue("country", "");
+    setValue("population", "");
+  }
+
+  // handle form
+  /*   function handleFormSubmit(event) {
+    event.preventDefault();
+    console.log(formData);
+    mutate({ ...formData });
+
+    // setFormData({});
+    setShowForm(false);
+  } */
+
+  // function handleChange(event) {
+  /*     let { id, value } = event.target;
+    if (id === "population") {
+      value = parseInt(value);
+    }
+    setFormData((prevData) => {
+      return {
+        ...prevData,
+        [id]: value,
+      };
+    });
+  } */
 
   if (isLoading) {
     return (
@@ -65,7 +133,7 @@ const MutateData = () => {
       {data?.pages.map((page) => {
         return page?.data?.data.map((city) => {
           return (
-            <article key={city.id} className="item cursor-pointer">
+            <article key={city.id} className="item">
               <h2 className="country-name">City: {city.name}</h2>
               <div className="row">
                 <p>
@@ -73,7 +141,7 @@ const MutateData = () => {
                 </p>
                 <p>
                   <strong>Population:</strong>{" "}
-                  {city.population.toLocaleString()}
+                  {city?.population?.toLocaleString()}
                 </p>
               </div>
             </article>
@@ -83,10 +151,96 @@ const MutateData = () => {
 
       {/* Click to fetch */}
       <div className="click-btn-container">
-        <button disabled={!hasNextPage} onClick={fetchNextPage}>
-          {hasNextPage ? "Load More..." : "No More Country to Fetch"}
-        </button>
+        {hasNextPage ? (
+          <button onClick={fetchNextPage}>Load More...</button>
+        ) : (
+          <button onClick={() => setShowForm(true)}>
+            No More Cities Click to Add
+          </button>
+        )}
       </div>
+
+      {/* Add More Cities Form */}
+      {showForm && (
+        <section className="form-container">
+          {/* <form action="" onSubmit={handleFormSubmit}> */}
+          <form action="" onSubmit={handleSubmit(handleCitySubmission)}>
+            <div className="form-row">
+              <div className="close-btn-container">
+                <button
+                  type="button"
+                  className="close-btn"
+                  onClick={() => setShowForm(false)}
+                >
+                  x
+                </button>
+              </div>
+              <label htmlFor="city">City</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="City Name"
+                // onChange={handleChange}
+                className={`${
+                  errors.name ? "border-red-500" : "border-gray-300"
+                }`}
+                {...register("name", {
+                  required: "City name is required",
+                })}
+              />
+              {errors.name && (
+                <p className="form-error-msg">{errors.name.message}!</p>
+              )}
+            </div>
+            <div className="form-row">
+              <label htmlFor="country">Country</label>
+              <select
+                id="country"
+                // onChange={handleChange}
+                className={`cursor-pointer ${
+                  errors.country ? "border-red-500" : "border-gray-300"
+                }`}
+                {...register("country", {
+                  required: "Country is required",
+                })}
+              >
+                <option value="">-- Select Country --</option>
+                {countries?.data.map((country) => (
+                  <option key={country.id} value={country.name}>
+                    {country.name}
+                  </option>
+                ))}
+              </select>
+              {errors.country && (
+                <p className="form-error-msg">{errors.country.message}!</p>
+              )}
+            </div>
+            <div className="form-row">
+              <label htmlFor="population">Population</label>
+              <input
+                type="number"
+                id="population"
+                placeholder="Number of People"
+                // onChange={handleChange}
+                className={`${
+                  errors.population ? "border-red-500" : "border-gray-300"
+                }`}
+                {...register("population", {
+                  required: "Population number is required",
+                })}
+              />
+              {errors.population && (
+                <p className="form-error-msg">{errors.population.message}!</p>
+              )}
+            </div>
+            <div className="form-row">
+              <button type="submit" className="submit-btn">
+                Submit
+              </button>
+            </div>
+          </form>
+        </section>
+      )}
     </main>
   );
 };
