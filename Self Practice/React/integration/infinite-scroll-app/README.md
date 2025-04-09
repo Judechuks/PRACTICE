@@ -6,7 +6,8 @@ An infinite scroll app - fetching data from a server and displaying the data on 
 
 At the root directory:
 `npm install`
-`npm run server` (to start the api server)
+`npm run server` (to serve the countries.json file on the json-server)
+`npm run city-server` (to serve the cities.json file on the json-server)
 `npm run dev` (to start the react app)
 
 ### Dependencies
@@ -58,6 +59,15 @@ React implementation of the Intersection Observer API to tell you when an elemen
 ##### Installation
 
 `npm i react-intersection-observer`
+
+#### 7. [react-hook-form](https://www.npmjs.com/package/react-hook-form)
+
+React Hook Form is a powerful library designed for managing forms in React applications.
+**Usage:** Form validation
+
+##### Installation
+
+`npm i react-hook-form`
 
 ### Files
 
