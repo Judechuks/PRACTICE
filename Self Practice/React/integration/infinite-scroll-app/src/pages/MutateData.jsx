@@ -22,7 +22,7 @@ const fetchCountries = () => {
 };
 
 const addCity = (city) => {
-  return axios.post(`http://localhost:4040/cities`, city);
+  return axios.post(`http://localhost:4040/citie`, city);
 };
 
 // component
@@ -55,7 +55,11 @@ const MutateData = () => {
   const queryClient = useQueryClient();
 
   // mutation query
-  const { mutate } = useMutation({
+  const {
+    mutate,
+    isError: isMutationError,
+    error: mutationError,
+  } = useMutation({
     mutationFn: addCity,
     onMutate: async (newCity) => {
       await queryClient.cancelQueries(["cities"]); // to prevent overriding the data update and ensure consistent state
@@ -86,6 +90,11 @@ const MutateData = () => {
       });
 
       return previousData; // for rollback incase mutation fails
+    },
+    onError: (error, newCity, context) => {
+      if (error) console.log("Error", error);
+      if (newCity) console.log("Data", newCity);
+      queryClient.setQueryData(["cities"], context.previousData); // rollback if there is an error
     },
   });
 
@@ -141,14 +150,22 @@ const MutateData = () => {
     );
   }
 
-  if (isError) {
+  if (isError || isMutationError) {
     return (
       <main className="home-main">
         <div className="msg-container">
           <h3 className="notify-heading error-msg">Oppss!</h3>
-          <p className="notify-msg">
-            Error: {error ? error.message : "Could not fetch data"}
-          </p>
+          {isError && (
+            <p className="notify-msg">
+              Error: {error ? error.message : "Could not fetch data"}
+            </p>
+          )}
+          {isMutationError && (
+            <p className="notify-msg">
+              Error:{" "}
+              {mutationError ? mutationError.message : "Could not submit data"}
+            </p>
+          )}
         </div>
       </main>
     );
