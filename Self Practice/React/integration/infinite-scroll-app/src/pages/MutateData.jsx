@@ -47,7 +47,7 @@ const MutateData = () => {
       getNextPageParam: (_lastPage, allPages) => {
         return allPages[allPages.length - 1].data.next;
       },
-      staleTime: 60000,
+      // staleTime: 60000,
       refetchOnWindowFocus: false,
     });
 
@@ -57,8 +57,33 @@ const MutateData = () => {
   // mutation query
   const { mutate } = useMutation({
     mutationFn: addCity,
-    onSuccess: () => {
-      queryClient.invalidateQueries("cities"); // causes a clear in cache and refetches data which causes a re-render
+    onSuccess: (newData) => {
+      // queryClient.invalidateQueries("cities"); // causes a clear in cache and refetches data which causes a re-render
+      console.log("newData", newData);
+
+      queryClient.setQueryData(["cities"], (oldQueryData) => {
+        console.log("oldQueryData", oldQueryData);
+
+        const obj = {
+          ...oldQueryData,
+          pages: oldQueryData.pages.map((page, index) => {
+            if (index === oldQueryData.pages.length - 1) {
+              return {
+                ...page,
+                data: {
+                  ...page.data,
+                  data: [...page.data.data, newData.data],
+                },
+              };
+            }
+            return page;
+          }),
+        };
+
+        console.log("Returned Obj", obj);
+
+        return obj;
+      });
     },
   });
 
