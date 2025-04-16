@@ -22,7 +22,7 @@ const fetchCountries = () => {
 };
 
 const addCity = (city) => {
-  return axios.post(`http://localhost:4040/citie`, city);
+  return axios.post(`http://localhost:4040/cities`, city);
 };
 
 // component
@@ -95,6 +95,9 @@ const MutateData = () => {
       if (error) console.log("Error", error);
       if (newCity) console.log("Data", newCity);
       queryClient.setQueryData(["cities"], context.previousData); // rollback if there is an error
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries(["cities"]); // keeps server data in sync with the UI
     },
   });
 
