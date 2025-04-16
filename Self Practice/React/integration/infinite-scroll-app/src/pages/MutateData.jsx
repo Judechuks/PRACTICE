@@ -57,13 +57,12 @@ const MutateData = () => {
   // mutation query
   const { mutate } = useMutation({
     mutationFn: addCity,
-    onSuccess: (newData) => {
-      // queryClient.invalidateQueries("cities"); // causes a clear in cache and refetches data which causes a re-render
-      console.log("newData", newData);
-
+    onMutate: async (newCity) => {
+      await queryClient.cancelQueries(["cities"]); // to prevent overriding the data update and ensure consistent state
+      const previousData = queryClient.getQueryData(["cities"]); // gets the current query data (newCity) incase mutation fails inorder to make a rollback
+      // update the internal city cache with the new data that is received (newCity)
       queryClient.setQueryData(["cities"], (oldQueryData) => {
-        console.log("oldQueryData", oldQueryData);
-
+        // console.log("oldQueryData", oldQueryData);
         const obj = {
           ...oldQueryData,
           pages: oldQueryData.pages.map((page, index) => {
@@ -72,18 +71,21 @@ const MutateData = () => {
                 ...page,
                 data: {
                   ...page.data,
-                  data: [...page.data.data, newData.data],
+                  data: [
+                    ...page.data.data,
+                    { ...newCity, id: String(page.data.data.length + 1) },
+                  ],
                 },
               };
             }
             return page;
           }),
         };
-
-        console.log("Returned Obj", obj);
-
+        // console.log("Returned Obj", obj);
         return obj;
       });
+
+      return previousData; // for rollback incase mutation fails
     },
   });
 
