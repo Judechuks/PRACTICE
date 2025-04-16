@@ -37,52 +37,10 @@
       "population": 2000000
     },
     {
-      "id": "72f7",
-      "name": "Onitsha",
-      "country": "Nigeria",
-      "population": 123456789
-    },
-    {
-      "id": "a353",
-      "name": "Abuja",
-      "country": "Nigeria",
-      "population": 22233456
-    },
-    {
-      "id": "d1af",
-      "name": "Asaba",
-      "country": "Nigeria",
-      "population": 123432345
-    },
-    {
-      "id": "bf42",
+      "id": "5769",
       "name": "Agbor",
       "country": "Nigeria",
       "population": 100000
-    },
-    {
-      "id": "daef",
-      "name": "Awka",
-      "country": "Nigeria",
-      "population": 160000
-    },
-    {
-      "id": "36cb",
-      "name": "Nnewi",
-      "country": "Nigeria",
-      "population": 100000
-    },
-    {
-      "id": "2d96",
-      "name": "Warri",
-      "country": "Nigeria",
-      "population": 250000
-    },
-    {
-      "id": "6f13",
-      "name": "Aba",
-      "country": "Nigeria",
-      "population": 250000
     }
   ]
 }
