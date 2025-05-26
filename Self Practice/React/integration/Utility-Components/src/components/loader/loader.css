@@ -1,0 +1,185 @@
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: conic_loader 2s infinite;
+  background: green;
+}
+@keyframes conic_loader {
+  0% {
+    background: conic-gradient(#f03355 0, #0000 0);
+  }
+  12.5% {
+    background: conic-gradient(#f03355 45deg, #0000 46deg);
+  }
+  25% {
+    background: conic-gradient(#f03355 90deg, #0000 91deg);
+  }
+  37.5% {
+    background: conic-gradient(#f03355 135deg, #0000 136deg);
+  }
+  50% {
+    background: conic-gradient(#f03355 180deg, #0000 181deg);
+  }
+  62.5% {
+    background: conic-gradient(#f03355 225deg, #0000 226deg);
+  }
+  75% {
+    background: conic-gradient(#f03355 270deg, #0000 271deg);
+  }
+  87.5% {
+    background: conic-gradient(#f03355 315deg, #0000 316deg);
+  }
+  100% {
+    background: conic-gradient(#f03355 360deg, #0000 360deg);
+  }
+}
+
+/* Bar Loader */
+/* <div class="loader">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div> 
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+  height: 35px;
+  margin: 0 5px;
+  animation-delay: 0.25s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes scale-up4 {
+  20% {
+    background-color: #ffff;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+} */
+
+/* Dots */
+/* HTML: <div class="loader"></div> 
+.loader {
+  width: 120px;
+  height: 20px;
+  -webkit-mask: radial-gradient(circle closest-side,#000 94%,#0000) left/20% 100%;
+  background: linear-gradient(#000 0 0) left/0% 100% no-repeat #ddd;
+  animation: l17 2s infinite steps(6);
+}
+@keyframes l17 {
+    100% {background-size:120% 100%}
+}
+*/
+/* Spinning Loader */
+/* HTML: <div class="loader"></div>
+.loader {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(#f03355, #0000);
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+/* Pulsing Loader */
+/* HTML: <div class="loader"></div>
+.loader {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(#f03355, #0000);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} */
+
+/* Bouncing Loader */
+/* HTML: <div class="loader"></div>
+.loader {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(#f03355, #0000);
+  animation: bounce 1.5s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+} */
+
+/* Circular Loader */
+/* HTML: <div class="loader"></div>
+.loader {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(#f03355, #0000);
+  animation: circle 1.5s linear infinite;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+/* Spiral Loader */
+/* HTML: <div class="loader"></div>
+.loader {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(#f03355, #0000);
+  animation: spiral 1.5s linear infinite;
+}
+@keyframes spiral {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  100% {
+    transform: rotate(360deg) translateX(20px);
+  }
+} */

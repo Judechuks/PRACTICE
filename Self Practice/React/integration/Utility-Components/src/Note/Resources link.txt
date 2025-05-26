@@ -1,0 +1,15 @@
+1. Loaders:
+https://css-loaders.com/progress/
+https://app.uxcel.com/courses/ui-components-best-practices/basics-i-971
+https://daisyui.com/components/loading/?lang=en
+https://ui.dhis2.nu/components/loading/
+https://semantic-ui.com/elements/loader.html
+
+2. Semantic UI - Everything UI - from buttons, dropdowns, sidebars, form, grid, table,etc.
+https://semantic-ui.com
+
+3. UI-Verse - Everything UI - from buttons, toggles, patterns, tooltips, form, etc.
+https://uiverse.io
+
+4. React-select
+https://demo.mobiscroll.com/react/select/responsive

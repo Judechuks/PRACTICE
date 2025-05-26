@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* stylelint-disable-next-line */
+@theme {
+  --breakpoint-wide: 1440px;
+  --breakpoint-custom-xl: 1200px;
+  --breakpoint-x-sm: 580px;
+  --breakpoint-xx-sm: 415px;
+  --font-Afacad_Flux: "Afacad Flux", sans-serif;
+  --color-blue: #2a2185;
+  --color-dark-blue: #221470;
+  --color-gray: #ececec;
+  --color-dark-title: #2b2320;
+  --color-lightgray: rgb(235, 235, 235);
+  --color-gray-300: #d1d5dc;
+  --color-gray-400: #99a1af;
+}
+:root {
+  --white: #fff;
+  --black: #000;
+  --dark-title: #2b2320;
+  --dark-blue: #221470;
+  --blue: #2a2185;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+  --modal-color: rgba(20, 20, 20, 0.7);
+}
+body {
+  font-family: "Afacad Flux", sans-serif;
+  font-size: 1.1rem;
+  overflow-x: hidden;
+}
+/* ===== Personal Utilities Classes ===== */
+.grid-center {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.grid-auto-1fr,
+.grid-auto-fr {
+  grid-template-rows: auto 1fr;
+}
+.grid-1fr-auto,
+.grid-fr-auto {
+  grid-template-rows: 1fr auto;
+}
+.shadow-box {
+  box-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)),
+    0 0px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)),
+    0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+}
+.transparent-modal {
+  background: var(--modal-color);
+}
+
+/* ===== Styles ===== */
+/* form */
+.auth-form .input-group {
+  margin-bottom: 30px;
+}
+.row .input-group {
+  flex-basis: 48%;
+}
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1.1rem;
+  border: 1px solid var(--dark-title);
+  border-radius: 4px;
+}
+.auth-form select {
+  color: #888;
+}
+.auth-form input:focus-within {
+  outline-color: var(--dark-title);
+}
+.auth-form label {
+  height: 100%;
+  font-size: 1.2rem;
+  padding: 2px;
+  color: #888;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.auth-form #submit-btn {
+  margin: 0 auto 18px;
+  font-size: 1.3rem;
+  height: 40px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 2px solid var(--dark-blue);
+  outline: none;
+  color: var(--white);
+  background: var(--dark-blue);
+  border-radius: 4px;
+}
+select,
+button {
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background: var(--blue);
+}
