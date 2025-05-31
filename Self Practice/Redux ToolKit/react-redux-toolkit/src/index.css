@@ -1,0 +1,127 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+#root {
+  width: 100%;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.4em 0.8em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+.card-container {
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+}
+.card {
+  padding: 40px 30px;
+  border-radius: 10px;
+  display: grid;
+  gap: 20px;
+  background-color: rgb(57, 57, 57);
+  max-width: 360px;
+}
+.card h2 {
+  font-size: 1.2rem;
+}
+.card label {
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.card input {
+  padding: 6px;
+  border-radius: 4px;
+  max-width: 120px;
+}
+.quantity-container {
+  margin-bottom: 25px;
+}
+.error-container {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.967);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.text-center {
+  text-align: center;
+}
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.gap-2 {
+  gap: 8px;
+}
+.items-center {
+  align-items: center;
+}
