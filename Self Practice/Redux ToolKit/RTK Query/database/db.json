@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Jude Chuks",
+      "job": "Software Developer",
+      "email": "judechuks@gmail.com",
+      "gender": "male",
+      "maritalStatus": "married"
+    },
+    {
+      "id": "2",
+      "name": "Kelvin Smith",
+      "job": "Frontend Developer",
+      "email": "kelvinsmith@gmail.com",
+      "gender": "male",
+      "maritalStatus": "widowed"
+    },
+    {
+      "id": "3",
+      "name": "Peter Obi",
+      "job": "Product Designer",
+      "email": "peterobi@gmail.com",
+      "gender": "male",
+      "maritalStatus": "married"
+    },
+    {
+      "id": "4",
+      "name": "Jane Boko",
+      "job": "UI/UX",
+      "email": "bokojane@gmail.com",
+      "gender": "female",
+      "maritalStatus": "married"
+    },
+    {
+      "id": "5",
+      "name": "Mary FIn",
+      "job": "Database Administrator",
+      "email": "maryfin@gmail.com",
+      "gender": "female",
+      "maritalStatus": "married"
+    },
+    {
+      "id": "d547",
+      "name": "Edufun Technik STEM Hub",
+      "email": "admin@edufuntechnik.com",
+      "gender": "female",
+      "job": "Project Manager",
+      "maritalStatus": "married"
+    },
+    {
+      "id": "c5b1",
+      "name": "Adam Smith",
+      "email": "adamsmith@gmail.com",
+      "gender": "female",
+      "job": "UI/UX",
+      "maritalStatus": "widowed"
+    },
+    {
+      "id": "3058",
+      "name": "Monye Jude",
+      "email": "jude@gmail.com",
+      "gender": "male",
+      "maritalStatus": "single",
+      "job": "Frontend Developer"
+    }
+  ]
+}
