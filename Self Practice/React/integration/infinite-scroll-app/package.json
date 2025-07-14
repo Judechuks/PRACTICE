@@ -9,7 +9,12 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "json-server --watch db.json --port 4000",
-    "city-server": "json-server --watch cities.json --port 4040"
+    "city-server": "json-server --watch cities.json --port 4040",
+    "pro-server": "json-server --watch bschtaProfile.json --port 4050",
+    "session-server": "json-server --watch bschtaSession.json --port 4060",
+    "academics-server": "json-server --watch bschtaAcademics.json --port 4070",
+    "exams-server": "json-server --watch bschtaExams.json --port 4080",
+    "app-server": "json-server --watch bschtaApplicant.json --port 4090"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.71.5",

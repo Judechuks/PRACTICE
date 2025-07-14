@@ -1,0 +1,90 @@
+{
+  "applicants": [
+    {
+      "id": "1",
+      "application_no": "BSCHTA25/NDPHT/001",
+      "app_user": "BSCHTA25/NDPHT/001",
+      "surname": "UGESE",
+      "first_name": "KUMAWUESE",
+      "other_name": "OMASE",
+      "email": "kumawueseruthugese@gmail.com",
+      "department": "NDPHT",
+      "application_status": "Pending",
+      "application_date": "2023-10-01",
+      "application_fee_status": "Paid",
+      "application_fee_date": "2023-10-01",
+      "application_fee_receipt": "https://example.com/receipt.jpg",
+      "application_fee_receipt_no": "REC123456",
+      "application_fee_payment_method": "Bank Transfer",
+      "application_fee_payment_status": "Confirmed",
+      "application_fee_payment_date": "2023-10-01",
+      "application_fee_payment_receipt": "https://example.com/payment_receipt.jpg",
+      "application_session": "2023/2024",
+      "preferred_course": "NDPHT",
+      "invoice_number": "HHMHK5ST14PQ",
+      "reference": "1781735978",
+      "amount": "80000.0",
+      "items": ["{NATIONAL QUALIFYING EXAMS: 80000.0}"],
+      "submitted": true,
+      "stage": "Submitted",
+      "submitted_at": {
+        "date": "2023-10-01",
+        "time": "10:00:00"
+      },
+      "approved": false,
+      "approved_at": {
+        "data": "",
+        "time": ""
+      },
+      "approved_course": "",
+      "aptitude_test_score": 50,
+      "aptitude_test_remark": "PASSED",
+      "submitted_date": "2023-10-01",
+      "submitted_time": "14:04",
+      "approved_date": "",
+      "approved_time": ""
+    }
+  ],
+  "admins": [
+    {
+      "id": "1",
+      "email": "superadmin@gmail.com",
+      "first_name": "Admin",
+      "last_name": "Super",
+      "password": "superadmin",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "2",
+      "email": "lecturer@gmail.com",
+      "first_name": "Emmanuel",
+      "last_name": "Adebayo",
+      "password": "lecturer01",
+      "role": "LECTURER"
+    },
+    {
+      "id": "3",
+      "email": "officer@gmail.com",
+      "first_name": "Patrick",
+      "last_name": "Obi",
+      "password": "officer01",
+      "role": "EXAM_OFFICER"
+    },
+    {
+      "id": "4",
+      "email": "support@gmail.com",
+      "first_name": "Vivian",
+      "last_name": "Idemadu",
+      "password": "support01",
+      "role": "ICT_SUPPORT"
+    },
+    {
+      "id": "4cdc",
+      "last_name": "Monye",
+      "first_name": "Jude",
+      "email": "jude3231@gmail.com",
+      "password": "superadmin02",
+      "role": "SUPER_ADMIN"
+    }
+  ]
+}

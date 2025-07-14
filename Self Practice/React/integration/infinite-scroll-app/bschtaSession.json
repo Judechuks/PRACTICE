@@ -1,0 +1,73 @@
+{
+  "sessions": [
+    {
+      "id": "f6a5",
+      "session": "2023/2024",
+      "status": false
+    },
+    {
+      "id": "38df",
+      "session": "2024/2025",
+      "status": true
+    }
+  ],
+  "departments": [
+    {
+      "id": "1",
+      "count": 3,
+      "department_code": "NDEHT",
+      "department_name": "ND Environmental Health Technology"
+    },
+    {
+      "id": "2",
+      "count": 328,
+      "department_code": "NDCHT",
+      "department_name": "ND Community Health"
+    },
+    {
+      "id": "3",
+      "count": 59,
+      "department_code": "NDPHT",
+      "department_name": "ND Public Health"
+    },
+    {
+      "id": "4",
+      "count": 6,
+      "department_code": "NDEDC",
+      "department_name": "ND Epidemiology and Disease Control"
+    },
+    {
+      "id": "5",
+      "count": 90,
+      "department_code": "CCPTT",
+      "department_name": "Certified Pharmacy Technician"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "course_code": "CHM101",
+      "course_name": "Introduction to Chemistry"
+    },
+    {
+      "id": "2",
+      "course_code": "PHY102",
+      "course_name": "Introduction to Physics"
+    },
+    {
+      "id": "3",
+      "course_code": "BIO101",
+      "course_name": "Introduction to Biology"
+    },
+    {
+      "id": "4",
+      "course_code": "EVS103",
+      "course_name": "Introduction to Environmental Studies"
+    },
+    {
+      "id": "5",
+      "course_code": "HLT101",
+      "course_name": "Introduction to Health Science"
+    }
+  ]
+}

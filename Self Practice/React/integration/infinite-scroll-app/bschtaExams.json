@@ -1,0 +1,592 @@
+{
+  "exams": [
+    {
+      "id": "1",
+      "school_name": "Royal Academy Secondary School",
+      "exam_type": "NECO",
+      "year": "2023",
+      "exam_number": "0208802090"
+    },
+    {
+      "id": "2",
+      "school_name": "Holy Infants Secondary School",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "2880209112"
+    },
+    {
+      "id": "3",
+      "school_name": "Vocational enterprises institute gwagwalada Abuja",
+      "exam_type": "NABTEB",
+      "year": "2023",
+      "exam_number": "112239112"
+    },
+    {
+      "id": "4",
+      "school_name": "If academic annune",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "112239000"
+    },
+    {
+      "id": "5",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    },
+    {
+      "id": "6",
+      "school_name": "SURANTO UNIQUE ACADEMY JATO-AKA",
+      "exam_type": "WAEC",
+      "year": "2021",
+      "exam_number": "1232449011"
+    },
+    {
+      "id": "7",
+      "school_name": "PEOPLE'S COMPREHENSIVE HIGH SCHOOL LESSEL",
+      "exam_type": "NECO",
+      "year": "2022",
+      "exam_number": "1678449220"
+    },
+    {
+      "id": "8",
+      "school_name": "New orleans model college orudu",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "9",
+      "school_name": "Government Secondary School, Buruku",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "458449220"
+    },
+    {
+      "id": "10",
+      "school_name": "Aduma Memorial Secondary School, High Level Oiji",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "11",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    },
+    {
+      "id": "12",
+      "school_name": "SURANTO UNIQUE ACADEMY JATO-AKA",
+      "exam_type": "WAEC",
+      "year": "2021",
+      "exam_number": "1232449011"
+    },
+    {
+      "id": "13",
+      "school_name": "PEOPLE'S COMPREHENSIVE HIGH SCHOOL LESSEL",
+      "exam_type": "NECO",
+      "year": "2022",
+      "exam_number": "1678449220"
+    },
+    {
+      "id": "14",
+      "school_name": "New orleans model college orudu",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "15",
+      "school_name": "Government Secondary School, Buruku",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "458449220"
+    },
+    {
+      "id": "16",
+      "school_name": "Aduma Memorial Secondary School, High Level Oiji",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "17",
+      "school_name": "Royal Academy Secondary School",
+      "exam_type": "NECO",
+      "year": "2023",
+      "exam_number": "0208802090"
+    },
+    {
+      "id": "18",
+      "school_name": "Holy Infants Secondary School",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "2880209112"
+    },
+    {
+      "id": "19",
+      "school_name": "Vocational enterprises institute gwagwalada Abuja",
+      "exam_type": "NABTEB",
+      "year": "2023",
+      "exam_number": "112239112"
+    },
+    {
+      "id": "20",
+      "school_name": "If academic annune",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "112239000"
+    },
+    {
+      "id": "21",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    },
+    {
+      "id": "22",
+      "school_name": "Royal Academy Secondary School",
+      "exam_type": "NECO",
+      "year": "2023",
+      "exam_number": "0208802090"
+    },
+    {
+      "id": "23",
+      "school_name": "Holy Infants Secondary School",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "2880209112"
+    },
+    {
+      "id": "24",
+      "school_name": "Vocational enterprises institute gwagwalada Abuja",
+      "exam_type": "NABTEB",
+      "year": "2023",
+      "exam_number": "112239112"
+    },
+    {
+      "id": "25",
+      "school_name": "If academic annune",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "112239000"
+    },
+    {
+      "id": "26",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    },
+    {
+      "id": "27",
+      "school_name": "SURANTO UNIQUE ACADEMY JATO-AKA",
+      "exam_type": "WAEC",
+      "year": "2021",
+      "exam_number": "1232449011"
+    },
+    {
+      "id": "7",
+      "school_name": "PEOPLE'S COMPREHENSIVE HIGH SCHOOL LESSEL",
+      "exam_type": "NECO",
+      "year": "2022",
+      "exam_number": "1678449220"
+    },
+    {
+      "id": "28",
+      "school_name": "New orleans model college orudu",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "29",
+      "school_name": "Government Secondary School, Buruku",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "458449220"
+    },
+    {
+      "id": "30",
+      "school_name": "Aduma Memorial Secondary School, High Level Oiji",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "31",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    },
+    {
+      "id": "32",
+      "school_name": "SURANTO UNIQUE ACADEMY JATO-AKA",
+      "exam_type": "WAEC",
+      "year": "2021",
+      "exam_number": "1232449011"
+    },
+    {
+      "id": "33",
+      "school_name": "PEOPLE'S COMPREHENSIVE HIGH SCHOOL LESSEL",
+      "exam_type": "NECO",
+      "year": "2022",
+      "exam_number": "1678449220"
+    },
+    {
+      "id": "34",
+      "school_name": "New orleans model college orudu",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "35",
+      "school_name": "Government Secondary School, Buruku",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "458449220"
+    },
+    {
+      "id": "36",
+      "school_name": "Aduma Memorial Secondary School, High Level Oiji",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "37",
+      "school_name": "Royal Academy Secondary School",
+      "exam_type": "NECO",
+      "year": "2023",
+      "exam_number": "0208802090"
+    },
+    {
+      "id": "38",
+      "school_name": "Holy Infants Secondary School",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "2880209112"
+    },
+    {
+      "id": "39",
+      "school_name": "Vocational enterprises institute gwagwalada Abuja",
+      "exam_type": "NABTEB",
+      "year": "2023",
+      "exam_number": "112239112"
+    },
+    {
+      "id": "40",
+      "school_name": "If academic annune",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "112239000"
+    },
+    {
+      "id": "41",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    },
+    {
+      "id": "1",
+      "school_name": "Royal Academy Secondary School",
+      "exam_type": "NECO",
+      "year": "2023",
+      "exam_number": "0208802090"
+    },
+    {
+      "id": "42",
+      "school_name": "Holy Infants Secondary School",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "2880209112"
+    },
+    {
+      "id": "43",
+      "school_name": "Vocational enterprises institute gwagwalada Abuja",
+      "exam_type": "NABTEB",
+      "year": "2023",
+      "exam_number": "112239112"
+    },
+    {
+      "id": "44",
+      "school_name": "If academic annune",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "112239000"
+    },
+    {
+      "id": "45",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    },
+    {
+      "id": "46",
+      "school_name": "SURANTO UNIQUE ACADEMY JATO-AKA",
+      "exam_type": "WAEC",
+      "year": "2021",
+      "exam_number": "1232449011"
+    },
+    {
+      "id": "47",
+      "school_name": "PEOPLE'S COMPREHENSIVE HIGH SCHOOL LESSEL",
+      "exam_type": "NECO",
+      "year": "2022",
+      "exam_number": "1678449220"
+    },
+    {
+      "id": "48",
+      "school_name": "New orleans model college orudu",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "49",
+      "school_name": "Government Secondary School, Buruku",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "458449220"
+    },
+    {
+      "id": "50",
+      "school_name": "Aduma Memorial Secondary School, High Level Oiji",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "51",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    },
+    {
+      "id": "52",
+      "school_name": "SURANTO UNIQUE ACADEMY JATO-AKA",
+      "exam_type": "WAEC",
+      "year": "2021",
+      "exam_number": "1232449011"
+    },
+    {
+      "id": "53",
+      "school_name": "PEOPLE'S COMPREHENSIVE HIGH SCHOOL LESSEL",
+      "exam_type": "NECO",
+      "year": "2022",
+      "exam_number": "1678449220"
+    },
+    {
+      "id": "54",
+      "school_name": "New orleans model college orudu",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "55",
+      "school_name": "Government Secondary School, Buruku",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "458449220"
+    },
+    {
+      "id": "56",
+      "school_name": "Aduma Memorial Secondary School, High Level Oiji",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "57",
+      "school_name": "Royal Academy Secondary School",
+      "exam_type": "NECO",
+      "year": "2023",
+      "exam_number": "0208802090"
+    },
+    {
+      "id": "58",
+      "school_name": "Holy Infants Secondary School",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "2880209112"
+    },
+    {
+      "id": "59",
+      "school_name": "Vocational enterprises institute gwagwalada Abuja",
+      "exam_type": "NABTEB",
+      "year": "2023",
+      "exam_number": "112239112"
+    },
+    {
+      "id": "60",
+      "school_name": "If academic annune",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "112239000"
+    },
+    {
+      "id": "61",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    },
+    {
+      "id": "62",
+      "school_name": "Royal Academy Secondary School",
+      "exam_type": "NECO",
+      "year": "2023",
+      "exam_number": "0208802090"
+    },
+    {
+      "id": "63",
+      "school_name": "Holy Infants Secondary School",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "2880209112"
+    },
+    {
+      "id": "64",
+      "school_name": "Vocational enterprises institute gwagwalada Abuja",
+      "exam_type": "NABTEB",
+      "year": "2023",
+      "exam_number": "112239112"
+    },
+    {
+      "id": "65",
+      "school_name": "If academic annune",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "112239000"
+    },
+    {
+      "id": "66",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    },
+    {
+      "id": "67",
+      "school_name": "SURANTO UNIQUE ACADEMY JATO-AKA",
+      "exam_type": "WAEC",
+      "year": "2021",
+      "exam_number": "1232449011"
+    },
+    {
+      "id": "68",
+      "school_name": "PEOPLE'S COMPREHENSIVE HIGH SCHOOL LESSEL",
+      "exam_type": "NECO",
+      "year": "2022",
+      "exam_number": "1678449220"
+    },
+    {
+      "id": "69",
+      "school_name": "New orleans model college orudu",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "70",
+      "school_name": "Government Secondary School, Buruku",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "458449220"
+    },
+    {
+      "id": "71",
+      "school_name": "Aduma Memorial Secondary School, High Level Oiji",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "72",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    },
+    {
+      "id": "73",
+      "school_name": "SURANTO UNIQUE ACADEMY JATO-AKA",
+      "exam_type": "WAEC",
+      "year": "2021",
+      "exam_number": "1232449011"
+    },
+    {
+      "id": "74",
+      "school_name": "PEOPLE'S COMPREHENSIVE HIGH SCHOOL LESSEL",
+      "exam_type": "NECO",
+      "year": "2022",
+      "exam_number": "1678449220"
+    },
+    {
+      "id": "75",
+      "school_name": "New orleans model college orudu",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "76",
+      "school_name": "Government Secondary School, Buruku",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "458449220"
+    },
+    {
+      "id": "77",
+      "school_name": "Aduma Memorial Secondary School, High Level Oiji",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "67832449011"
+    },
+    {
+      "id": "78",
+      "school_name": "Royal Academy Secondary School",
+      "exam_type": "NECO",
+      "year": "2023",
+      "exam_number": "0208802090"
+    },
+    {
+      "id": "79",
+      "school_name": "Holy Infants Secondary School",
+      "exam_type": "WAEC",
+      "year": "2024",
+      "exam_number": "2880209112"
+    },
+    {
+      "id": "80",
+      "school_name": "Vocational enterprises institute gwagwalada Abuja",
+      "exam_type": "NABTEB",
+      "year": "2023",
+      "exam_number": "112239112"
+    },
+    {
+      "id": "81",
+      "school_name": "If academic annune",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "112239000"
+    },
+    {
+      "id": "82",
+      "school_name": "DE- GLOAL ACADEMY GBOKO",
+      "exam_type": "NECO",
+      "year": "2024",
+      "exam_number": "144449000"
+    }
+  ]
+}
