@@ -1,0 +1,13 @@
+/*========= Custom properties =========*/
+:root{
+  --mainColor: #152028;
+  --secondaryColor: #192734;
+  --borderColor: #164d56;
+  --mainText: #fff;
+  --secondaryText: #eeeeee;
+  --shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+  --themeDotBorder: #fff;
+  --previewBg: rgba(25,39,52,0.8);
+  --previewShadow: #111921;
+  --buttonColor: #17a2b8;
+}
