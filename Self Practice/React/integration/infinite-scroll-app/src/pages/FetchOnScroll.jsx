@@ -81,8 +81,7 @@ const FetchOnScroll = () => {
             <article
               key={country.id}
               className="item cursor-pointer"
-              onClick={() => navigate(`/countries/${country.id}`)}
-            >
+              onClick={() => navigate(`/countries/${country.id}`)}>
               <h2 className="country-name">{country.name}</h2>
               <div className="row">
                 <p>
